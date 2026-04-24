@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Simulador MOPT</title>
+    <link rel="stylesheet" href="../frontend/styles.css">
+</head>
+<body>
+
+<header>
+    <h1>Simulador MOPT</h1>
+
+    <div id="nav-usuario">
+        <span id="user-name"></span>
+        <button id="logout-btn" style="display:none;">Cerrar sesión</button>
+    </div>
+</header>
+
+<div id="toast" class="toast"></div>
+
+<main>
+
+<section id="auth">
+    <h2>Login / Registro</h2>
+    <button id="btn-login">Iniciar sesión</button>
+</section>
+
+<section id="examenes">
+    <h2>Exámenes</h2>
+
+    <a href="examen.html" class="btn disabled">🔒 Diagnóstico</a>
+    <a href="examen.html" class="btn disabled">🔒 Random</a>
+    <a href="examen.html" class="btn disabled">🔒 Difícil</a>
+</section>
+
+<section id="manual">
+    <h2>Manual</h2>
+    <a href="manual.html" class="btn">Leer</a>
+</section>
+
+</main>
+
+<!-- MODAL -->
+<div id="modal-login" class="modal">
+    <div class="modal-content">
+        <span id="close-modal">&times;</span>
+
+        <h2>Iniciar sesión</h2>
+
+        <input type="email" id="login-email" placeholder="Correo">
+        <input type="password" id="login-password" placeholder="Contraseña">
+
+        <button id="submit-login">Entrar</button>
+    </div>
+</div>
+
+<script src="../backend/login.js"></script>
+
+</body>
+</html>
