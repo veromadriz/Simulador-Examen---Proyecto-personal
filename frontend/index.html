@@ -30,26 +30,66 @@
 
 </header>
 
+<h1 id="welcome-title">¡Bienvenido a DrivePrep!</h1>
+
 <div id="toast" class="toast"></div>
+
+
+<section id="stats-section" class="stats" style="display:none;">
+
+    <div class="stat-card">
+        <h3>Exámenes</h3>
+        <p id="stat-examenes">0</p>
+        <span>hechos y aprobados</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Promedio</h3>
+        <p id="stat-promedio">0%</p>
+        <span>preparación</span>
+    </div>
+
+    <div class="stat-card">
+        <h3>Temas</h3>
+        <p id="stat-temas">0</p>
+        <span>dominados</span>
+    </div>
+
+</section>
 
 <main class="dashboard">
 
-    <section class="card">
-        <h2>Exámenes</h2>
+    <div class="actions">
+
+    <div class="action-card action-examenes">
+       <h2>Exámenes</h2>
         <div class="card-content">
             <a href="examen.html" class="btn disabled">🔒 Diagnóstico</a>
             <a href="examen.html" class="btn disabled">🔒 Random</a>
             <a href="examen.html" class="btn disabled">🔒 Difícil</a>
         </div>
-    </section>
+    </div>
 
-    <section class="card">
+    <div class="action-card action-chatbot">
+        <h2>Chatbot</h2>
+    <div class="card-content">
+        <a href="connie.py" class="btn">Pregúntale a Connie</a>
+    </div>
+    </div>
+
+    <div class="action-card action-manual">
         <h2>Manual</h2>
         <div class="card-content">
             <a href="manual.html" class="btn">Leer Manual</a>
         </div>
-    </section>
+    </div>
 
+    <div class="action-card action-practico">
+       <h2>Práctico</h2>
+    <div class="card-content">
+        <a href="practico.html" class="btn disabled">🔒 Simulación</a>
+    </div>
+    </div>
 </main>
 
 

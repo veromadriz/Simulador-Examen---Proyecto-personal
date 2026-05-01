@@ -71,13 +71,16 @@ submitBtn.onclick = async () => {
         const data = await res.json();
 
         if (data.success) {
-            localStorage.setItem("usuario", data.nombre);
-            mostrarToast(`Bienvenido, ${data.nombre} 😌`);
-            actualizarUI();
-            modal.style.display = "none";
-        } else {
+    localStorage.setItem("usuario", data.nombre);
+
+    mostrarToast(`Bienvenido, ${data.nombre} 😌`);
+    actualizarUI();
+    const modal = document.getElementById("modal-login");
+    modal.style.display = "none";
+     }else {
             alert(data.message);
         }
+
 
     } else {
         // REGISTER
@@ -145,3 +148,61 @@ function mostrarToast(mensaje) {
 
 /* INIT */
 window.onload = actualizarUI;
+
+function actualizarUI() {
+    const usuario = localStorage.getItem("usuario");
+    const titulo = document.getElementById("welcome-title");
+    const stats = document.getElementById("stats-section");
+    const dashboard = document.querySelector(".dashboard");
+
+    if (usuario) {
+        // NAV
+        document.getElementById("btn-login").style.display = "none";
+        document.getElementById("btn-register").style.display = "none";
+
+        navUsuario.style.display = "flex";
+        userName.innerText = usuario;
+
+        // TÍTULO
+        titulo.innerText = `Hola, ${usuario} 😌`;
+
+        // MOSTRAR STATS
+        stats.style.display = "flex";
+
+        // CAMBIAR MODO DASHBOARD
+        dashboard.classList.add("logged-in");
+
+        // DESBLOQUEAR
+        document.querySelectorAll(".btn.disabled").forEach(btn => {
+            btn.classList.remove("disabled");
+            btn.innerText = btn.innerText.replace("🔒 ", "");
+        });
+
+        cargarStats(); // 👈 importante
+
+    } else {
+        document.getElementById("btn-login").style.display = "inline-block";
+        document.getElementById("btn-register").style.display = "inline-block";
+
+        navUsuario.style.display = "none";
+
+        titulo.innerText = "Bienvenida a DrivePrep 🚗";
+
+        // OCULTAR STATS
+        stats.style.display = "none";
+
+        // VOLVER A MODO NORMAL
+        dashboard.classList.remove("logged-in");
+
+        // BLOQUEAR
+        document.querySelectorAll(".btn").forEach(btn => {
+            if (!btn.classList.contains("disabled")) {
+                btn.classList.add("disabled");
+
+                if (!btn.innerText.includes("🔒")) {
+                    btn.innerText = "🔒 " + btn.innerText;
+                }
+            }
+        });
+    }
+}
