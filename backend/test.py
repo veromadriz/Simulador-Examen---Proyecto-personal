@@ -30,3 +30,6 @@ try:
 except Exception as e:
     print("❌ Error al conectar:")
     print(e)
+
+    cursor.execute("SELECT COUNT(*) FROM preguntas;")
+print(cursor.fetchone())

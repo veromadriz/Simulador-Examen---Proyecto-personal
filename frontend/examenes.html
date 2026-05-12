@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Exámenes</title>
+<link rel="stylesheet" href="../static/css/examenes.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+  <header class="navbar">
+    <div class="logo">🚗 DrivePrep</div>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="manual.html">Estudiar</a>
+      <a href="examenes.html" class="active">Exámenes</a>
+      <a href="progreso.html">Progreso</a>
+    </nav>
+  </header>
+
+  <main class="exam-dashboard">
+    <section class="hero">
+      <h1>Elige tu tipo de examen</h1>
+      <p>Pon a prueba tus conocimientos y descubre qué tan preparado estás.</p>
+    </section>
+
+    <section class="stats">
+      <div class="stat-card"><span>🏆</span><h3>95%</h3><p>Mejor nota</p></div>
+      <div class="stat-card"><span>📝</span><h3>12</h3><p>Exámenes</p></div>
+      <div class="stat-card"><span>📈</span><h3>87%</h3><p>Promedio</p></div>
+      <div class="stat-card"><span>🔥</span><h3>5</h3><p>Racha</p></div>
+    </section>
+
+    <section class="exam-cards">
+      <article class="exam-card blue">
+        <i class="fas fa-stethoscope"></i>
+        <h2>Diagnóstico</h2>
+        <p>Descubre qué temas necesitas reforzar.</p>
+        <button onclick="startExam('diagnostic')">Iniciar diagnóstico</button>
+      </article>
+
+      <article class="exam-card purple">
+        <i class="fas fa-fire"></i>
+        <h2>Examen Extremo</h2>
+        <p>El desafío más difícil de DrivePrep.</p>
+        <button onclick="startExam('extreme')">Acepto el reto</button>
+      </article>
+
+      <article class="exam-card green">
+        <i class="fas fa-book"></i>
+        <h2>Por Categoría</h2>
+        <p>Practica sólo el tema que tú elijas.</p>
+        <button onclick="selectCategory()">Elegir categoría</button>
+      </article>
+
+      <article class="exam-card orange">
+        <i class="fas fa-dice"></i>
+        <h2>Aleatorio</h2>
+        <p>Una mezcla sorpresa de preguntas.</p>
+        <button onclick="startExam('random')">Comenzar examen</button>
+      </article>
+    </section>
+
+    <section class="recommendation">
+      <h3>🎯 Recomendación personalizada</h3>
+      <p>Te recomendamos practicar Señales de tránsito antes de intentar otro examen completo.</p>
+    </section>
+  </main>
+  
+
+  <script src="../static/js/examenes.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,64 @@
+<html lang="es">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DrivePrep | Quiz Final</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exam.css') }}">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="exam-header">
+        <button class="menu-btn" onclick="window.location.href='examenes.html'">
+            🏠 Menú
+        </button>
+
+        <div class="exam-title">
+            <div class="title-icon"></div>
+            <h1 id="exam-title">Quiz Final</h1>
+        </div>
+
+        <div class="header-right">
+            <div class="timer-pill">
+                ⏱️ <span id="timer">60s</span>
+            </div>
+            <div class="question-counter" id="question-counter">1/10</div>
+        </div>
+    </header>
+
+    <!-- PROGRESS BAR -->
+    <section class="progress-wrapper">
+        <div class="progress-bar">
+            <div class="progress-fill" id="progress-fill"></div>
+        </div>
+    </section>
+
+    <!-- MAIN CONTENT -->
+    <main class="exam-container">
+
+        <!-- QUESTION CARD -->
+        <section class="question-card">
+            <div class="question-number" id="question-number">1</div>
+            <h2 id="question-text">Cargando pregunta...</h2>
+        </section>
+
+        <!-- OPTIONS -->
+        <section class="options-container" id="options-container">
+            <!-- JS inserts options -->
+        </section>
+
+        <!-- NAVIGATION -->
+        <section class="navigation-buttons">
+            <button class="secondary-btn" id="prev-btn">Anterior</button>
+            <button class="primary-btn" id="next-btn">Siguiente</button>
+        </section>
+
+    </main>
+
+
+<script src="{{ url_for('static', filename='js/examen.js') }}"></script>
+</body>
+</html>
