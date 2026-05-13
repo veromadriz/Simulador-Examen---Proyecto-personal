@@ -89,3 +89,101 @@ def register(data: dict):
         "success": True,
         "message": "Usuario creado correctamente"
     }
+
+    from fastapi import Body
+
+@app.post("/guardar_resultado")
+def guardar_resultado(data: dict = Body(...)):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    id_usuario = data["id_usuario"]
+    id_examen = data["id_examen"]
+    tipo_generado = data.get("tipo_generado", "normal")
+    puntaje = data["puntaje"]
+    aprobado = data["aprobado"]
+
+    cursor.execute("""
+        INSERT INTO intentos_examen
+        (id_usuario, id_examen, tipo_generado, puntaje, aprobado)
+        VALUES (%s, %s, %s, %s, %s)
+        RETURNING id_intento
+    """, (
+        id_usuario,
+        id_examen,
+        tipo_generado,
+        puntaje,
+        aprobado
+    ))
+
+    id_intento = cursor.fetchone()[0]
+
+    conn.commit()
+    conn.close()
+
+    return {
+        "success": True,
+        "id_intento": id_intento
+    }
+
+@app.get("/estadisticas/{id_usuario}")
+def obtener_estadisticas(id_usuario: int):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            COUNT(*),
+            COALESCE(MAX(puntaje), 0),
+            COALESCE(AVG(puntaje), 0)
+        FROM intentos_examen
+        WHERE id_usuario = %s
+        """,
+        (id_usuario,)
+    )
+
+    total_examenes, mejor_nota, promedio = cursor.fetchone()
+
+    conn.close()
+
+    return {
+        "total_examenes": total_examenes,
+        "mejor_nota": round(float(mejor_nota), 1),
+        "promedio": round(float(promedio), 1)
+    }
+
+@app.get("/ultimo_resultado/{id_usuario}")
+def obtener_ultimo_resultado(id_usuario: int):
+    conn = get_connection()
+    cursor = conn.cursor()
+
+    cursor.execute(
+        """
+        SELECT
+            i.puntaje,
+            i.aprobado,
+            i.fecha,
+            e.titulo
+        FROM intentos_examen i
+        JOIN examenes e ON i.id_examen = e.id_examen
+        WHERE i.id_usuario = %s
+        ORDER BY i.fecha DESC
+        LIMIT 1
+        """,
+        (id_usuario,)
+    )
+
+    resultado = cursor.fetchone()
+    conn.close()
+
+    if not resultado:
+        return {"success": False}
+
+    return {
+        "success": True,
+        "puntaje": float(resultado[0]),
+        "aprobado": bool(resultado[1]),
+        "fecha": str(resultado[2]),
+        "titulo_examen": resultado[3]
+    }

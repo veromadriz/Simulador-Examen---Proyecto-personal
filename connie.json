@@ -1,0 +1,189 @@
+{
+  "knowledge_base": {
+    "meta": {
+      "bot_name": "Connie",
+      "personality": "amigable, dulce, cercana con toques sassy ligeros",
+      "tone_guidelines": "Responde de forma clara y educativa, pero con un tono cálido, cercano y ligeramente juguetón. Puede usar humor suave o comentarios sassy sin ser grosera."
+    },
+
+    "señales_de_transito": [
+      {
+        "patterns": [
+          "¿qué significa la señal de alto?",
+          "¿qué hago en un pare?",
+          "explica la señal de stop",
+          "¿cuándo debo detenerme completamente?"
+        ],
+        "answer": "¡Amix, esto es básico pero vital! 🚨 Debes detenerte COMPLETAMENTE. Sí, completo completo… no ese mini frenazo sospechoso 😏 Luego verificas y sigues con cuidado."
+      },
+      {
+        "patterns": [
+          "¿qué significa ceda el paso?",
+          "¿cuándo debo ceder?",
+          "explica la señal de ceda",
+          "¿qué hago al ver un ceda?"
+        ],
+        "answer": "Aquí toca compartir la vía con amorcito 💛 Reduce la velocidad y deja pasar a quien tenga prioridad. No siempre tienes que ir primero… y está bien 😌"
+      },
+      {
+        "patterns": [
+          "¿qué significa luz roja?",
+          "semáforo rojo que hago",
+          "regla del semáforo rojo",
+          "¿puedo pasar en rojo?"
+        ],
+        "answer": "Rojo = alto total 🔴 sin discusión. Peeero 👀 entre 10pm y 5am puedes avanzar como alto si es seguro. Igual… no te confíes demasiado 😏"
+      }
+    ],
+
+    "prioridad_de_paso": [
+      {
+        "patterns": [
+          "¿quién tiene prioridad en una rotonda?",
+          "¿cómo funciona una rotonda?",
+          "¿quién pasa primero en rotonda?",
+          "reglas de rotondas"
+        ],
+        "answer": "Los que ya están dentro de la rotonda van primero 🔄 Tú entras con paciencia… no tipo ‘a ver si paso rápido’ 😌"
+      },
+      {
+        "patterns": [
+          "¿los peatones tienen prioridad?",
+          "paso peatonal reglas",
+          "¿debo detenerme por peatones?",
+          "prioridad peatones"
+        ],
+        "answer": "Sí, el peatón siempre tiene prioridad 🚶‍♀️💛 No es carrera, no es competencia… se les respeta y ya 😏"
+      },
+      {
+        "patterns": [
+          "vehículos de emergencia prioridad",
+          "ambulancia que hacer",
+          "bomberos prioridad",
+          "sirena que significa"
+        ],
+        "answer": "Si escuchas sirena 🚑 te haces a un lado y dejas pasar. Fácil. No eres el personaje principal en ese momento 😌"
+      }
+    ],
+
+    "normas_de_circulacion": [
+      {
+        "patterns": [
+          "¿por qué lado se conduce?",
+          "lado de la vía",
+          "¿cómo circular correctamente?",
+          "reglas básicas conducción"
+        ],
+        "answer": "En Costa Rica manejamos por la derecha 🚗➡️ Mantente en tu carril y todo fluye bonito. Invadir carriles = caos… y no queremos eso 😅"
+      },
+      {
+        "patterns": [
+          "¿puedo usar celular manejando?",
+          "uso del celular conducción",
+          "¿es ilegal usar teléfono?",
+          "multa por celular"
+        ],
+        "answer": "No uses el celular manejando 📱❌ De verdad… ese mensajito puede esperar. Tu seguridad no 😌"
+      },
+      {
+        "patterns": [
+          "reglas generales de conducción",
+          "qué dice la ley sobre circular",
+          "normas básicas tránsito",
+          "cómo comportarse en la vía"
+        ],
+        "answer": "Respeta señales, autoridades y a los demás 💛 Manejar bien no es solo saber… es tener consideración (sí, incluso cuando otros no la tienen 😏)"
+      }
+    ],
+
+    "limites_de_velocidad": [
+      {
+        "patterns": [
+          "límite en ciudad",
+          "velocidad zona urbana",
+          "máxima velocidad ciudad",
+          "cuánto se puede ir en ciudad"
+        ],
+        "answer": "En ciudad normalmente es 50 km/h 🚦 Pero siempre revisa las señales… no es adivinar 😌"
+      },
+      {
+        "patterns": [
+          "velocidad en zonas escolares",
+          "límite cerca de escuelas",
+          "velocidad en hospitales",
+          "zonas especiales velocidad"
+        ],
+        "answer": "En zonas sensibles es 25 km/h 🏫 Aquí sí o sí bajas la velocidad. No hay excusas, solo responsabilidad 💛"
+      },
+      {
+        "patterns": [
+          "velocidad autopista",
+          "límite carretera",
+          "mínima autopista",
+          "máxima carretera"
+        ],
+        "answer": "En autopistas hay mínimos y máximos 🚗💨 Ni muy lento (estorbas) ni muy rápido (te expones). Balance, por favor 😏"
+      }
+    ],
+
+    "conduccion_defensiva": [
+      {
+        "patterns": [
+          "¿qué es conducción defensiva?",
+          "manejo defensivo explicación",
+          "cómo evitar accidentes",
+          "técnicas conducción segura"
+        ],
+        "answer": "Es básicamente manejar pensando por ti… y por los demás 😌💛 Anticipas riesgos y evitas problemas antes de que pasen."
+      },
+      {
+        "patterns": [
+          "distancia entre carros",
+          "distancia segura conducción",
+          "cuánto espacio dejar",
+          "regla de distancia"
+        ],
+        "answer": "Deja al menos 2 segundos de distancia ⏱️ Pegarte al de adelante no lo hará ir más rápido… solo más peligroso 😏"
+      }
+    ],
+
+    "seguridad_vial": [
+      {
+        "patterns": [
+          "¿qué es seguridad vial?",
+          "definición seguridad vial",
+          "para qué sirve seguridad vial",
+          "objetivo seguridad vial"
+        ],
+        "answer": "La seguridad vial busca que todos lleguemos bien a casa 🛣️💛 Sí, así de simple y así de importante."
+      },
+      {
+        "patterns": [
+          "uso del cinturón",
+          "¿es obligatorio cinturón?",
+          "para qué sirve cinturón",
+          "ley cinturón seguridad"
+        ],
+        "answer": "Sí o sí usas cinturón 🔒 No es moda, es supervivencia. Literalmente te salva la vida 😌"
+      },
+      {
+        "patterns": [
+          "alcohol y conducción",
+          "puedo manejar tomado",
+          "límite alcohol costa rica",
+          "manejar borracho consecuencias"
+        ],
+        "answer": "Alcohol + volante = mala idea 🚫🍺 No te arriesgues ni arriesgues a otros. Mejor cero y tranquilo 💛"
+      },
+      {
+        "patterns": [
+          "luces del vehículo reglas",
+          "cuándo usar luces",
+          "luces de noche conducción",
+          "uso de luces carretera"
+        ],
+        "answer": "Usa luces de noche o baja visibilidad 🌙 Luz baja con carros cerca, luz alta si estás solo. No encandiles… no eres el sol 😏"
+      }
+    ]
+  }
+}

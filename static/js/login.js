@@ -1,3 +1,6 @@
+const API_BASE = window.location.origin && window.location.origin !== "null"
+    ? window.location.origin
+    : "http://127.0.0.1:5000";
 let isLogin = true;
 
 const modal = document.getElementById("modal-login");
@@ -62,7 +65,7 @@ submitBtn.onclick = async () => {
 
     if (isLogin) {
         // LOGIN
-        const res = await fetch("http://127.0.0.1:8000/login", {
+        const res = await fetch(`${API_BASE}/login`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ email, password })
@@ -71,22 +74,22 @@ submitBtn.onclick = async () => {
         const data = await res.json();
 
         if (data.success) {
-    localStorage.setItem("usuario", data.nombre);
-
-    mostrarToast(`Bienvenido, ${data.nombre} 😌`);
-    actualizarUI();
-    const modal = document.getElementById("modal-login");
-    modal.style.display = "none";
-     }else {
+            localStorage.setItem("usuario", data.nombre);
+            localStorage.setItem("id_usuario", data.id_usuario);
+            mostrarToast(`Bienvenido, ${data.nombre} 😌`);
+            actualizarUI();
+            modal.style.display = "none";
+            emailInput.value = "";
+            passwordInput.value = "";
+        } else {
             alert(data.message);
         }
-
 
     } else {
         // REGISTER
         const nombre = nombreInput.value;
 
-        const res = await fetch("http://127.0.0.1:8000/register", {
+        const res = await fetch(`${API_BASE}/register`, {
             method: "POST",
             headers: { "Content-Type": "application/json" },
             body: JSON.stringify({ nombre, email, password })
@@ -98,36 +101,14 @@ submitBtn.onclick = async () => {
             mostrarToast("Cuenta creada 😌 ahora inicia sesión");
             isLogin = true;
             updateForm();
+            nombreInput.value = "";
+            emailInput.value = "";
+            passwordInput.value = "";
         } else {
             alert(data.message);
         }
     }
 };
-
-/* UI USUARIO */
-function actualizarUI() {
-    const usuario = localStorage.getItem("usuario");
-
-    if (usuario) {
-        document.getElementById("btn-login").style.display = "none";
-        document.getElementById("btn-register").style.display = "none";
-
-        navUsuario.style.display = "flex";
-        userName.innerText = usuario;
-
-        // desbloquear botones
-        document.querySelectorAll(".btn.disabled").forEach(btn => {
-            btn.classList.remove("disabled");
-            btn.innerText = btn.innerText.replace("🔒 ", "");
-        });
-
-    } else {
-        document.getElementById("btn-login").style.display = "inline-block";
-        document.getElementById("btn-register").style.display = "inline-block";
-
-        navUsuario.style.display = "none";
-    }
-}
 
 /* LOGOUT */
 logoutBtn.onclick = () => {
@@ -146,11 +127,30 @@ function mostrarToast(mensaje) {
     }, 3000);
 }
 
+async function cargarStats() {
+    try {
+        const response = await fetch(`${API_BASE}/api/examen/stats`);
+        if (!response.ok) return;
+        const stats = await response.json();
+
+        const elExamenes = document.getElementById("stat-examenes");
+        const elPromedio = document.getElementById("stat-promedio");
+        const elTemas = document.getElementById("stat-temas");
+
+        if (elExamenes) elExamenes.textContent = stats.examenes ?? 0;
+        if (elPromedio) elPromedio.textContent = (stats.promedio ?? 0) + "%";
+        if (elTemas) elTemas.textContent = stats.temas ?? 0;
+    } catch (error) {
+        console.error("Error cargando stats:", error);
+    }
+}
+
 /* INIT */
 window.onload = actualizarUI;
 
 function actualizarUI() {
     const usuario = localStorage.getItem("usuario");
+    const id_usuario = localStorage.getItem("id_usuario");
     const titulo = document.getElementById("welcome-title");
     const stats = document.getElementById("stats-section");
     const dashboard = document.querySelector(".dashboard");
