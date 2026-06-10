@@ -8,6 +8,14 @@ ROOT_DIR = BASE_DIR.parent
 STATIC_DIR = ROOT_DIR / "static"
 TEMPLATES_DIR = ROOT_DIR / "templates"
 FRONTEND_DIR = ROOT_DIR / "frontend"
+REACT_DIST_DIR = ROOT_DIR / "react-frontend" / "dist"
+
+
+def serve_react_app():
+    if (REACT_DIST_DIR / "index.html").exists():
+        return send_from_directory(str(REACT_DIST_DIR), "index.html")
+
+    return send_from_directory(str(FRONTEND_DIR), "index.html")
 
 app = Flask(
     __name__,
@@ -24,12 +32,25 @@ except ImportError:
 
 @app.route("/")
 def home():
-    return send_from_directory(str(FRONTEND_DIR), "index.html")
+    return serve_react_app()
 
 @app.route("/<path:filename>")
 def frontend_pages(filename):
+    if filename.startswith("api/"):
+        return app.send_static_file(filename)
+
     if filename.endswith(".html"):
-        return send_from_directory(str(FRONTEND_DIR), filename)
+        return serve_react_app()
+
+    if filename.startswith("static/"):
+        return app.send_static_file(filename)
+
+    if (REACT_DIST_DIR / filename).exists():
+        return send_from_directory(str(REACT_DIST_DIR), filename)
+
+    if filename in {"examen", "resultados", "category-selection", "connie", "examenes", "manual"}:
+        return serve_react_app()
+
     return app.send_static_file(filename)
 
 @app.route("/api/examen/questions")
@@ -85,15 +106,23 @@ def get_stats():
 
 @app.route('/examen')
 def exam_page():
-    return render_template('examen.html')
+    return serve_react_app()
 
 @app.route('/resultados')
 def results_page():
-    return render_template('resultados.html')
+    return serve_react_app()
 
 @app.route('/category-selection')
 def category_selection_page():
-    return render_template('category_selection.html')
+    return serve_react_app()
+
+@app.route('/examenes')
+def examenes_page():
+    return serve_react_app()
+
+@app.route('/manual')
+def manual_page():
+    return serve_react_app()
 
 @app.route('/login', methods=['POST'])
 def login():

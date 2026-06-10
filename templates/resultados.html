@@ -4,99 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>DrivePrep | Resultados</title>
-
-    <!-- Reutiliza tus estilos del examen -->
-    <link
-        rel="stylesheet"
-        href="{{ url_for('static', filename='css/exam.css') }}"
-    />
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/exam.css') }}" />
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
 </head>
 <body>
 
-    <!-- HEADER -->
-    <header class="exam-header">
-        <button
-            class="menu-btn"
-            onclick="window.location.href='/index.html'"
-        >
-            🏠 Menú
-        </button>
+    <div id="root"></div>
 
-        <div class="exam-title">
-            <h1>Resultados</h1>
-        </div>
-
-        <div class="header-right">
-            <div class="question-counter">
-                🎯 Resultado final
-            </div>
-        </div>
-    </header>
-
-    <!-- MAIN CONTENT -->
-    <main class="exam-container">
-
-        <section class="question-card">
-            <h2 id="estado">Cargando resultados...</h2>
-
-            <p style="font-size: 1.2rem; margin-top: 1rem;">
-                <strong>Respuestas correctas:</strong>
-                <span id="correctas">0/0</span>
-            </p>
-
-            <p style="font-size: 1.2rem; margin-top: 0.5rem;">
-                <strong>Porcentaje:</strong>
-                <span id="porcentaje">0.0</span>%
-            </p>
-        </section>
-        <p></p>
-
-        <!-- BOTONES -->
-        <section class="navigation-buttons">
-            <button
-                class="secondary-btn"
-                onclick="window.location.href='/examenes.html'"
-            >
-                Volver a exámenes
-            </button>
-
-            <button
-                class="primary-btn"
-                onclick="window.location.href='/examen.html'"
-            >
-                Repetir examen
-            </button>
-        </section>
-
-    </main>
-
-    <script>
-        const resultado = JSON.parse(
-            localStorage.getItem("ultimoResultado")
-        );
-
-        const correctasEl = document.getElementById("correctas");
-        const porcentajeEl = document.getElementById("porcentaje");
-        const estadoEl = document.getElementById("estado");
-
-        if (resultado) {
-            correctasEl.textContent =
-                `${resultado.correctas}/${resultado.total}`;
-
-            porcentajeEl.textContent =
-                Number(resultado.porcentaje).toFixed(1);
-
-            estadoEl.textContent = resultado.aprobado
-                ? "🎉 ¡Aprobaste el examen!"
-                : "❌ No aprobaste el examen";
-        } else {
-            estadoEl.textContent =
-                "No se encontraron resultados.";
-
-            correctasEl.textContent = "0/0";
-            porcentajeEl.textContent = "0.0";
-        }
-    </script>
+    <script src="/static/js/react-app.js"></script>
 
 </body>
 </html>

@@ -1,4 +1,4 @@
-from fastapi import FastAPI
+from fastapi import FastAPI,Body, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 import psycopg2
 import os

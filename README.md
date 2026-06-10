@@ -28,10 +28,31 @@ El proyecto también busca aplicar conocimientos de desarrollo web full stack, i
 - HTML5
 - CSS3
 - JavaScript
+- React
+- Vite
 - Herramientas de desarrollo
 - Git
 - GitHub
 - Visual Studio Code
+
+🚗 Frontend React
+La interfaz principal también está disponible como una app React en la carpeta `react-frontend/`.
+
+Cómo funciona:
+- `index.html` es solo el contenedor inicial; React monta la UI dentro de `#root`.
+- Cada pantalla se maneja como una ruta de React, no como un HTML separado.
+- Los componentes consumen las mismas rutas del backend (`/login`, `/register`, `/api/examen/questions`, `/guardar_resultado`, `/estadisticas/:id_usuario`, `/api/connie`).
+- En desarrollo, Vite proxy las llamadas al backend local para evitar problemas de CORS.
+
+Para ejecutarlo:
+1. Abrir una terminal en `react-frontend/`
+2. Instalar dependencias con `npm install`
+3. Iniciar el frontend con `npm run dev`
+4. Mantener el backend corriendo en `http://127.0.0.1:5000`
+
+En producción, Vite genera archivos estáticos con `npm run build` y el resultado queda en `react-frontend/dist/`.
+
+Para servirlo desde el backend, Flask intenta cargar `react-frontend/dist/index.html` primero y usa el HTML legacy solo si todavía no hiciste el build.
 
 🚗 Estructura general del proyecto
 DrivePrep/

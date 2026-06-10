@@ -37,7 +37,7 @@ body {
 .logo-text {
     font-weight: bold;
     font-size: 18px;
-    color: white;
+    color: #5a4d5d;
 }
 
 /* NAV DERECHA */
@@ -49,7 +49,7 @@ body {
 
 /* BOTONES NAV */
 .nav-btn {
-    background: rgba(255,255,255,0.2);
+    background: #f79d65;
     border: none;
     padding: 8px 14px;
     border-radius: 999px;
@@ -59,7 +59,7 @@ body {
 }
 
 .nav-btn:hover {
-    background: rgba(255,255,255,0.35);
+    background: #e98d56;
 }
 
 /* USUARIO */
