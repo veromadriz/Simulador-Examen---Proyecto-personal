@@ -1,0 +1,13 @@
+# Entorno / secretos
+.env
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# Node / build
+react-frontend/node_modules/
+react-frontend/dist/
+npm-debug.log*
