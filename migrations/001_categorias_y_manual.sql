@@ -31,6 +31,14 @@ CREATE TABLE IF NOT EXISTS manual_secciones (
 
 CREATE INDEX IF NOT EXISTS idx_manual_secciones_capitulo ON manual_secciones (capitulo_id);
 
+-- 2.1) Cada pregunta pertenece opcionalmente a un capítulo del manual.
+--      Los exámenes "Por capítulo" usan esta relación, no la categoría de
+--      texto libre, para garantizar que no se mezclen temas.
+ALTER TABLE preguntas
+    ADD COLUMN IF NOT EXISTS capitulo_id INTEGER REFERENCES manual_capitulos(id);
+
+CREATE INDEX IF NOT EXISTS idx_preguntas_capitulo_id ON preguntas (capitulo_id);
+
 -- 3) Datos de ejemplo para poder probar el Manual de inmediato.
 --    Bórralos o cámbialos por el contenido real cuando quieras.
 INSERT INTO manual_capitulos (numero, titulo, descripcion, icono)
@@ -63,8 +71,11 @@ FROM manual_capitulos c
 WHERE c.numero = 3
   AND NOT EXISTS (SELECT 1 FROM manual_secciones s WHERE s.capitulo_id = c.id AND s.orden = 1);
 
--- 4) Sugerencia: si tus preguntas actuales no tienen categoría asignada,
---    puedes mapearlas rápido a estos tres capítulos con algo como:
--- UPDATE preguntas SET categoria = 'signals' WHERE enunciado ILIKE '%señal%';
--- UPDATE preguntas SET categoria = 'rules'   WHERE enunciado ILIKE '%prioridad%' OR enunciado ILIKE '%velocidad%';
--- UPDATE preguntas SET categoria = 'safety'  WHERE enunciado ILIKE '%cinturón%' OR enunciado ILIKE '%distancia%';
+-- 4) Asigná tus preguntas existentes al capítulo correcto. Adaptá estas
+--    sugerencias a tu banco de preguntas antes de ejecutar los UPDATE:
+-- UPDATE preguntas SET capitulo_id = (SELECT id FROM manual_capitulos WHERE numero = 1)
+-- WHERE enunciado ILIKE '%señal%';
+-- UPDATE preguntas SET capitulo_id = (SELECT id FROM manual_capitulos WHERE numero = 2)
+-- WHERE enunciado ILIKE '%prioridad%' OR enunciado ILIKE '%velocidad%';
+-- UPDATE preguntas SET capitulo_id = (SELECT id FROM manual_capitulos WHERE numero = 3)
+-- WHERE enunciado ILIKE '%cinturón%' OR enunciado ILIKE '%distancia%';

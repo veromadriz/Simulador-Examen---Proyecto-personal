@@ -15,6 +15,32 @@ REACT_DIST_DIR = ROOT_DIR / "react-frontend" / "dist"
 PASSING_SCORE = 80  # porcentaje mínimo para aprobar un examen
 
 
+def option_is_correct(value):
+    """Normalize boolean values that can come from an older database."""
+    if isinstance(value, bool):
+        return value
+    if isinstance(value, (int, float)):
+        return value == 1
+    return str(value).strip().lower() in {"true", "t", "1", "si", "sí", "yes", "y"}
+
+
+def build_review_topics(revisiones):
+    """Groups incorrect answers into a concise, chapter-based study plan."""
+    topics = {}
+    for revision in revisiones:
+        if revision["es_correcta"]:
+            continue
+        chapter_number = revision.get("capitulo_numero")
+        chapter_title = revision.get("capitulo_titulo")
+        key = chapter_number or "general"
+        if key not in topics:
+            label = f"Capítulo {chapter_number}: {chapter_title}" if chapter_number else "Tema general"
+            topics[key] = {"tema": label, "errores": 0, "preguntas": []}
+        topics[key]["errores"] += 1
+        topics[key]["preguntas"].append(revision["enunciado"])
+    return sorted(topics.values(), key=lambda topic: (-topic["errores"], topic["tema"]))
+
+
 def serve_react_app():
     index_file = REACT_DIST_DIR / "index.html"
     if index_file.exists():
@@ -31,6 +57,34 @@ def serve_react_app():
 
 app = Flask(__name__, static_folder=str(STATIC_DIR))
 app.register_blueprint(manual_bp, url_prefix="/api")
+
+
+def ensure_result_tracking_tables():
+    """Creates the auxiliary tables used to aggregate per-topic readiness."""
+    with get_cursor(commit=True) as cur:
+        cur.execute(
+            """
+            CREATE TABLE IF NOT EXISTS intento_capitulo (
+                id SERIAL PRIMARY KEY,
+                id_usuario INTEGER NOT NULL REFERENCES usuarios(id_usuario) ON DELETE CASCADE,
+                id_intento INTEGER NOT NULL REFERENCES intentos_examen(id_intento) ON DELETE CASCADE,
+                capitulo_id INTEGER REFERENCES manual_capitulos(id) ON DELETE SET NULL,
+                puntaje NUMERIC(5,2) NOT NULL DEFAULT 0,
+                correctas INTEGER NOT NULL DEFAULT 0,
+                total INTEGER NOT NULL DEFAULT 0,
+                created_at TIMESTAMPTZ NOT NULL DEFAULT NOW()
+            );
+            """
+        )
+        cur.execute(
+            """
+            CREATE INDEX IF NOT EXISTS idx_intento_capitulo_usuario
+            ON intento_capitulo (id_usuario, capitulo_id);
+            """
+        )
+
+
+ensure_result_tracking_tables()
 
 # CORS opcional si está instalado flask_cors
 try:
@@ -69,41 +123,54 @@ def health():
 
 # ─── Exámenes ────────────────────────────────────────────────────────────
 
-@app.route("/api/examen/categorias")
-def get_categorias():
-    """Categorías con preguntas disponibles, para 'Practicar por categoría'."""
+@app.route("/api/examen/capitulos")
+def get_capitulos_examen():
+    """Capítulos del manual disponibles para practicar de forma exclusiva."""
     with get_cursor() as cur:
         cur.execute(
             """
-            SELECT categoria, COUNT(*) AS total
-            FROM preguntas
-            WHERE categoria IS NOT NULL AND categoria <> ''
-            GROUP BY categoria
-            ORDER BY categoria
+            SELECT c.id, c.numero, c.titulo, c.descripcion, c.icono,
+                   COUNT(p.id_pregunta) AS total_preguntas
+            FROM manual_capitulos c
+            LEFT JOIN preguntas p ON p.capitulo_id = c.id
+            GROUP BY c.id
+            ORDER BY c.numero
             """
         )
         rows = cur.fetchall()
 
-    return jsonify([{"categoria": categoria, "total_preguntas": total} for categoria, total in rows])
+    return jsonify([
+        {
+            "id": chapter_id,
+            "numero": numero,
+            "titulo": titulo,
+            "descripcion": descripcion,
+            "icono": icono,
+            "total_preguntas": total,
+        }
+        for chapter_id, numero, titulo, descripcion, icono, total in rows
+    ])
 
 
 @app.route("/api/examen/questions")
 def get_questions():
     exam_type = request.args.get("type", "random")
-    categoria = request.args.get("categoria")
+    capitulo_id = request.args.get("capitulo_id")
 
     with get_cursor() as cur:
-        if exam_type == "category" and categoria:
+        if exam_type == "chapter" and capitulo_id:
             cur.execute(
                 """
                 SELECT id_pregunta, enunciado
                 FROM preguntas
-                WHERE categoria = %s
+                WHERE capitulo_id = %s
                 ORDER BY RANDOM()
                 LIMIT 10
                 """,
-                (categoria,),
+                (capitulo_id,),
             )
+        elif exam_type == "chapter":
+            preguntas_rows = []
         else:
             cur.execute(
                 """
@@ -114,7 +181,8 @@ def get_questions():
                 """
             )
 
-        preguntas_rows = cur.fetchall()
+        if exam_type != "chapter" or capitulo_id:
+            preguntas_rows = cur.fetchall()
 
         questions = []
         for id_pregunta, enunciado in preguntas_rows:
@@ -153,44 +221,98 @@ def guardar_resultado():
     id_usuario = data.get("id_usuario")
     id_examen = data.get("id_examen")
     tipo_generado = data.get("tipo_generado", "normal")
+    es_diagnostico = tipo_generado == "diagnostic"
 
-    total = len(respuestas)
+    # Each question counts once, even when it was left unanswered. Keeping the
+    # answers in a dictionary also prevents a duplicated payload from changing
+    # the score.
+    respuestas_por_pregunta = {}
+    for respuesta in respuestas:
+        if isinstance(respuesta, dict) and respuesta.get("id_pregunta") is not None:
+            respuestas_por_pregunta[respuesta["id_pregunta"]] = respuesta.get("id_opcion")
+
+    total = len(respuestas_por_pregunta)
     correctas = 0
+    respuestas_calificadas = []
+    revisiones = []
+    resumen_por_capitulo = {}
 
     with get_cursor() as cur:
-        for respuesta in respuestas:
-            id_pregunta = respuesta.get("id_pregunta")
-            id_opcion = respuesta.get("id_opcion")
-
-            if id_pregunta is None or id_opcion is None:
-                continue
-
+        for id_pregunta, id_opcion in respuestas_por_pregunta.items():
             cur.execute(
                 """
-                SELECT es_correcta
-                FROM opciones
-                WHERE id_pregunta = %s AND id_opcion = %s
+                SELECT p.enunciado, p.capitulo_id, c.numero, c.titulo,
+                       o.id_opcion, o.texto, o.es_correcta
+                FROM preguntas p
+                JOIN opciones o ON o.id_pregunta = p.id_pregunta
+                LEFT JOIN manual_capitulos c ON c.id = p.capitulo_id
+                WHERE p.id_pregunta = %s
+                ORDER BY o.id_opcion
                 """,
-                (id_pregunta, id_opcion),
+                (id_pregunta,),
             )
-            row = cur.fetchone()
-            if row and row[0]:
+            opciones = cur.fetchall()
+            enunciado = opciones[0][0] if opciones else "Pregunta no disponible"
+            capitulo_id = opciones[0][1] if opciones else None
+            capitulo_numero = opciones[0][2] if opciones else None
+            capitulo_titulo = opciones[0][3] if opciones else None
+            opcion_usuario = next((option for option in opciones if option[4] == id_opcion), None)
+            opcion_correcta = next((option for option in opciones if option_is_correct(option[6])), None)
+            es_correcta = bool(opcion_usuario and opcion_correcta and opcion_usuario[4] == opcion_correcta[4])
+
+            if es_correcta:
                 correctas += 1
+
+            if capitulo_id is not None:
+                entry = resumen_por_capitulo.setdefault(capitulo_id, {"correctas": 0, "total": 0})
+                entry["total"] += 1
+                if es_correcta:
+                    entry["correctas"] += 1
+
+            respuestas_calificadas.append({
+                "id_pregunta": id_pregunta,
+                "id_opcion": id_opcion,
+                "es_correcta": es_correcta,
+            })
+            revisiones.append({
+                "id_pregunta": id_pregunta,
+                "enunciado": enunciado,
+                "respuesta_usuario": opcion_usuario[5] if opcion_usuario else "Sin respuesta",
+                "respuesta_correcta": opcion_correcta[5] if opcion_correcta else "No configurada",
+                "es_correcta": es_correcta,
+                "capitulo_numero": capitulo_numero,
+                "capitulo_titulo": capitulo_titulo,
+            })
 
     puntaje = round((correctas / total) * 100, 1) if total else 0
     aprobado = puntaje >= PASSING_SCORE
 
-    with get_cursor(commit=True) as cur:
-        cur.execute(
-            """
-            INSERT INTO intentos_examen
-            (id_usuario, id_examen, tipo_generado, puntaje, aprobado)
-            VALUES (%s, %s, %s, %s, %s)
-            RETURNING id_intento
-            """,
-            (id_usuario, id_examen, tipo_generado, puntaje, aprobado),
-        )
-        id_intento = cur.fetchone()[0]
+    id_intento = None
+    if not es_diagnostico:
+        with get_cursor(commit=True) as cur:
+            cur.execute(
+                """
+                INSERT INTO intentos_examen
+                (id_usuario, id_examen, tipo_generado, puntaje, aprobado)
+                VALUES (%s, %s, %s, %s, %s)
+                RETURNING id_intento
+                """,
+                (id_usuario, id_examen, tipo_generado, puntaje, aprobado),
+            )
+            id_intento = cur.fetchone()[0]
+
+            for capitulo_id, resumen in resumen_por_capitulo.items():
+                capitulo_total = resumen["total"]
+                capitulo_correctas = resumen["correctas"]
+                capitulo_puntaje = round((capitulo_correctas / capitulo_total) * 100, 1) if capitulo_total else 0
+                cur.execute(
+                    """
+                    INSERT INTO intento_capitulo
+                    (id_usuario, id_intento, capitulo_id, puntaje, correctas, total)
+                    VALUES (%s, %s, %s, %s, %s, %s)
+                    """,
+                    (id_usuario, id_intento, capitulo_id, capitulo_puntaje, capitulo_correctas, capitulo_total),
+                )
 
     return jsonify({
         "success": True,
@@ -199,6 +321,10 @@ def guardar_resultado():
         "total": total,
         "puntaje": puntaje,
         "aprobado": aprobado,
+        "modo_diagnostico": es_diagnostico,
+        "respuestas_calificadas": respuestas_calificadas,
+        "revisiones": revisiones,
+        "temas_a_repasar": build_review_topics(revisiones),
     })
 
 
@@ -218,10 +344,32 @@ def obtener_estadisticas(id_usuario):
         )
         total_examenes, mejor_nota, promedio = cur.fetchone()
 
+        cur.execute(
+            """
+            SELECT mc.id, mc.numero, mc.titulo,
+                   COALESCE(ROUND(AVG(ic.puntaje), 1), 0)
+            FROM manual_capitulos mc
+            LEFT JOIN intento_capitulo ic ON ic.capitulo_id = mc.id AND ic.id_usuario = %s
+            GROUP BY mc.id, mc.numero, mc.titulo
+            ORDER BY mc.numero
+            """,
+            (id_usuario,),
+        )
+        temas = [
+            {
+                "id": capitulo_id,
+                "numero": numero,
+                "titulo": titulo,
+                "puntaje": round(float(puntaje), 1) if puntaje is not None else 0,
+            }
+            for capitulo_id, numero, titulo, puntaje in cur.fetchall()
+        ]
+
     return jsonify({
         "total_examenes": total_examenes,
         "mejor_nota": round(float(mejor_nota), 1),
         "promedio": round(float(promedio), 1),
+        "topicos": temas,
     })
 
 

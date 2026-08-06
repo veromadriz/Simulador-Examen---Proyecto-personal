@@ -8,6 +8,7 @@ export default defineConfig({
     port: 5173,
     proxy: {
       '/api': 'http://127.0.0.1:5000',
+      '/static': 'http://127.0.0.1:5000',
       '/login': 'http://127.0.0.1:5000',
       '/register': 'http://127.0.0.1:5000',
       '/guardar_resultado': 'http://127.0.0.1:5000',

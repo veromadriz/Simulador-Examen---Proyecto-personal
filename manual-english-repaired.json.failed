@@ -1,0 +1,494 @@
+[
+    {
+        "chapter": "# 1",
+        "title": "GENERAL ASPECTS OF TRAFFIC AND ROAD SAFETY",
+        "antecedentes": [
+            "The first vehicle to travel through San José did so in 1912.",
+            "The first Traffic Code was officially published in 1920.",
+            "The Road Administration Act (Law No. 5930) was enacted on October 27, 1976.",
+            "The first Traffic Law (Law No. 6324) was enacted on May 25, 1979.",
+            "The second and current Traffic Law for Public Roads (Law No. 7331) was enacted on April 22, 1993."
+        ],
+        "trilogia_vial": {
+            "subtitle": "(Three Elements of Driving)",
+            "elements": [
+                "Human factor: the driver",
+                "Vehicle factor: the vehicle",
+                "Environmental factor: the roadway"
+            ],
+            "note": "These three elements interact dynamically with one another during the driving process."
+        },
+        "concepto_de_transito": "The act of moving or traveling from one place to another.",
+        "concepto_de_transporte": "The act of transporting a person or object from one place to another.",
+        "concepto_de_seguridad_vial": "The discipline that studies and applies measures and mechanisms to ensure safe road use by preventing traffic accidents.",
+        "seguridad_vial_objective": "Road safety aims to prevent accidents and eliminate their causes, although it cannot eliminate them completely.",
+        "entendida_asi": "Road safety seeks to eliminate the causes that lead to traffic accidents.",
+        "en_sintesis_objetivo_primordial_seguridad_vial": "PREVENT TRAFFIC ACCIDENTS.",
+        "objetivos_de_la_seguridad_vial": [
+            "Reduce harm to people using public roads.",
+            "Improve traffic flow.",
+            "Prevent traffic accidents.",
+            "Avoid traffic congestion.",
+            "Reduce environmental pollution caused by motor vehicles.",
+            "Protect and preserve road infrastructure (roads and sidewalks).",
+            "Keep vehicles in optimal operating condition.",
+            "Reduce energy consumption and vehicle operating costs (fuel).",
+            "Educate citizens on the proper use of public roads."
+        ]
+    },
+    {
+        "chapter": "# 2",
+        "title": "TRAFFIC LEGISLATION",
+        "derecho_de_circulacion": {
+            "description": "The right to freedom of movement, derived from the fundamental right to personal liberty.",
+            "constitutional_article": "Article 22 of the Political Constitution of Costa Rica states: 'Every Costa Rican may travel and remain anywhere within the Republic or leave it...'"
+        },
+        "ley_de_transito": {
+            "description": "The Traffic Law establishes a series of prohibitions whose violation may result in penalties ranging from fines to driver's license suspension or vehicle impoundment.",
+            "sanciones": "Disregarding traffic signs, driving without a valid license or learner's permit, or driving under the influence of alcohol or drugs may result in one or more penalties. A person who commits these offenses is referred to as an OFFENDER.",
+            "economic_fines": "Economic penalties range from fixed fines to variable fines calculated based on the monthly base salary.",
+            "other_penalties": "Other penalties include vehicle immobilization, license plate removal, driver's license suspension, driving disqualification, and criminal prosecution for driving under the influence with more than 0.75 grams of alcohol per liter of blood or driving at speeds exceeding 150 km/h."
+        },"ley_de_transito_vigente": {
+    "article_9078_title": "Articles of Traffic Law No. 9078",
+    "effective_date": "Effective as of October 26, 2012",
+
+    "articulo_32_requisitos_generales_vehiculos_automotores": {
+        "title": "ARTICLE 32 - General Requirements for Motor Vehicles",
+        "intro": "To operate on public roads, motor vehicles must meet the following general requirements, as applicable according to their design:",
+        "requirements": [
+            "Have a front windshield and a rear windshield whenever the vehicle's design allows it. Sun visors may be used as long as they do not obstruct the area covered by the windshield wipers.",
+            "Be equipped with a horn that complies with the legally established noise limits.",
+            "Have a speedometer displaying speed in kilometers per hour. Other units may also be displayed. The speedometer must be visible to the driver.",
+            "Have the steering wheel located on the left side or in the center, according to the vehicle's original design. Steering wheel conversions are not permitted.",
+            "Be equipped with at least three-point seat belts for all outer seating positions whenever the vehicle's design allows it.",
+            "Have rearview mirrors or equivalent devices that allow the driver to observe the vehicle and the roadway.",
+            "Be equipped with fully functional headlights, brake lights, reverse lights, parking lights, turn signals, hazard lights, and license plate illumination.",
+            "Heavy-duty, emergency, public, or special-purpose vehicles may use special lighting when authorized by the Ministry of Public Works and Transport (MOPT).",
+            "Have front and rear bumpers that comply with the vehicle's original design and technical specifications.",
+            "Be equipped with a muffler that meets legal noise regulations.",
+            "Have braking systems capable of stopping the vehicle safely and efficiently, including a parking brake.",
+            "Be equipped with a properly functioning emissions control system.",
+            "Have windshield wipers that provide full visibility over the area they cover."
+        ]
+    },
+
+    "articulo_33_requisitos_especificos_automoviles": {
+        "title": "ARTICLE 33 - Specific Requirements for Passenger Vehicles",
+        "intro": "In addition to the requirements established in Article 32, passenger vehicles must comply with the following:",
+        "requirements": [
+            "Be equipped with headrests whenever they do not obstruct the driver's visibility.",
+            "Have front and rear windshield defrosters.",
+            "Have tires with tread depth above the wear indicator.",
+            "Be equipped with at least front airbags for the protection of front-seat occupants, unless exempt due to their original design or intended public service."
+        ]
+    },
+
+    "articulo_36_requisitos_de_seguridad_en_carretera": {
+        "title": "ARTICLE 36 - Highway Safety Equipment",
+        "intro": "When traveling on highways, every vehicle must carry the following safety equipment in proper working condition:",
+        "requirements": [
+            "A fire extinguisher, at least two warning triangles (or equivalent devices), and a reflective safety vest.",
+            "A spare tire and the necessary tools to replace it.",
+            "Reflective tape on motorcycles, mopeds, and UTVs equipped with cargo boxes."
+        ]
+    },
+
+    "articulo_83_permiso_temporal_de_aprendizaje": {
+        "title": "ARTICLE 83 - Temporary Learner's Permit",
+        "intro": "To obtain a temporary learner's permit, valid for three months from the date of issuance, applicants must meet the following requirements:",
+        "requirements": [
+            "Be able to read and write.",
+            "Persons with disabilities must be provided with the necessary accommodations and support services.",
+            "Pass the Basic Road Safety Education Course.",
+            "Be at least 18 years old, except as provided for Class A-1 licenses.",
+            "Submit a valid medical certificate issued by an authorized physician.",
+            "Obtain civil liability insurance as required by law.",
+            "Have committed none of the offenses specified in Article 143 during the previous twelve months.",
+            "Meet the minimum requirements for the requested license class and always drive under the supervision of a qualified instructor or licensed driver."
+        ]
+    },
+
+    "articulo_84_requisitos_licencia_conducir": {
+        "title": "ARTICLE 84 - Requirements for a Driver's License",
+        "intro": "To obtain a driver's license for the first time, applicants must:",
+        "requirements": [
+            "Meet the minimum age requirement.",
+            "Be able to read and write.",
+            "Present a valid medical certificate.",
+            "Pass the Basic Road Safety Education Course.",
+            "Pass the practical driving test for the requested license class.",
+            "Have committed none of the offenses established by law during the previous twelve months."
+        ]
+    }
+},"articulo_85_disposiciones_licencias_clase_a": {
+    "title": "ARTICLE 85 - Class A Driver's Licenses",
+    "intro": "Class A driver's licenses are divided into the following categories:",
+    "modalities": [
+        {
+            "type": "A-1",
+            "description": "Authorizes the operation of mopeds and motorcycles with an engine displacement of up to 125 cc. For electric or hybrid vehicles, the maximum power output may not exceed 11 kW. It also authorizes the operation of tricycles and quadricycles with engines up to 250 cc. Individuals 16 years of age or older may apply with written authorization from a parent, guardian, or legal representative and must obtain liability insurance."
+        },
+        {
+            "type": "A-2",
+            "description": "Authorizes the operation of mopeds and motorcycles with engines up to 500 cc or electric/hybrid motorcycles with a maximum output of 35 kW."
+        },
+        {
+            "type": "A-3",
+            "description": "Authorizes the operation of motorcycles, mopeds, electric, hybrid, and combustion-engine motorcycles without engine displacement or power limitations. Holders may operate all vehicles authorized under Class A."
+        }
+    ]
+}, "articulo_86_disposiciones_licencias_clase_b": {
+    "title": "ARTICLE 86 - Class B Driver's Licenses",
+    "intro": "Class B driver's licenses include the following categories:",
+    "modalities": [
+        {
+            "type": "B-1",
+            "description": "Authorizes the operation of vehicles with a gross vehicle weight of up to 4,000 kg, including light trailers, provided the combined weight does not exceed 4,000 kg. It also authorizes the operation of UTVs and certain motorcycles on non-primary roads."
+        },
+        {
+            "type": "B-2",
+            "description": "Authorizes the operation of vehicles weighing up to 8,000 kg. Applicants must be at least 20 years old and have held a Class B or C license for at least two years."
+        },
+        {
+            "type": "B-3",
+            "description": "Authorizes the operation of vehicles of any weight except articulated heavy vehicles. Applicants must be at least 22 years old and have held a Class B or C license for at least three years."
+        },
+        {
+            "type": "B-4",
+            "description": "Authorizes the operation of articulated heavy vehicles of any weight. Applicants must meet the legal age and experience requirements and successfully complete the required specialized training."
+        }
+    ]
+}, "articulo_87_disposiciones_licencias_clase_c": {
+    "title": "ARTICLE 87 - Class C Driver's Licenses",
+    "intro": "Class C driver's licenses include the following categories:",
+    "modalities": [
+        {
+            "type": "C-1",
+            "description": "Authorizes the operation of taxi vehicles. Applicants must have held a Class B or C-2 license for at least three years and complete the required public transportation training."
+        },
+        {
+            "type": "C-2",
+            "description": "Authorizes the operation of buses, minibuses, and other public passenger transportation vehicles. Applicants must meet the legal experience requirements and complete the corresponding public transportation course."
+        }
+    ]
+}, "articulo_88_disposiciones_licencias_clase_d": {
+    "title": "ARTICLE 88 - Class D Driver's Licenses",
+    "intro": "Class D driver's licenses include the following categories:",
+    "modalities": [
+        {
+            "type": "D-1",
+            "description": "Authorizes the operation of wheeled tractors."
+        },
+        {
+            "type": "D-2",
+            "description": "Authorizes the operation of tracked tractors."
+        },
+        {
+            "type": "D-3",
+            "description": "Authorizes the operation of other types of specialized heavy equipment."
+        }
+    ]
+}, "articulo_89_disposiciones_licencias_clase_e": {
+    "title": "ARTICLE 89 - Class E Driver's Licenses",
+    "intro": "Class E driver's licenses include the following categories:",
+    "modalities": [
+        {
+            "type": "E-1",
+            "description": "Authorizes the operation of heavy multi-axle vehicles, excluding public transportation vehicles."
+        },
+        {
+            "type": "E-2",
+            "description": "Authorizes the operation of tractors and all types of heavy equipment, excluding machinery intended for public transportation."
+        }
+    ]
+}, "articulo_90_conductor_profesional": {
+    "title": "ARTICLE 90 - Professional Drivers",
+    "description": "Any employer whose employees' primary duty is operating vehicles for transporting goods or passengers must employ licensed professional drivers."
+}, "articulo_93_reglas_generales": {
+    "title": "ARTICLE 93 - General Rules",
+    "intro": "When using public roads, drivers, passengers, and pedestrians must:",
+    "rules": [
+        "Immediately obey verbal or written instructions from traffic authorities.",
+        "Comply with all official traffic control devices.",
+        "Observe and obey all traffic signs and pavement markings.",
+        "Drive in a manner that does not obstruct traffic or endanger others.",
+        "Apply defensive driving techniques and always show consideration for pedestrians and other road users.",
+        "Yield the right-of-way to emergency vehicles responding to emergencies with activated lights and sirens."
+    ]
+}, "articulo_94_cinturones_y_otros_dispositivos_de_seguridad": {
+    "title": "ARTICLE 94 - Seat Belts and Other Safety Devices",
+    "intro": "Drivers are responsible for their own safety and that of their passengers. They must ensure that every occupant properly uses seat belts and all legally required safety devices.",
+    "child_safety": "Children under 12 years of age who are shorter than 1.45 meters must travel in the rear seat using an approved child restraint system unless otherwise permitted by law.",
+    "exemptions": "Certain public transportation vehicles and other legally exempt vehicles are not required to comply with these child restraint provisions."
+},"articulo_98_limites_de_velocidad": {
+    "title": "ARTICLE 98 - Speed Limits",
+    "intro": "Speed limits on public roads are established by the General Directorate of Traffic Engineering and are based on technical studies according to the type and conditions of the roadway. In the absence of posted signs, the following limits apply:",
+    "limits": [
+        "On highways, the minimum speed is 50 km/h.",
+        "Where no speed limit is posted, the maximum speed is 60 km/h. In densely populated urban areas, the maximum speed is 50 km/h.",
+        "Around schools, healthcare facilities, and locations where large groups of pedestrians are present, the speed limit is 25 km/h. Emergency vehicles responding to emergencies are exempt when operating with activated emergency lights and sirens."
+    ]
+}, "articulo_103_uso_de_luces": {
+    "title": "ARTICLE 103 - Use of Lights",
+    "intro": "The following rules apply to vehicle lighting:",
+    "rules": [
+        "From 6:00 p.m. to 6:00 a.m., all vehicles must operate with their required lights turned on. The same applies whenever visibility is reduced.",
+        "High beams may only be used when there is no oncoming traffic.",
+        "Low beams must be used when approaching oncoming traffic or following another vehicle.",
+        "Fog lights may only be used under fog or other low-visibility conditions.",
+        "Lighting systems may not exceed the legally established brightness or projection limits.",
+        "Motorcycles, mopeds, and UTVs must keep their headlights on at all times, day and night."
+    ]
+}, "articulo_104_interseccion_de_vias": {
+    "title": "ARTICLE 104 - Intersections",
+    "intro": "When approaching an intersection where the driver does not have the right-of-way, the following rules apply:",
+    "rules": [
+        "Stop completely at the stop line when facing a red traffic signal.",
+        "A right turn on red is permitted only when traffic conditions allow and no sign prohibits it.",
+        "Between 10:00 p.m. and 5:00 a.m., drivers may proceed through certain red lights as though approaching a stop sign, unless otherwise prohibited.",
+        "Drivers with a green light or making a right turn on red must always yield to pedestrians and cyclists.",
+        "A yellow light indicates that drivers should slow down and stop if it is safe to do so.",
+        "At STOP signs, drivers must come to a complete stop and yield the right-of-way before proceeding.",
+        "At YIELD signs, drivers must reduce speed and stop if necessary before entering the intersection.",
+        "Emergency vehicles responding to emergencies may proceed through red lights or stop signs after ensuring the intersection is clear."
+    ]
+}, "articulo_110_estacionamiento": {
+    "title": "ARTICLE 110 - Parking",
+    "intro": "Every parked vehicle must have the parking brake engaged. Parking is prohibited under the following conditions:",
+    "prohibitions": [
+        "In front of schools, hospitals, fire stations, Red Cross facilities, garages, or parking lot entrances and exits.",
+        "On sidewalks or in locations that obstruct traffic or reduce visibility.",
+        "Where signs or yellow markings prohibit parking.",
+        "Within 5 meters of a fire hydrant or pedestrian crossing.",
+        "Within 10 meters of an urban intersection or 25 meters of a rural intersection.",
+        "On the crest of a hill or on a curve.",
+        "On the roadway except in emergencies, in which case hazard lights and warning devices must be used.",
+        "On bicycle lanes or bicycle paths.",
+        "In parking spaces reserved for persons with disabilities without proper authorization."
+    ]
+}, "articulo_117_obligaciones_conductores_y_pasajeros": {
+    "title": "ARTICLE 117 - Obligations of Motorcycle Drivers and Passengers",
+    "intro": "Drivers and passengers must comply with the following:",
+    "obligations": [
+        "Wear an approved safety helmet.",
+        "Do not carry objects that interfere with safe vehicle operation.",
+        "Do not hold onto another moving vehicle.",
+        "Wear reflective clothing when riding or when stopped on the roadside.",
+        "Children under five years of age may not be transported as passengers."
+    ]
+}, "articulo_119_obligaciones_de_los_ciclistas": {
+    "title": "ARTICLE 119 - Cyclists",
+    "intro": "Cyclists must:",
+    "obligations": [
+        "Ride carefully and responsibly.",
+        "Ensure that the bicycle is in safe operating condition.",
+        "Carry identification.",
+        "Ride on the right side of the lane.",
+        "Overtake only on the left.",
+        "Avoid roads where the speed limit is 80 km/h or higher unless specifically authorized.",
+        "Ride in single file when traveling in groups.",
+        "Carry only one passenger if the bicycle is designed for that purpose.",
+        "Do not ride on sidewalks.",
+        "Do not hold onto moving vehicles.",
+        "Children under six years old must be accompanied by someone at least fifteen years old.",
+        "Learning to ride on public roads is prohibited.",
+        "Wear reflective clothing.",
+        "Use designated bicycle lanes whenever available."
+    ]
+}, "articulo_120_peatones": {
+    "title": "ARTICLE 120 - Pedestrians",
+    "intro": "Pedestrians must carry identification, obey traffic laws, and follow instructions given by traffic authorities.",
+    "obligations": [
+        "Use sidewalks whenever available.",
+        "Cross streets only at intersections or marked crosswalks.",
+        "Walk facing traffic when sidewalks are unavailable.",
+        "Do not walk on restricted-access highways or railroad tracks.",
+        "Do not obstruct vehicle or pedestrian traffic."
+    ]
+}, "nota_importante": {
+    "title": "IMPORTANT NOTE",
+    "text": "You are not expected to memorize every article of the law for your written exam. However, understanding these articles is essential both for becoming a responsible driver and for passing the practical driving test.",
+    "source_note": "The legal articles above have not been summarized because modifying the wording of legal provisions is not permitted. They were taken directly from the Driver's Manual and the Traffic Law."
+}, "sanciones": {
+    "title": "PENALTIES",
+    "intro": "Violating the current Traffic Law will result in the corresponding legal penalties.",
+    "infractor_definition": "An offender is any person who violates one or more provisions of the Traffic Law."
+}, "rebajo_de_puntos": {
+    "title": "POINT DEDUCTION SYSTEM",
+    "description": "One of the most significant innovations of the Traffic Law is the point-based performance system. Every new driver starts with 50 points, which are deducted whenever a traffic offense is committed.",
+    "recovery_and_bonus": "Drivers may recover lost points through the legally established procedures and may receive bonus points when renewing their license if they have maintained a clean driving record."
+}, "tabla_de_sanciones_y_perdida_puntos": {
+    "title": "PENALTY AND POINT DEDUCTION TABLE",
+    "note": "The official penalty tables and corresponding point deductions are included in the 2015 COSEVI Driver's Manual."
+},{
+    "chapter": "# 3",
+    "title": "THE ROADWAY AND ITS ENVIRONMENT",
+
+    "concepto_de_via_y_su_entorno": "An integrated system of highways, roads, paths, streets, plazas, and parks considered public spaces. It is the environment where we carry out our social, economic, and recreational activities.",
+
+    "concepto_de_medio_ambiente": {
+        "definition": "The environment in which human activities take place and which must be protected and preserved.",
+        "composition": "The public roadway is part of the environment."
+    },
+
+    "via_publica": {
+        "intro": "Public roads are divided into two main types:",
+
+        "via_urbana_4_partes": {
+            "title": "Urban Road (4 Parts)",
+            "acera": "Sidewalk: designated for pedestrian traffic.",
+            "calzada": "Roadway: the portion intended for vehicle travel.",
+            "caño": "Drainage channel: carries rainwater and wastewater.",
+            "borde_de_acera": "Curb."
+        },
+
+        "via_rural_3_partes": {
+            "title": "Rural Road (3 Parts)",
+            "calzada": "Roadway: the portion intended for vehicle travel.",
+            "espaldon": "Shoulder: used by pedestrians when no sidewalk exists and by vehicles during emergencies.",
+            "cuneta": "Ditch: collects rainwater."
+        }
+    },
+
+    "funciones_de_la_via_publica": {
+        "intro": "The public roadway serves the following primary functions:",
+        "functions": [
+            "Transportation: allows people and vehicles to travel from one place to another.",
+            "Social interaction: provides spaces where people coexist and interact.",
+            "Environmental: promotes the relationship between people and their surroundings."
+        ]
+    },
+
+    "concepto_de_estructura_vial": {
+        "definition": "Infrastructure built by humans to facilitate transportation. It plays a fundamental role in social and economic development."
+    },
+
+    "elementos_principales_de_la_estructura_vial": [
+        "Roadways: public or private routes open to vehicle and pedestrian traffic.",
+        "Intersections: locations where two or more roads meet, allowing vehicles to continue or turn.",
+        "Traffic control devices: physical elements used to regulate traffic."
+    ],
+
+    "funciones_de_la_estructura_vial": [
+        "Regulate the movement of vehicles and pedestrians.",
+        "Warn drivers of potential hazards.",
+        "Guide road users safely.",
+        "Communicate legal restrictions and regulations.",
+        "Provide guidance for pedestrians."
+    ],
+
+    "concepto_de_senales_de_transito_o_senalamiento": {
+        "definition": "Traffic signs are physical devices used to regulate traffic. They guide road users, reduce accident risks, and communicate information through symbols and written messages.",
+
+        "classification": [
+            "Vertical signs: signs mounted on posts.",
+            "Horizontal signs: pavement markings painted on the road surface.",
+            "Traffic signals: signs that communicate through lights, such as traffic lights."
+        ],
+
+        "note_on_systems": "Two major traffic sign systems are used worldwide: the American system and the European system. Costa Rica follows the American system."
+    }
+},"senalamiento_vertical": {
+    "description": "Vertical signs are mounted on posts or elevated structures. They communicate information through symbols and text, and each type has a specific purpose.",
+
+    "types": [
+        {
+            "type_name": "Regulatory Signs",
+            "description": "These signs inform drivers of restrictions, prohibitions, and regulations governing the use of the roadway. Most feature a red circle indicating a restriction. When crossed by a red diagonal bar, the restriction becomes a complete prohibition. With the exception of STOP and YIELD signs, they generally have reflective backgrounds with black symbols or text."
+        },
+        {
+            "type_name": "Warning Signs",
+            "description": "These signs warn drivers about existing or potential hazards on or near the roadway. They feature a yellow reflective background with black symbols or text."
+        },
+        {
+            "type_name": "Road Work Warning Signs",
+            "description": "These signs alert drivers to construction or maintenance activities. They have an orange reflective background with black symbols or text."
+    ]
+},"examples_of_regulation_signs": [
+  "SPEED LIMIT 60 KM/H",
+  "BUS STOP",
+  "TAXI STAND",
+  "PEDESTRIANS KEEP LEFT",
+  "MAXIMUM WIDTH 1.8 m",
+  "MAXIMUM VEHICLE WEIGHT 10 TONS",
+  "KEEP RIGHT",
+  "END OF SPEED LIMIT",
+  "TRUCKS KEEP RIGHT",
+  "ONE-HOUR PARKING (6 A.M.–6 P.M.)",
+  "U-TURN PERMITTED",
+  "MAXIMUM HEIGHT 3 m",
+  "NO ENTRY",
+  "NO PASSING",
+  "NO U-TURN",
+  "PROCEED WITH CAUTION",
+  "ONE-WAY",
+  "TWO-WAY TRAFFIC AHEAD",
+  "NO BICYCLES",
+  "NO RIGHT TURN",
+  "NO LEFT TURN",
+  "NO PARKING",
+  "STOP",
+  "YIELD",
+  "25 KM/H"
+],
+
+"examples_of_prevention_signs": [
+  "INTERSECTION AHEAD",
+  "LANDSLIDE AREA",
+  "CURVE AHEAD",
+  "SLOW DOWN"
+],
+
+"examples_of_work_prevention_signs": [
+  "ROAD CONSTRUCTION AHEAD",
+  "FRESH ASPHALT",
+  "LEFT LANE CLOSED AHEAD",
+  "ROAD UNDER CONSTRUCTION",
+  "SHOULDER WORK AHEAD",
+  "ONE LANE AHEAD",
+  "ROAD CLOSED AHEAD",
+  "ROAD WORK",
+  "HEAVY MACHINERY AHEAD",
+  "TEMPORARY ROUTE AHEAD",
+  "DETOUR AHEAD",
+  "ROAD WORK AHEAD",
+  "RIGHT LANE CLOSED AHEAD",
+  "MAIN ROAD UNDER REPAIR IN 500 m",
+  "END OF ROAD REPAIR ZONE",
+  "DETOUR"
+],
+
+"senales_de_informacion": {
+  "description": "Information signs guide drivers along their route. They are typically rectangular and use blue-and-white or green-and-white color schemes.",
+
+  "classification": [
+    "Route Identification: indicates the highway or road number.",
+    "Destination: indicates distances to cities or destinations.",
+    "General Information: identifies rivers, towns, and other locations.",
+    "Recommendations: encourage safe driving practices.",
+    "Services and Tourism: indicate available services such as restaurants, gas stations, museums, and tourist attractions."
+  ],
+
+  "examples": [
+    "HANDICRAFTS",
+    "HOTEL",
+    "AUTO REPAIR SHOP",
+    "GAS STATION",
+    "AIRPORT",
+    "LAKE",
+    "SUN & BEACH",
+    "RED CROSS",
+    "RESTAURANT",
+    "TELEPHONE",
+    "RECREATIONAL AREA",
+    "PUBLIC SWIMMING AREA"
+  ]
+},
+
+"senalamiento_horizontal": {
+  "description": "Horizontal signs are pavement markings painted on the roadway. They are white or yellow and each color has a specific meaning.",
+
+  "pintura_de_color_blanca": "White markings indicate traffic moving in the same direction. They are also used for stop lines, yield lines, and speed markings.",
+
+  "pintura_de_color_amarillo": "Yellow markings separate opposing traffic lanes. They are also used for no-parking zones, bus stops, and fire hydrants."
+}
