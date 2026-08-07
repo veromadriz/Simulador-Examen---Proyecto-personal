@@ -1,0 +1,1314 @@
+[
+    {
+        "chapter": "# 1",
+        "title": "GENERAL ASPECTS OF TRAFFIC AND ROAD SAFETY",
+        "antecedentes": [
+            "The first vehicle that circulated in San José did so in 1912",
+            "The first Traffic Code was officially published in 1920.",
+            "The Road Administration Law (Law 5930) was published on October 27, 1976",
+            "The first Traffic Law (Law 6324) was published on May 25, 1979",
+            "The second and current Law on Traffic on Public Land Roads (7331) was published on April 22, 1993."
+        ],
+        "trilogia_vial": {
+            "subtitle": "(three elements of driving)",
+            "elements": [
+                "Human factor: the person",
+                "Vehicular factor: the vehicle",
+                "Environmental factor: the public road"
+            ],
+            "note": "These three elements interrelate dynamically, intervening in driving."
+        },
+        "concepto_de_transito": "Action of moving or relocating from one place to another (to transit)",
+        "concepto_de_transporte": "Action of moving a person or thing from one place to another (to transport)",
+        "concepto_de_seguridad_vial": "Discipline that studies and applies the actions and mechanisms that guarantee circulation on the road, preventing accidents.",
+        "seguridad_vial_objective": "Road safety seeks to prevent accidents and eliminate the causes that provoke them; it will never remove them completely.",
+        "entendida_asi": "Road safety is understood as seeking to eliminate the causes that produce accidents.",
+        "en_sintesis_objetivo_primordial_seguridad_vial": "PREVENT TRAFFIC ACCIDENTS.",
+        "objetivos_de_la_seguridad_vial": [
+            "Decrease damage to people on public roads",
+            "Provide fluidity to traffic",
+            "Prevent traffic accidents.",
+            "Avoid congestion.",
+            "Decrease environmental pollution caused by vehicles that causes health damage.",
+            "Protect and preserve the road infrastructure (streets, sidewalks)",
+            "Maintain the best condition of the motor vehicle (cars, buses, etc.) (RITEVE)",
+            "Decrease energy consumption and operational costs of vehicles (fuels).",
+            "Educate the citizen on the correct use of the public road."
+        ]
+    },
+    {
+        "chapter": "# 2",
+        "title": "TRAFFIC LEGISLATION",
+        "derecho_de_circulacion": {
+            "description": "It is understood as the freedom of circulation or movement as a projection of physical or corporal freedom.",
+            "constitutional_article": "The Political Constitution of Costa Rica establishes in Article 22 that: “Every Costa Rican can move and remain in any point of the Republic or outside it...\""
+        },
+        "ley_de_transito": {
+            "description": "Incorporates a series of prohibitions, for whose non-compliance sanctions are established ranging from fines of different costs to the suspension of the driver's license or removal of the vehicle from circulation.",
+            "sanciones": "Disregarding traffic signals, driving a vehicle without a license or temporary permit, or under the effects of alcohol or other drugs exposes both the owner and the driver to one or more sanctions. And they are called OFFENDER.",
+            "economic_fines": "Regarding economic fines, they vary from the FIXED FINE system to sanctions by VARIABLE FINES, according to a parameter based on the monthly base salary.",
+            "other_penalties": "Economic fines, such as vehicle immobilization, removal of plates, license suspension, disqualification from driving vehicles, among others, and elevates driving under the effects of alcohol with a concentration of more than 0.75 grams per liter of blood or driving over 150 kilometers per hour to the rank of a crime.",
+            "point_system_innovation": {
+                "description": "The most important innovation of the law is the creation of a points system. It is characterized by 50 points granted; points are lost, but it also has mechanisms to recover them and a bonus when renewing the license when the driver has demonstrated good performance by not losing points.",
+                "composition": [
+                    "269 articles",
+                    "7 transitory provisions",
+                    "Divided into 8 specific parts called 'titles' and these are arranged in chapters."
+                ]
+            }
+        },
+        "ley_de_transito_vigente": {
+            "article_9078_title": "Articles of traffic law 9078",
+            "effective_date": "Effective as of October 26, 2012",
+            "articulo_32_requisitos_generales_vehiculos_automotores": {
+                "title": "ARTICLE 32.- General requirements for motor vehicles",
+                "intro": "In order to circulate, motor vehicles must comply with the following general requirements as applicable according to their constructive nature:",
+                "requirements": [
+                    "Have a front windshield and a rear windshield, provided that the constructive nature of the vehicle allows it. The use of a sun visor is permitted, provided it does not cover the area of the wiper or wipers.",
+                    "Be provided with a horn that complies with the sound limits established by regulation.",
+                    "Have a speed indicator in kilometers per hour, without prejudice to simultaneously using any other unit of measure. The indicator must be installed in view of the driver.",
+                    "Have a steering wheel located on the left side or in the center, according to its constructive nature. Steering wheel location conversions will not be admitted.",
+                    "Have seat belts of at least three points in all side seats, unless its constructive nature does not allow it. In such case, they must use, at a minimum, sub-abdominal type belts. In the remaining seats, they must have sub-abdominal belts. Excepted from this obligation are buses and minibuses of regular route for the paid transport of people and UTV, bicimoto, and motorcycle type vehicles, unless, in the latter case, a sidecar device is adapted, where the passenger must have the corresponding belt.",
+                    "Have rearview mirrors or any other devices that allow the driver to observe the vehicle and the road. The number of mirrors, their location, and other technical specifications will be established via regulation, according to the categories of the vehicles and respecting their constructive nature.",
+                    "Be provided with projector devices for high and low beam, brake, reverse, position, turn signals, emergency flashers, and plate identification in perfect working order. Their colors, locations, number, light projection, uses, adjustment conditions, light intensity, and other technical specifications will be established via regulation, according to their categories and respecting the constructive nature of the vehicle.",
+                    "Heavy-duty vehicles, special equipment, security or emergency vehicles, public and private, by permit granted by the competent organ of the MOPT, may be fitted with special lights, in accordance with what is established via regulation.",
+                    "Be provided with a front bumper and a rear bumper, according to the constructive nature and technical specifications of the vehicle, respecting international regulations issued on the matter. Excepted from this requirement are cargo vehicles that use the anti-underrun device as a substitute mechanism in their rear part, according to regulatory specifications.",
+                    "Have a muffler for the exhaust that complies with the parameters and noise levels established in the regulation.",
+                    "Be equipped with brakes capable of moderating and stopping the movement of the vehicle in a safe, fast, and effective way; as well as a parking or safety brake. Motor vehicles using a compressed air system for the operation of their own brakes or the brakes of any trailer or semi-trailer attached to it must be provided with a visible and audible warning signal, located on the instrument panel of the driver's cabin.",
+                    "Have a pollutant emission control system in perfect working order, in accordance with article 38 of this law.",
+                    "Have wipers or blades on the front windshield; visibility must be free in one hundred percent (100%), regarding the coverage area of those devices."
+                ]
+            },
+            "articulo_33_requisitos_especificos_automoviles": {
+                "title": "ARTICLE 33.- Specific requirements for the circulation of automobiles",
+                "intro": "In addition to the requirements contained in article 32, automobiles must comply with the following requirements, as applicable according to their constructive nature:",
+                "requirements": [
+                    "Possess headrests, as long as these do not affect the driver's visibility.",
+                    "Have a defogger for the front and rear windshields.",
+                    "Have tires whose groove depth does not reach the tire wear indicator.",
+                    "Have at least an airbag system for the protection of the occupants of the front seats. Excepted from compliance with this requirement are public transport service vehicles, as well as motor vehicles that by their constructive nature or factory design do not incorporate it."
+                ]
+            },
+            "articulo_36_requisitos_de_seguridad_en_carretera": {
+                "title": "ARTICLE 36.- Road safety requirements.",
+                "intro": "To circulate on the road, every vehicle must be provided with the following implements in perfect working order, unless its constructive nature does not allow it:",
+                "requirements": [
+                    "A fire extinguisher, at least two safety triangles or analogous device, reflective vest.",
+                    "A spare tire and the necessary equipment to change it.",
+                    "On bicimotos, motorcycles, and UTVs provided with a box, use reflective tape."
+                ]
+            },
+            "articulo_83_permiso_temporal_de_aprendizaje": {
+                "title": "ARTICLE 83.- Temporary learning permit.",
+                "intro": "To obtain a temporary learner's permit, which will be valid for three months from its date of issue, the applicant must meet the following requirements:",
+                "requirements": [
+                    "Know how to read and write. If the person has any type of learning, cognitive, or similar limitation, the applicant may substitute this requirement with the special courses established by the General Directorate of Road Education.",
+                    "Persons with disabilities must be guaranteed the necessary adaptations and support services during the course instruction.",
+                    "Pass the Basic Road Education Course, whose requirements will be established by regulation.",
+                    "Be over eighteen years old, except for the provisions for the A-1 type license.",
+                    "Present a general medical certificate performed by a professional in medical sciences, authorized by the College of Physicians and Surgeons.",
+                    "Subscribe to an insurance policy with civil liability coverage, the amount of which will be determined by regulation.",
+                    "Not have committed any of the infractions indicated in article 143 of this law nor the crimes of 254 bis, of Law No. 4573, Penal Code, of May 4, 1970, and its reforms, during the twelve months prior to the date on which the temporary learning permit is requested.",
+                    "Meet the minimum requirements for the license in question. The learner with a temporary permit must be assisted by a companion or instructor who possesses a driver's license of the same type or higher than the one they aspire to, which must be valid and have been obtained at least five years in advance. Neither the learner nor the instructor or companion may be under the influence of liquor or drugs, in accordance with the rules regulating the matter, when using this permit. In the case of driving schools, instructors must comply with the provisions of Law No. 8709, Law for the Regulation of Driving Schools, of February 3, 2009. In cases where a temporary learning permit is requested for the purpose of managing a C-2 type license, the practice must be performed in units without passengers, except for the instructor or companion."
+                ]
+            },
+            "articulo_84_requisitos_licencia_conducir": {
+                "title": "ARTICLE 84.- Requirements for the driver's license.",
+                "intro": "To obtain any class of driver's license for the first time, the applicant must meet the following requirements:",
+                "requirements": [
+                    "Be over eighteen years old, except in the case of the provisions of article 85 for the A-1 type license. In the case of B2, B3, and B4 type licenses, regulated by article 86 of this law, the minimum age indicated there must be met.",
+                    "Know how to read and write. If the person has any type of learning, cognitive, or similar limitation, the applicant may substitute this requirement with the special courses established by the General Directorate of Road Education. Persons with disabilities must be guaranteed the necessary adaptations and support services during the course instruction.",
+                    "Present a general medical certificate performed by a professional in medical sciences, authorized by the College of Physicians and Surgeons.",
+                    "Pass the basic road education course, whose requirements will be established by regulation.",
+                    "Pass the practical exam for the type of license aspired to, in accordance with the provisions established for that effect by the competent authorities. Excepted from the practical exam are C-1 type and E-1 and E-2 type licenses. The exam may be performed in manual, automatic, or mixed transmission vehicles, or specially adapted vehicles in the case of persons with disabilities, respecting the constructive nature of the manufacturers. When dealing with articulated vehicles, the performance of the exam will require the handling of the complete vehicle (tractor, trailer, or semi-trailer). To obtain the B-1 license, the practical exam will be performed in vehicles up to 4000 kilograms of gross weight or GVWR, as long as they are not UTV type vehicles.",
+                    "Not have committed any of the crimes typified in article 254 bis of Law No. 4573, Penal Code, of May 4, 1970, and its reforms, nor any of the infractions classified as category A and B conducts of this law, during the twelve months prior to the date on which the license is requested for the first time."
+                ]
+            },
+            "articulo_85_disposiciones_licencias_clase_a": {
+                "title": "ARTICLE 85.- Provisions for class A driver's licenses.",
+                "intro": "Class A driver's licenses will have the following modalities:",
+                "modalities": [
+                    {
+                        "type": "A-1",
+                        "description": "authorizes driving motor vehicles of the bicimoto and motorcycle type, internal combustion, whose engine displacement does not exceed 125 cubic centimeters. In case these have electric or hybrid motors, the maximum power cannot exceed 11 kilowatts. Likewise, it authorizes driving a tricycle and quadricycle, whose engine displacement does not exceed two hundred and fifty cubic centimeters. Persons over sixteen years old are authorized to opt for this driver's license, provided they have written authorization from one of their parents, curator, tutor, or their legal or administrative representative. Additionally, they must subscribe to an insurance policy for death, injury, accident, and damage to third parties."
+                    },
+                    {
+                        "type": "A-2",
+                        "description": "authorizes driving motor vehicles of the bicimoto and motorcycle type, internal combustion, whose engine displacement does not exceed five hundred cubic centimeters. In case these have electric or hybrid motors, the maximum power cannot exceed 35 kilowatts."
+                    },
+                    {
+                        "type": "A-3",
+                        "description": "authorizes driving motor vehicles of the bicimoto and motorcycle type, internal combustion, electric or hybrid, without displacement or power limits. Drivers accredited with this type of license may drive all vehicles authorized for class A licenses."
+                    }
+                ]
+            },
+            "articulo_86_disposiciones_licencias_clase_b": {
+                "title": "ARTICLE 86.- Provisions for class B driver's licenses.",
+                "intro": "Class B driver's licenses will have the following modalities:",
+                "modalities": [
+                    {
+                        "type": "B-1",
+                        "description": "authorizes driving vehicles up to 4,000 kilograms of gross weight or maximum authorized weight (GVWR). These vehicles may be driven with a light trailer, provided the vehicle, the trailer, and the load combined do not exceed 4,000 kilograms of gross weight and are not regulated within other classes or types of license. Additionally, it authorizes driving UTV type transport units. Likewise, it authorizes driving on non-primary roads motor vehicles of the bicimoto and motorcycle type, internal combustion, whose engine displacement does not exceed 125 cubic centimeters; in case these have electric or hybrid motors, the maximum power cannot exceed 11 kilowatts. In the same terms, it authorizes the driving of tricycle and quadricycle type motorcycles, whose engine displacement does not exceed five hundred cubic centimeters."
+                    },
+                    {
+                        "type": "B-2",
+                        "description": "authorizes driving vehicles up to 8,000 kilograms of gross weight or maximum authorized weight (GVWR). These vehicles may be driven with a trailer, provided the vehicle, the trailer, and the load combined do not exceed 8,000 kilograms of gross weight. The driver must be over twenty years old and have a class B or C license, issued at least two years prior."
+                    },
+                    {
+                        "type": "B-3",
+                        "description": "authorizes driving vehicles of any weight, except for articulated heavy vehicles. The driver must be over twenty-two years old and have a class B or C license, issued at least three years prior."
+                    },
+                    {
+                        "type": "B-4",
+                        "description": "Authorizes driving vehicles of any weight, including articulated heavy vehicles. The driver must be over twenty-two years old and have a class B or C license, issued at least three years prior, and pass a course specifically taught by the General Directorate of Road Education or a duly accredited entity, according to the provisions of article 222 of this law."
+                    }
+                ]
+            },
+            "articulo_87_disposiciones_licencias_clase_c": {
+                "title": "ARTICLE 87.- Provisions for class C driver's licenses.",
+                "intro": "Class C driver's licenses will have the following modalities:",
+                "modalities": [
+                    {
+                        "type": "C-1",
+                        "description": "authorizes driving motor vehicles in the taxi modality. The driver must have a class B or C-2 type license, with at least three years issued, and have obtained the certificate of the basic road education course for public transport."
+                    },
+                    {
+                        "type": "C-2",
+                        "description": "authorizes driving motor vehicles for public transport of people in the modality of bus, minibus, and microbus. A class B or C-1 type license must be held, at least three years issued, and the basic road education course certificate for public transport must have been obtained. Exceptionally, through the passing of a specially designed course, supervised and endorsed by the CTP, persons with two years of experience in class B or C-1 type licenses may obtain a C-2 type license, provided it is guaranteed, through technical parameters, that they meet the ideal characteristics for driving the type of vehicles indicated here. Prior to authorization for the provision of special services for the transport of minor students, a criminal record certificate must be provided stating that they have not been convicted of crimes of pedophilia, sexual crimes, or those contemplated in article 254 bis of Law No. 4573, Penal Code, of May 4, 1970, and its reforms. Drivers who obtain a class C license may dispense with the B-1 type license for driving the motor vehicles covered by said accreditation."
+                    }
+                ]
+            },
+            "articulo_88_disposiciones_licencias_clase_d": {
+                "title": "ARTICLE 88.- Provisions for class D driver's licenses.",
+                "intro": "Class D driver's licenses will have the following modalities:",
+                "modalities": [
+                    {
+                        "type": "D-1",
+                        "description": "authorizes driving wheel tractors."
+                    },
+                    {
+                        "type": "D-2",
+                        "description": "authorizes driving only track tractors."
+                    },
+                    {
+                        "type": "D-3",
+                        "description": "authorizes driving other types of special equipment, not contemplated in the D-1 or D-2 licenses."
+                    }
+                ]
+            },
+            "articulo_89_disposiciones_licencias_clase_e": {
+                "title": "ARTICLE 89.- Provisions for class E driver's licenses.",
+                "intro": "Class E driver's licenses will have the following modalities:",
+                "modalities": [
+                    {
+                        "type": "E-1",
+                        "description": "authorizes driving vehicles comprised within the classes of two, three, four or more axles, except those intended for public transport. The driver must have an A-3 and B-4 license, issued at least one year prior."
+                    },
+                    {
+                        "type": "E-2",
+                        "description": "authorizes handling wheel tractors, track tractors, and all kinds of vehicles with two, three, four or more axles, as well as machinery authorized by type D-1, D-2, and D-3 licenses, except for machinery intended for public transport. The driver must have an A-3 and B-4 license, issued at least one year prior."
+                    }
+                ]
+            },
+            "articulo_90_conductor_profesional": {
+                "title": "ARTICLE 90.- Professional driver.",
+                "description": "Every employer who hires people whose main labor is driving vehicles for the transfer of merchandise or people must employ professional drivers for such activity."
+            },
+            "articulo_93_reglas_generales": {
+                "title": "ARTICLE 93.- General rules",
+                "intro": "When using public roads, drivers, vehicle passengers, and pedestrians must:",
+                "rules": [
+                    "Immediately comply with the verbal or written indications of the traffic authorities and stop when given the stop signal, which can be done by hand or by means of acoustic or luminous signals.",
+                    "Respect the instructions of any official traffic control device that has been installed and operates in accordance with the respective legal and regulatory provisions.",
+                    "Observe and comply with vertical and horizontal signals on public roads. d) Conduct themselves in a way that circulation is not obstructed and the safety of vehicles or other persons is not endangered.",
+                    "Drivers must avoid situations that prevent the free circulation of traffic; therefore, they will apply defensive driving and maintain constant precaution and mutual consideration toward pedestrians and other drivers.",
+                    "Give right-of-way priority to emergency vehicles when they circulate in response to an incident of this nature, which will be evidenced by the activation of the alarm devices with which these vehicles are equipped."
+                ]
+            },
+            "articulo_94_cinturones_y_otros_dispositivos_de_seguridad": {
+                "title": "ARTICLE 94.- Seat belts and other safety devices",
+                "intro": "Drivers must ensure the physical integrity and safety of themselves and the passengers; furthermore, they must use and ensure that all occupants of the vehicle use seat belts and other devices that according to this law must be installed in the vehicle.",
+                "child_safety": "Minor children under twelve years old who measure less than 1.45 meters in height must travel in the rear seat of the vehicle. For this, a child restraint system must be adapted, whose technical specifications will be defined by regulation. Exceptionally, they may travel in the front passenger seat using the child restraint system when a duly accredited medical reason so requires, or when by constructive nature the vehicle does not have rear seats.",
+                "exemptions": "Excepted from the use of child restraint systems are public transport vehicles in the taxi modality, stable special taxi service, buses or minibuses in regular route, and buses or minibuses of special services, except in the special student transport service when provided to minor children under twelve years old who measure less than 1.45 meters in height. Likewise, vehicles excepted in paragraph e) of article 32 of this law would not be subject to compliance with what is provided in this norm."
+            },
+            "articulo_98_limites_de_velocidad": {
+                "title": "ARTICLE 98.- Speed limits",
+                "intro": "Speed limits for vehicle circulation will be set by the General Directorate of Traffic Engineering and must be updated in accordance with international trends, after technical study, according to the type of road and its conditions. Minimum and maximum limits apply from the placement of the signs or markings indicating those speeds, which must be installed on public roads in a visible and appropriate manner. In the absence of signaling, the minimum and maximum limits will be:",
+                "limits": [
+                    "On highways, the minimum speed will be fifty kilometers per hour (50km/h).",
+                    "Where no markings exist, the limit will be sixty kilometers per hour (60km/h); in high population density urban zones it will be fifty kilometers per hour (50 km/h).",
+                    "At pedestrian crossings of public roads located around educational facilities with students present, health centers, and where massive activities or concentrations take place, the limit will be twenty-five kilometers per hour (25 km/h). The starting and ending point of said restriction must be duly defined and marked, as well as the hours and days in which it takes effect. It is prohibited to circulate at a speed higher than the maximum limit or lower than the established minimum; for this, the driver must take into account the conditions of the road and the driving rules. Emergency vehicles, in the performance of their functions and duly identified by respective audible and luminous signals, will be exempt from complying with said limits, always safeguarding the integrity of those present at those places and safety on the road."
+                ]
+            },
+            "articulo_103_uso_de_luces": {
+                "title": "ARTICLE 103.- Use of lights",
+                "intro": "For the use of lights, the following rules must be followed:",
+                "rules": [
+                    "From six in the evening until six in the morning, vehicle circulation without the required lights turned on is prohibited. This provision will also apply at any time of the day when for natural or artificial reasons visibility is difficult.",
+                    "The high beam of the vehicle will be used on public roads, as long as vehicles are not traveling in the opposite direction.",
+                    "The low beam of the vehicle will be used on public roads when vehicles are traveling in the opposite direction or when traveling behind another vehicle.",
+                    "Fog lights will be used only when weather conditions so require.",
+                    "Lights whose power and projection toward the front, adjustment conditions, luminous intensity, or quantity exceed the limits established by regulation may not be used.",
+                    "Motor vehicles of the bicimoto, motorcycle, and UTV type must keep the required lights turned on twenty-four hours a day during their movement."
+                ]
+            },
+            "articulo_104_interseccion_de_vias": {
+                "title": "ARTICLE 104.- Road intersection",
+                "intro": "When approaching an intersection of roads where there is no right-of-way, the driver will proceed as follows:",
+                "rules": [
+                    "If it is an access controlled by the red light of a traffic signal, the driver will stop their vehicle completely at the marked stop line. If that line does not exist, the driver will stop near the road to be crossed but without obstructing transverse traffic.",
+                    "In case they are going to turn right and if traffic on the green light road allows it, the driver may turn as if it were a crossing regulated with a fixed stop sign. Nevertheless, the General Directorate of Traffic Engineering may prohibit right turns on red in sites where technically justified, in which case it will place fixed signaling indicating so.",
+                    "Between 22:00 hours and 05:00 hours, if traffic on the green light road allows it, the driver may continue passage as if it were a crossing regulated with a fixed stop sign. Nevertheless, the General Directorate of Traffic Engineering may prohibit this passage option on red in sites where technically justified, in which case it will place fixed signaling indicating so.",
+                    "When the green light of the traffic signal grants the right of way or when turning right on red, the driver will yield the right of way to all pedestrians and cyclists on the roadway.",
+                    "The yellow light and the flashing green light of the traffic signal indicate that the driver must decelerate to stop if still far from the crossing point or that, if very close to the crossing point, they must hasten without exceeding speed limits to clear the intersection zone.",
+                    "If it is an access controlled by a 'stop' sign, the driver will stop the vehicle completely at the stop line, even when they have sufficient visibility and no vehicle is circulating on the priority road. If no stop line exists, they will stop upon reaching the point closest to the road they are going to cross; to perform such a maneuver, they will yield the right of way to all pedestrians on the roadway or to vehicles that by speed or proximity circulate on the priority roads.",
+                    "At intersections marked with a 'yield' sign, the driver must decrease speed so as to observe the traffic approaching on other roads. If a vehicle approaches that by its proximity or speed could endanger traffic safety, they must stop their movement completely.",
+                    "Emergency vehicles traveling in response to an incident of this nature, using the corresponding alarm devices, may continue movement at an intersection with a red light or stop sign, but only after verifying that there is no circulation of vehicles on the intersecting roads."
+                ]
+            },
+            "articulo_110_estacionamiento": {
+                "title": "ARTICLE 110.- Parking",
+                "intro": "Every parked vehicle must keep the emergency brake activated. Additionally, cargo vehicles of more than two tons must be blocked with the required chocks. In urban zones, the tires of the vehicle must be at a distance no greater than thirty centimeters (30 cm) from the edge of the sidewalk. Parking a vehicle is prohibited under the following conditions:",
+                "prohibitions": [
+                    "In front of any entrance or exit of educational facilities, hospitals, clinics, fire stations or Red Cross, private or public parking lots, and garages. Likewise, venues or buildings while shows or sports, religious, or social activities are being carried out, provided they are identified for information to the general public.",
+                    "On roadways or sidewalks in a way that prevents free passage, affects visibility, or endangers the safety of others.",
+                    "In places expressly indicated or marked with a yellow stripe, unless the prohibition is limited to a specific schedule.",
+                    "At a distance less than five meters (5 m) from a hydrant or pedestrian crossing zones; less than ten meters (10 m) from an urban road intersection or less than twenty-five meters (25 m) from a non-urban road intersection.",
+                    "On the upper part of a slope or in a curve.",
+                    "On public roads, except for special reasons, in which case the driver will place their vehicle off the roadway, signaling their presence by emergency lights and luminous or reflective devices, in accordance with this law and its regulation. In case there is no shoulder, the driver must park it in the safest place.",
+                    "Using a bike path, bike lane, protected bike lane, or sidewalk-path for motor traffic, to park, make repairs, to load and unload goods and people, or for any other use than stipulated in the definitions for these devices.",
+                    "In breach of the requirements established in article 43 of Law No. 7600, Equal Opportunity Law for Persons with Disabilities, of May 2, 1996, and its regulation, by parking in spaces designated for vehicles of persons with disabilities. Such reserved spaces must be duly labeled and indicate the law and applicable sanctions in case of being used without corresponding identification. Authorized emergency vehicles acting in reason of their functions are excepted, provided they identify themselves by visual or audible signals. Non-compliance with the previous provisions empowers the traffic authority to remove the vehicle when the driver is not present, or to force the driver to remove it, without prejudice to the respective fine."
+                ]
+            },
+            "articulo_117_obligaciones_conductores_y_pasajeros": {
+                "title": "ARTICLE 117.- Obligations of drivers and their passengers",
+                "intro": "Drivers and passengers of the vehicles indicated in this chapter must comply with the following provisions:",
+                "obligations": [
+                    "Wear a safety helmet according to the requirements stipulated in the regulation of this law.",
+                    "They are prohibited from carrying packages, bundles, and objects that limit freedom of movement when driving the vehicle.",
+                    "Abstain from holding onto another vehicle in motion on public roads.",
+                    "Use reflective clothing, both when the vehicle is in motion and when stopped to perform any repair on the shoulder or road edge.",
+                    "They may not transport children under five years old as passengers."
+                ]
+            },
+            "articulo_119_obligaciones_de_los_ciclistas": {
+                "title": "ARTICLE 119.- Obligations of cyclists",
+                "intro": "Cyclists shall:",
+                "obligations": [
+                    "Drive with due care and precaution on public roads.",
+                    "Ensure their bicycle is in optimal condition to travel on public roads.",
+                    "Carry identification documents and circulate on the right side of the road lane.",
+                    "In cases where they overtake a vehicle moving at a lower speed, it must be done on the left side of the lane.",
+                    "Circulate on public roads whose permitted speed is not equal to or greater than eighty kilometers per hour (80 km/h), except in the case of special activities authorized by the General Directorate of Traffic Engineering.",
+                    "When several bicycles circulate, they will do so in a single file, with the exception of the provisions in the previous paragraph.",
+                    "On a bicycle, no more than one person may travel unless the vehicle is conditioned for it; passengers must be over three years old. Additionally, both must use the safety helmet and vest, without prejudice to other additional protection devices.",
+                    "They may not circulate on sidewalks.",
+                    "It is prohibited to hold onto another vehicle in motion.",
+                    "Children under six years of age must be accompanied by persons over fifteen years old when riding bicycles or tricycles on public roads.",
+                    "Learning to ride bicycles on public roads is prohibited.",
+                    "The driver must use reflective clothing.",
+                    "Use the exclusive lane for bicycles, provided one is available."
+                ]
+            },
+            "articulo_120_peatones": {
+                "title": "ARTICLE 120.- Pedestrians",
+                "intro": "Every pedestrian must carry an identification document, behave in a way that does not put others at risk, as well as comply with traffic rules and signals applicable to them, and obey the indications of traffic authorities. Pedestrians are obligated to comply with the following indications:",
+                "obligations": [
+                    "Pedestrian traffic on public roads will be done outside zones intended for vehicle traffic. b) In urban zones, they will travel on sidewalks and cross streets at corners, marked crossing zones, or pedestrian bridges.",
+                    "They will travel on the left side of public roads according to their direction of travel when there are no sidewalks or available space.",
+                    "It is prohibited to travel on restricted access public roads or on railroad tracks, as well as to perform acts of juggling, circus acts, begging, or of any other nature, including sales or lucrative activities.",
+                    "It is prohibited to carry elements that may obstruct or affect traffic."
+                ]
+            },
+            "nota_importante": {
+                "title": "IMPORTANT NOTE:",
+                "text": "You do not need to memorize all the articles for your test; however, it is important that you know them, not only for your future life as a driver but also for your practical test (they are essential). It is important that you read and understand them.",
+                "source_note": "The previous articles were not summarized (it is against the law to modify an article of a legal nature); they were taken from the Driver's Manual and the Traffic Law."
+            },
+            "sanciones": {
+                "title": "SANCTIONS",
+                "intro": "A sanction of any type will be obtained for disregarding the current Traffic Law.",
+                "infractor_definition": "An offender is a person who violates one or more rules of the Law."
+            },
+            "rebajo_de_puntos": {
+                "title": "REDUCTION OF POINTS",
+                "description": "The most important innovation of the law is the creation of a points system as a Performance Control Mechanism, characterized by a reduction of points every time an infraction is committed out of a total of 50 points granted upon getting your license.",
+                "recovery_and_bonus": "But the offender has a mechanism for recovering lost points and an incentive or bonus when renewing the license when the driver has demonstrated good performance by not having lost points."
+            },
+            "tabla_de_sanciones_y_perdida_puntos": {
+                "title": "SANCTIONS AND POINTS LOSS TABLE",
+                "note": "*The tables of the infraction process and corresponding point reduction from the COSEVI 2015 new driving manual will be attached following."
+            }
+        }
+    },
+    {
+        "chapter": "# 3",
+        "title": "ROAD FACTOR AND ITS ENVIRONMENT",
+        "concepto_de_via_y_su_entorno": "It is an integrated system of highways, roads, paths, squares, parks, all considered as public places or public domain. It is the place where we develop all our activities—social, economic, recreational.",
+        "concepto_de_medio_ambiente": {
+            "definition": "Where human activities develop and that we must preserve and care for.",
+            "composition": "The environment is composed of the public road."
+        },
+        "via_publica": {
+            "intro": "The public road is divided into two types:",
+            "via_urbana_4_partes": {
+                "title": "Urban road (4 parts)",
+                "acera": "pedestrian traffic.",
+                "calzada": "place intended for the circulation or rolling of vehicles.",
+                "caño": "evacuates rainwater or waste water.",
+                "borde_de_acera": "SIDEWALK EDGE."
+            },
+            "via_rural_3_partes": {
+                "title": "Rural road (3 parts)",
+                "calzada": "place intended for the circulation or rolling of vehicles.",
+                "espaldon": "traffic zone for pedestrians when there is no sidewalk and also used for cars to park in case of emergency.",
+                "cuneta": "intended to collect water."
+            }
+        },
+        "functions_de_la_via_publica": {
+            "intro": "The public road has the following main functions:",
+            "functions": [
+                "Circumvallation or circulation: to move as a driver or pedestrian.",
+                "Coexistence: for people to relate to each other.",
+                "Ecological: interrelation between the environment and humans."
+            ]
+        },
+        "concepto_de_estructura_vial": {
+            "definition": "A work carried out by man that facilitates circulation. It is of great importance for the social and economic development of society."
+        },
+        "elementos_principales_de_la_estructura_vial": [
+            "Circulation roads: public or private, open to the circulation of vehicles and people.",
+            "Intersection: place on the road where two or more roads converge and in which vehicles can turn or maintain their trajectory.",
+            "Signaling: physical elements used for the regulation of traffic."
+        ],
+        "funciones_de_la_estructura_vial": [
+            "Regulate the passage of vehicle streams and pedestrians.",
+            "Warn of possible dangers.",
+            "Guide the route along the road.",
+            "Make restrictions and legal provisions known.",
+            "Guide the pedestrian when walking on the road."
+        ],
+        "concepto_de_senales_de_transito_o_senalamiento": {
+            "definition": "They are physical elements used for traffic regulation. They serve as a guide and help decrease the risk of accidents. Their objective is to transmit their message to the driver by means of legends (letters) and symbols (drawings).",
+            "classification": [
+                "Vertical signaling: plates attached to posts",
+                "Horizontal signaling: signals painted on the roadway",
+                "Luminous signaling: signals that use light such as traffic lights."
+            ],
+            "note_on_systems": "In today's world, there are two systems of signaling: American and European. In Costa Rica, we use the American system."
+        },
+        "senalamiento_vertical": {
+            "description": "Plates located on posts or elevated places. They inform through legends and symbols. They have an intention according to the type.",
+            "types": [
+                {
+                    "type_name": "Regulatory signs",
+                    "description": "aim to indicate to the driver the existence of certain limitations, prohibitions, and restrictions that regulate the use of the road. On the upper part, they carry a red disk indicating a regulatory restriction. If said disk is crossed by a bar of the same color, it means that the restriction consists of a complete prohibition. Except for the STOP and YIELD signs, all have a reflective background color with the border and message in black."
+                },
+                {
+                    "type_name": "Warning signs",
+                    "description": "aim to warn drivers of certain potentially dangerous conditions existing on the roads or adjacent to them. All have a yellow reflective background with the border and message in black."
+                },
+                {
+                    "type_name": "Work zone warning signs",
+                    "description": "have an orange reflective background, black legend or symbol, and border."
+                }
+            ],
+            "examples_of_regulation_signs": [
+                "MAXIMUM SPEED 60 KPH",
+                "BUS STOP",
+                "TAXI STAND",
+                "PEDESTRIANS ON THE LEFT",
+                "MAXIMUM WIDTH 1.8 m",
+                "MAXIMUM WEIGHT PER VEHICLE 10 TONS",
+                "KEEP RIGHT",
+                "END OF RESTRICTED SPEED",
+                "TRUCKS RIGHT LANE",
+                "PARKING ONE HOUR 6AM-6PM",
+                "U-TURN PERMITTED",
+                "MAXIMUM HEIGHT 3m",
+                "NO ENTRY",
+                "NO OVERTAKING",
+                "NO U-TURN",
+                "PROCEED WITH CAUTION",
+                "ONE WAY",
+                "TWO WAY AHEAD",
+                "NO CYCLISTS",
+                "NO RIGHT TURN",
+                "NO LEFT TURN",
+                "NO PARKING",
+                "STOP",
+                "YIELD",
+                "25 KPH"
+            ],
+            "examples_of_prevention_signs": [
+                "INTERSECTION AHEAD",
+                "LANDSLIDES ON ROAD",
+                "CURVE AHEAD",
+                "SLOW"
+            ],
+            "examples_of_work_prevention_signs": [
+                "ROAD UNDER CONSTRUCTION AHEAD",
+                "FRESH ASPHALT",
+                "LEFT LANE CLOSED AHEAD",
+                "ROAD UNDER CONSTRUCTION",
+                "SHOULDER WORK AHEAD",
+                "ONE WAY AHEAD",
+                "ROAD CLOSED AHEAD",
+                "WORK ON ROAD",
+                "MACHINERY WORKING AHEAD",
+                "PROVISIONAL ROUTE AHEAD",
+                "DETOUR AHEAD",
+                "ROAD WORK AHEAD",
+                "RIGHT LANE CLOSED AHEAD",
+                "MAIN SECTION UNDER REPAIR AT 500 m.",
+                "END SECTION UNDER REPAIR",
+                "DETOUR"
+            ]
+        },
+        "senales_de_informacion": {
+            "description": "aim to guide the driver along the route. They are blue with white, or white with green with a rectangular shape.",
+            "classification": [
+                "Identification: informs the highway number (shield: international, circle: national)",
+                "Destination: indicates the distance from one place to another.",
+                "General information: names of rivers, towns, and others.",
+                "Recommendations: request prudent driving.",
+                "Services and tourism: indicate any type of services (restaurant, gas stations, museums)"
+            ],
+            "examples": [
+                "HANDICRAFTS",
+                "HOTEL",
+                "MECHANIC SHOP",
+                "GAS STATION",
+                "AIRPORT",
+                "LAKE",
+                "SUN AND BEACH",
+                "RED CROSS",
+                "RESTAURANT",
+                "TELEPHONE",
+                "RECREATIONAL AREA",
+                "SPA/POOLS"
+            ]
+        },
+        "senalamiento_horizontal": {
+            "description": "These are the signals painted on the roadway. These signals are marked in white or yellow, which have a meaning.",
+            "pintura_de_color_blanca": "Means that all traffic moves in the same direction. It is also used in marking stop signs, yields, and speeds.",
+            "pintura_de_color_amarillo": "Separates lanes, indicating that traffic moves in opposite directions (facing each other). Also the no parking line, bus stops, and hydrants.",
+            "tipos_de_lineas": {
+                "intro": "Markings on the roadway are to regulate traffic and arrange it according to direction. These are the horizontal signaling lines that exist:",
+                "lines": [
+                    {
+                        "name": "Edge lines",
+                        "description": "separates the roadway from the shoulder, serves to guide us in adverse conditions; red reflectors or 'cat eyes' are placed on these lines."
+                    },
+                    {
+                        "name": "Lane or road line",
+                        "description": "is broken white and white reflectors are placed. The main function is to organize traffic moving in the same direction."
+                    },
+                    {
+                        "name": "Center line",
+                        "description": "its purpose is to organize traffic in different directions of circulation, they are yellow and can be found broken or continuous. The broken line indicates that you can overtake or pass and the continuous line indicates that overtaking is prohibited. It can be of three types: Continuous yellow: when overtaking is prohibited."
+                    }
+                ],
+                "line_variations": [
+                    "Broken yellow: allows overtaking.",
+                    "Continuous white: when it organizes traffic in the same direction and does not allow overtaking",
+                    "Broken white: when it organizes traffic in the same direction and allows overtaking",
+                    "Barrier line: two continuous yellow lines in parallel. They prohibit overtaking in both directions. The reflectors are the same color as the line.",
+                    "Channelization lines: the line that organizes traffic turning left at an intersection.",
+                    "Stop line: serve to indicate to the driver where to stop their vehicle, it is a white transverse line, this is equivalent to a STOP.",
+                    "Channelization island: serves to order traffic in conflict zones or roadway widening, circulation on them is prohibited.",
+                    "Safety zone: white transverse lines placed in a ladder shape, indicating the flow of many people crossing the roadway.",
+                    "Crossing zone: pedestrian crossing on the road, two white transverse parallel lines.",
+                    "Parking zones: white transverse lines for parking the vehicle.",
+                    "Exclusive left turn lanes: refuge zone for making a left turn",
+                    "Reversible lane: used to decongest conflict zones, it is regulated.",
+                    "Box or yellow box: prohibits blocking an intersection, they are yellow.",
+                    "Shoulder markings: markings on the shoulder and fulfill the function of giving greater visibility to the driver.",
+                    "Central left turn lane: exclusively for making left turns, overtaking or U-turns are prohibited."
+                ]
+            },
+            "palabras_y_simbolos_de_color_blanco": [
+                "Directional arrows",
+                "Speed limits",
+                "School zones",
+                "Exclusive lanes for public service"
+            ],
+            "palabras_y_simbolos_de_color_amarillo": [
+                "Bus stops",
+                "Parking prohibition",
+                "Exclusive lane for left turn."
+            ]
+        },
+        "senalamiento_luminoso": {
+            "intro": "There are three types:",
+            "types": [
+                "Vehicular traffic light: system of three lights (Red= Stop) (Yellow=Light change) (Green=Go) (Flashing red= stop at stop line) (Flashing yellow=reduce speed)",
+                "Pedestrian traffic light: system of two lights (Red=Stop) (Green= Go)",
+                "Luminous informative signal: electronic screen device that passes important messages to the driver. They are situated in strategic places, like highways."
+            ]
+        },
+        "condiciones_climaticas": {
+            "intro": "These are the most common in Costa Rica that can affect vehicle circulation.",
+            "conditions": [
+                {
+                    "name": "Rain",
+                    "effects": [
+                        "Causes a film of dust and water drops that impede vision through the windshield.",
+                        "Wipers do not clean correctly.",
+                        "Slippery pavement."
+                    ]
+                },
+                {
+                    "name": "Fog",
+                    "recommendation": "When in fog, speed must be reduced and lights turned on."
+                },
+                {
+                    "name": "Floods",
+                    "recommendations": [
+                        "Water must not exceed the wheel hubs.",
+                        "The brake system must be dried by accelerating and braking the car."
+                    ]
+                },
+                {
+                    "name": "Hydroplaning",
+                    "definition": "It is the loss of contact between the tires and the pavement.",
+                    "prevention": "To avoid a catastrophe, steering must be turned in the same direction as the skid and speed reduced."
+                },
+                {
+                    "name": "Smoke or dust clouds",
+                    "effects": [
+                        "Decrease the driver's visibility.",
+                        "Are caused by forest fires, dust devils, and earth movement."
+                    ]
+                },
+                {
+                    "name": "The sun",
+                    "effects": [
+                        "Can produce glare directly or indirectly."
+                    ],
+                    "recommendations": [
+                        "It is recommended to have sunglasses, reduce speed, and orient the sun visor appropriately."
+                    ]
+                },
+                {
+                    "name": "The wind",
+                    "effects": [
+                        "Affects steering."
+                    ],
+                    "recommendations": [
+                        "If it is gusty, speed must be decreased, hold the wheel firmly, and have precaution, as obstacles may be found on the road."
+                    ]
+                }
+            ]
+        },
+        "condiciones_de_diseno": {
+            "intro": "These design conditions of the roadway occasionally affect circulation.",
+            "conditions": [
+                {
+                    "name": "Curves",
+                    "description": "According to their structure, they are classified as 'Vertical' and 'Horizontal'. To avoid skidding or leaving the road, consider the following:",
+                    "recommendations": [
+                        "Reduce speed, never overtake, always maintain your lane, and use low beams."
+                    ]
+                },
+                {
+                    "name": "Banking or superelevation",
+                    "description": "is the higher elevation at one of the edges of the roadway to counteract the effect of centrifugal force."
+                }
+            ]
+        }
+    },
+    {
+        "chapter": "# 4",
+        "title": "VEHICULAR FACTOR",
+        "funcionamiento_del_motor": [
+            "Fuel is pumped from the tank to the carburetor.",
+            "The carburetor converts liquid fuel into vapor and passes it to the engine.",
+            "The engine cylinders receive the fuel vapor; when starting the car, the battery produces sparks, which causes the vapor to ignite and produce an explosion.",
+            "The battery delivers electric current to the cylinders, which jumps in the form of a spark to the spark plugs.",
+            "The spark ignites the mixture (vapor) found in the cylinders and produces the explosion.",
+            "Through the intake valves, the regulated mixture of fuel and air continues to enter, while burnt gases leave through the exhaust valves toward the 'exhaust'. The combustion or smoke from the explosion is expelled through the tailpipe.",
+            "That explosion allows the movement of all wheels and the rolling of the car.",
+            "The lower part of the cylinders is capped by a piston, which slides due to the force of the explosion, pushing a connecting rod in its path, which in turn moves a cranked shaft at its end; the crankshaft's repetition of movements produces a crank mechanism, transforming upward-downward movement into rotative movement.",
+            "The clutch allows for gear changes."
+        ],
+        "sistemas_del_vehiculo": [
+            {
+                "system_name": "Lubrication system",
+                "function": "Prevents friction between engine parts and helps decrease wear.",
+                "components": [
+                    "oil pan (carter)",
+                    "dipstick",
+                    "pump",
+                    "oil",
+                    "filter",
+                    "distribution tube",
+                    "oil cap."
+                ]
+            },
+            {
+                "system_name": "Steering system",
+                "function": "Allows the driver to circulate the vehicle in the desired direction.",
+                "components": [
+                    "Steering wheel",
+                    "Steering shaft",
+                    "Steering box",
+                    "Ball joints",
+                    "Bars and hoses."
+                ]
+            },
+            {
+                "system_name": "Cooling system",
+                "function": "Cools the engine walls.",
+                "components": [
+                    "radiator",
+                    "fan",
+                    "hoses",
+                    "water pump",
+                    "internal conduits",
+                    "thermostat",
+                    "temperature gauge."
+                ]
+            },
+            {
+                "system_name": "Clutch system",
+                "function": "Separates the transmission system from the engine and performs gear changes.",
+                "components": [
+                    "fork",
+                    "throw-out bearing",
+                    "pressure plate",
+                    "disc."
+                ]
+            },
+            {
+                "system_name": "Instrument panel or dash",
+                "function": "Indicates the good or bad functioning of some vehicle system"
+            },
+            {
+                "system_name": "Electrical system",
+                "function": "Generator of the electrical current necessary for proper operation.",
+                "subsystems": [
+                    "Generation and accumulation (Dynamo, alternator, battery)",
+                    "Ignition (starter motor, coil, distributor, and spark plugs)",
+                    "Lighting and services (lights, signaling elements, etc.)"
+                ]
+            },
+            {
+                "system_name": "Brake system",
+                "function": "Slows down the vehicle's progress or stops it completely. Service and emergency; 'hand brake'; currently the hydraulic service brake system and the emergency one is actuated by a cable.",
+                "components": [
+                    "Master cylinder",
+                    "Fluid reservoir",
+                    "Conductor pipes",
+                    "Wheel cylinders",
+                    "Brake shoes",
+                    "Pads",
+                    "Drums and discs"
+                ]
+            },
+            {
+                "system_name": "Suspension and shock absorption system",
+                "function": "Provides comfort and safety to passengers.",
+                "division": "It is divided into two:",
+                "subsystems": [
+                    "Suspension (leaf springs, ball joints, and torsion bars)",
+                    "Damping (shock absorbers in their different types)."
+                ],
+                "components_details": "composed of: Two subsystems Suspension (leaf springs) Ball joints Torsion bars - And shock absorbers (shock absorbers in their different types)"
+            },
+            {
+                "system_name": "Fuel system",
+                "function": "Supplies the energy that allows it to perform the work of mobilizing it.",
+                "components": [
+                    "fuel tank",
+                    "pipes",
+                    "fuel pump",
+                    "carburetor."
+                ]
+            },
+            {
+                "system_name": "Exhaust system",
+                "function": "Evacuates the burnt gases resulting from engine operation.",
+                "components": [
+                    "exhaust manifold",
+                    "catalytic converter",
+                    "main pipe",
+                    "mufflers."
+                ],
+                "problems": "Problems that cause malfunction, pollution, and intoxication."
+            },
+            {
+                "system_name": "Pollutant control",
+                "description": "Places where pollutants are produced: It is the fuel system, combustion process, and the engine oil reservoir. For the control of pollutants and their reduction to the minimum, a series of small mechanical and electronic devices in different parts of the vehicle, mainly the engine and exhaust pipe."
+            }
+        ],
+        "llantas": {
+            "maintenance_priority": "The most important thing is to check the inflation pressure daily; if a tire has low pressure, it will wear more on the sides, and if it has too much pressure, it wears more in the center.",
+            "tire_depth": "A new tire has a depth of 9 mm. The traffic law allows wear of 2 mm for light vehicles and 4 mm for public transport."
+        },
+        "tablero_o_pal_de_instrumentos": "Indicates the good or bad functioning of some vehicle system having some variations depending on the model and type of vehicle.",
+        "condiciones_del_vehiculo": [
+            "Clean windows",
+            "Check lights every day",
+            "Check the tailpipe",
+            "Check for fluid leaks from the car.",
+            "Check the condition of the tires",
+            "Check oil, water, and other levels.",
+            "Always carry a well-inflated spare, tools, and other devices.",
+            "Carry all documents and circulation rights (riteve and plates)",
+            "General functioning of lights",
+            "Wipers",
+            "Horn or whistle",
+            "Carry triangles",
+            "Parking brake",
+            "Check oil leaks (floor)",
+            "Muffler",
+            "Brake and steering systems",
+            "Tool box",
+            "Up-to-date driver's license",
+            "Instrument panel is good",
+            "Mirror placement",
+            "Actuation of levers and pedals"
+        ],
+        "presion_de_las_llantas": [
+            "When it has too much pressure, the tire will wear in the center of the tread.",
+            "When it has low pressure, it will wear on the sides of the tread",
+            "When it has normal pressure, there will be even wear."
+        ],
+        "reencauche_de_las_llantas": {
+            "intro": "Retreading must always be done on a good base (do not do it on old tires), otherwise it will fail. Consider:",
+            "considerations": [
+                "Attention must be paid to the origin of the retread; they must come only from companies recognized for their quality controls.",
+                "For heavy transport, it is normal for a casing to support no more than three retreads, as long as the tire is well treated and used in optimal conditions; when not so, its useful life decreases."
+            ]
+        },
+        "rotacion_de_las_llantas": {
+            "intro": "Helps extend their duration and improves their performance. So for safety, saving money, and fuel, you should know the three main rotation patterns:",
+            "patterns_image_description": "Image showing three tire rotation patterns: Front Wheel Drive, Rear Wheel Drive, 4x4 (4-wheel drive)."
+        },
+        "como_cambiar_una_llanta": {
+            "intro": "Follow these steps to change a vehicle tire:",
+            "steps": [
+                "Choose well the place where you will change it (must be off the road) in a flat place.",
+                "Place safety triangles to alert traffic.",
+                "Activate emergency lights and put on the vest.",
+                "Take out necessary tools: spare tire, lug wrench, jack.",
+                "Loosen the nuts with the lug wrench (place foot on the wrench to loosen); these loosen counter-clockwise.",
+                "After loosening, lift the car (place at a point located behind the front or rear tire); make sure it is well placed.",
+                "Align the holes of the spare tire rim with the studs where it will be mounted. Push the tire all the way back and place the nuts on each of the bolts (tighten well).",
+                "Lower the vehicle with the jack smoothly.",
+                "Store the tools.",
+                "Remember to stay calm."
+            ]
+        },
+        "el_manometro": {
+            "definition": "Instrument for measuring and indicating the pressure of a fluid; it is used in vehicles to measure air pressure in tires, oil in the lubrication circuit, air or liquid in the hydraulic circuits of the vehicle, and gasoline.",
+            "how_to_measure_pressure": "To measure pressure we use a pressure gauge, there are digital or needle types.",
+            "note": "It is not recommended to check pressure after having traveled more than 5 km because there may be measurement errors due to air expansion from heating."
+        },
+        "los_extintores": {
+            "location": "The most appropriate place to carry the extinguisher is under the front passenger seat.",
+            "prohibition": "Do not place it under the driver's seat, because if the support breaks, the extinguisher can roll toward the pedals and cause an accident.",
+            "how_to_extinguish_flames": {
+                "title": "To extinguish flames:",
+                "steps": [
+                    "Remove the safety pin from the extinguisher activation lever, turning and pulling the pin.",
+                    "Being as close to the flame as possible, activate the gun directing the chemical powder at a 45° angle at the base of the flame and not directly at the flames.",
+                    "Do not empty the entire contents in a single shot: make short and precise discharges.",
+                    "Consider the expiration date found on the device and ensure it is charged."
+                ]
+            }
+        },
+        "seguridad_pasiva_del_vehiculo": {
+            "definition": "Passive safety is what every vehicle must have so that once an accident is suffered and during it, possible injuries are minor.",
+            "objective": "Detect points and critical situations so that vehicles possess a correct balance between power and maneuverability and stability attributes, as well as avoid failures due to breakage of parts. Ensure that, in case of collision, passive safety elements provide sufficient protection."
+        },
+        "elementos_fundamentales_seguridad_vial": {
+            "title": "FUNDAMENTAL ELEMENTS FROM THE ROAD SAFETY POINT OF VIEW:",
+            "elements": [
+                "Headrests",
+                "Seat belts",
+                "Helmets for motorcyclists",
+                "Helmets for cyclists"
+            ],
+            "seatbelt_effectiveness": "The use of the seat belt decreases physical damage to the driver and passengers by 40%. In some countries, mandatory use has decreased the mortality rate by 80%."
+        },
+        "passive_vs_active_safety": "The difference between passive and active safety is that passive safety reduces the severity of injuries once the accident has occurred (example: seat belt, headrest), whereas active safety prevents before the accident (example: brakes and lights)",
+        "tipos_de_cinturones_de_seguridad": [
+            "Pelvic (2 points)",
+            "Thoracic (2 points)",
+            "Static (3 points)",
+            "Retractable (3 points)"
+        ],
+        "colocacion_del_cinturon_de_seguridad_para_embarazadas": "It should be placed over the chest and under the belly.",
+        "dispositivos_de_seguridad_por_edades": {
+            "older_children_seatbelt": "In the case of children over 12 years old or who measure 1.45 m, they must use the seat belt, placed such that the upper point passes over the chest and NOT near the neck",
+            "fundamental_safety_elements": [
+                "Headrests",
+                "airbags",
+                "safety devices for children",
+                "seat belts",
+                "helmets for motorcyclists and cyclists",
+                "reflective vests."
+            ],
+            "child_safety_devices_table": {
+                "title": "TYPES OF SAFETY DEVICES FOR CHILDREN UP TO 12 YEARS OR 1.45 METERS",
+                "type": "child seats",
+                "data": [
+                    {
+                        "grupo": "Group 0",
+                        "edad": "0 months to 1 year",
+                        "peso": "-10 kg +13 kg",
+                        "estatura": "Up to 75 cm",
+                        "debe_cumplir_con": "Infant carrier device (facing away from traffic, fastened to seat belt, and the carrier handle must be below head level (never over the head)"
+                    },
+                    {
+                        "grupo": "Group I",
+                        "edad": "1 to 4 years",
+                        "peso": "Between 9 kg and 18 kg",
+                        "estatura": "Up to 75 cm",
+                        "debe_cumplir_con": "Safety seat type device, with lateral protection, fastened to the seat belt, placed in the direction of traffic in the center of the rear seat. The minor's head must not exceed the upper edge (must not be more than 7 cm)"
+                    },
+                    {
+                        "grupo": "Group II",
+                        "edad": "4 to 6 years",
+                        "peso": "Between 15 kg and 25 kg",
+                        "estatura": "Between 110 and 145 cm",
+                        "debe_cumplir_con": "Seat belt (3 points) must pass through clavicle and pelvis, must have a backrest, placed in the same direction of traffic and in the back. The head must exceed the height of the device."
+                    },
+                    {
+                        "grupo": "Group III",
+                        "edad": "6 to 12 years",
+                        "peso": "Between 22 kg and 36 kg",
+                        "estatura": "Between 110 and 145 cm",
+                        "debe_cumplir_con": "Booster type device with backrest, connected to seat belt (3 points) and facing forward."
+                    }
+                ],
+                "note": "Most vehicles have two-point belts, but adaptation must be made according to current regulations."
+            }
+        }
+    },
+    {
+        "chapter": "# 5",
+        "title": "HUMAN FACTOR",
+        "condiciones_tecnicas": {
+            "definition": "Knowledge of techniques for handling the vehicle and acquisition of necessary skills.",
+            "good_driver_qualities": {
+                "intro": "Being a good driver means much more than knowing how to handle a vehicle; two fundamental conditions are needed",
+                "conditions": [
+                    "Knowing how to maneuver the vehicle",
+                    "Having an adequate attitude or posture when driving"
+                ]
+            }
+        },
+        "conocimientos_sociales_y_tecnicos": {
+            "definition": "Knowledge of techniques for driving and acquisition of the skill necessary to drive",
+            "driver_knowledge_areas": [
+                "Rules for circulation: Traffic Law",
+                "Elementary knowledge of automotive mechanics",
+                "Accident prevention: three elements that intervene must be considered:",
+                "Perception: (seeing) is everything we perceive through the senses",
+                "Intellection: (thinking) is the decision based on knowledge",
+                "Volition: (acting) is the execution."
+            ]
+        },
+        "manejo_defensivo": {
+            "definition": "A series of good habits at the time of driving; it is represented in the following way:",
+            "concept": "defensive driving: EXPECT EVERYTHING, IMAGINE EVERYTHING, AND SUPPOSE EVERYTHING.",
+            "habits": [
+                "Expecting everything.",
+                "Supposing everything.",
+                "Imagining everything."
+            ]
+        },
+        "aptitud_y_habilidad_de_manejo": {
+            "intro": "Everything learned in theory regarding traffic matters must be reflected in practice. One who aspires to drive a vehicle must demonstrate vehicle mastery and response in a normal current of circulation during a driving test.",
+            "legal_obligation": "The traffic law establishes the obligation of complying with this requirement.",
+            "practice_and_experience": "It will be constant and continuous practice and driving experience that eliminates deficiencies and strengthens skills to drive the vehicle efficiently.",
+            "professional_driver_skills": {
+                "intro": "Professional driver: besides driving defensively to avoid accidents, one must develop driving skills that do not waste fuel and do not pollute the air we breathe. A 'Professional driver' must develop driving skills such as:",
+                "skills": [
+                    "Maintaining a distance with the vehicle ahead.",
+                    "Turning off the engine if it will take long. A good driver saves fuel and cares for the environment.",
+                    "Does not allow important vehicle sensors to be eliminated.",
+                    "Does not drive with feet on the brake or clutch pedal.",
+                    "Performs gear changes without exceeding the determined maximum speed",
+                    "Maintains adequate tire pressure.",
+                    "Accelerates smoothly and worries about revolutions per minute (RPM)"
+                ]
+            }
+        },
+        "condiciones_de_salud_del_conductor": {
+            "intro": "Driving a vehicle not only implies 'knowing' how to do it, but also 'being able' to do it. The driver must have the adequate physical-psychic conditions to do it.",
+            "health_problems": "Health problems that prevent driving can be transitory or permanent. The former, for example, fatigue, and in the latter, time prevents driving, for example, vision problems. When emotional, causes can also cause disorders.",
+            "permanent_impediments": "- Permanent impediments: these disabilities are normally the loss of some limb or sense or serious chronic diseases.",
+            "transitory_conditions": {
+                "intro": "Transitory or eventual conditions: they are occasional and generally preventable (fatigue, alcohol, and drugs). They can be physical or psychic.",
+                "common_physical_conditions": "Physical conditions common cases: FATIGUE, POLLUTION, INTOXICATION.",
+                "medications": "Medications cause numerous accidents; some are: Analgesics, Chemotherapeutics, Antispasmodics, Antibiotics, and Sedatives, stimulants.",
+                "enervating_drugs": "Enervating drugs: A good driver should NEVER use any type of drug.",
+                "alcohol_levels": [
+                    "Two cans of beer or one drink: concentration of 502 milligrams per 100 milliliters of blood",
+                    "Four beers or two drinks: concentration of 50 and less than 100 milligrams per 100 milliliters of blood",
+                    "Eight beers or four drinks or glasses of wine: imply concentration of 100 milligrams per 100 milliliters of blood."
+                ],
+                "ebriedad_threshold": "If the concentration is greater than 50 milligrams, it is already a state of DRUNKENNESS.",
+                "emotional_conditions": "Emotional conditions: behavioral alterations can affect driving capacity."
+            }
+        },
+        "condiciones_formales": {
+            "intro": "There are two conditions or requirements of a formal type to drive a vehicle:",
+            "requirements": [
+                "Having a valid driver's license",
+                "That the vehicle has up-to-date circulation rights."
+            ],
+            "classification_of_problems": {
+                "physical_problems": {
+                    "title": "Physical problems",
+                    "transitory": "Transitory: at determined times such as fatigue, pain, dizziness, flu.",
+                    "permanent": "Permanent: vision problems, lack of limbs, diabetes, high or low pressure etc.",
+                    "medications_note": "It is recommended not to take analgesics and antispasmodics if you are going to drive; taking reactivants or thiamine can turn people into reckless drivers."
+                },
+                "mental_problems": {
+                    "title": "Mental problems",
+                    "exhibicionista": "Exhibitionist: driving with one hand, high radio, distraction.",
+                    "conductor_temerario": "Reckless driver: state of drunkenness, street racing, overtaking on curves.",
+                    "ira": "Anger: becomes reckless and aggressive.",
+                    "vanidad": "Vanity: driver who feels superior to others.",
+                    "susceptible": "Susceptible: becomes resentful because someone honked or made faces."
+                }
+            }
+        },
+        "conduccion_nocturna": {
+            "intro": "Basically, night driving depends on:",
+            "factors": [
+                {
+                    "name": "Speed",
+                    "rule": "should be half of the speed used during the day."
+                },
+                {
+                    "name": "Visibility",
+                    "rule": "avoid looking at the lights of the other vehicle. At night, you see 50% of what can be seen during the day. Pedestrians are seen less at night, especially if they don't wear light clothing."
+                },
+                {
+                    "name": "Lighting",
+                    "rule": "when you meet a vehicle, you have to lower the lights so as not to blind; otherwise, use high beams. It is also very important to take into account the lighting of the road. You must lower lights when crossing with another vehicle or when following; your vehicle's headlights must be well aligned. High beams are used on open highways; low beams must be used when having another vehicle in front, when circulating through town, or if following another vehicle."
+                }
+            ]
+        }
+    },
+    {
+        "chapter": "# 6",
+        "title": "CIRCULATION RULES",
+        "circulacion_vehicular": {
+            "intro": "Before starting circulation, ensure the vehicle is in good condition and pay attention to the following conditions."
+        },
+        "zona_urbana": [
+            "Must circulate on sidewalks and places intended for such purpose.",
+            "Roads must be crossed at corners or specifically marked places (safety zones, pedestrian lights, etc.)",
+            "Pertinent signaling and traffic authority indications must be respected."
+        ],
+        "zona_rural": [
+            "When walking, always circulate in the opposite direction of vehicle traffic, on the left side of the road when there are no sidewalks.",
+            "If there is no sidewalk, walk as far as possible from the roadway.",
+            "In rainy season or fog zones, try to wear bright colors or flashy elements.",
+            "At night, carry a lit flashlight or some reflective material"
+        ],
+        "en_general": [
+            "Look both ways when crossing the road",
+            "If vision is obstructed, move slowly",
+            "Bicycles or pedestrians should not travel on highways or high-speed roads",
+            "Respect road signaling"
+        ],
+        "intersecciones": {
+            "definition": "It is the place where two or more roads converge, in which one can continue or change trajectory. Intersections are regulated by security devices (traffic lights, stops, and others)",
+            "approach_rules": "When approaching an intersection you must: reduce speed, respect signals, and know where to turn.",
+            "in_intersection_rules": [
+                "Think of the maneuver ahead of time, positioning yourself in the correct lane.",
+                "Reduce speed, and perform the maneuver calmly",
+                "Try never to stop inside an intersection unless strictly necessary."
+            ]
+        },
+        "prioridad_de_paso_en_intersecciones": {
+            "intro": "When performing a maneuver, you must know who goes first. To regulate that right of way, different rules or elements are used from highest to lowest priority or power:",
+            "priority_rules": [
+                "Authority: traffic inspector",
+                "Traffic light: in the absence of an authority, the traffic light regulates passage",
+                "Stop or Yield: (stop=stop completely) (yield= must wait your turn) The YIELD has right of way priority over the STOP.",
+                "Main roads: roads carrying more vehicles or greater circulation have priority.",
+                "Avenues and streets: vehicles traveling on avenues have right of way priority.",
+                "Right-hand rule: all those turning right have right of way priority.",
+                "Courtesy"
+            ]
+        },
+        "tipos_de_movimientos_en_una_interseccion": {
+            "prioridad_1": "Right turn",
+            "prioridad_2": "Straight through",
+            "prioridad_3": "Left turn"
+        },
+        "adelantamientos": {
+            "intro": "It is the most dangerous maneuver; it must be done with great caution to avoid a head-on collision. When overtaking, have sufficient space to do it and NEVER overtake on a curve, bridge, crest, intersection, or dangerous place.",
+            "maneuver_rules": [
+                "Observe that there is no prohibition in a traffic sign or yellow continuous line on the roadway.",
+                "Observe and measure the distance you have for overtaking.",
+                "Observe that no car is coming in the opposite lane.",
+                "Go to the left lane and use the left turn signal.",
+                "Increase speed and pass the car, using the right turn signal when returning to the right lane."
+            ]
+        },
+        "accidentes_vehiculares": {
+            "definition": "Unintentional event that causes injuries or deaths to people and livestock (animals) or damage to property. The science that studies accidents is called 'Road Accidentology'",
+            "main_types": [
+                "Collision: crash between 2 or more vehicles or another object.",
+                "Run-over: vehicle impacts a person causing damage",
+                "Rollover: the vehicle loses its original position."
+            ]
+        },
+        "accidentes_mas_frecuentes": {
+            "table": [
+                {
+                    "nombre": "Head-on collision",
+                    "causa": "When overtaking, taking a curve at high speeds, bad weather conditions, mechanical failures.",
+                    "consecuencias": "Passengers move forward and backward, which causes head injuries.",
+                    "prevencion": "Always look ahead, decrease speed in dangerous situations."
+                },
+                {
+                    "nombre": "Rear-end collision",
+                    "causa": "Happens from not keeping the correct distance or excess speed.",
+                    "consecuencias": "Blows to passengers and own vehicle and the one ahead.",
+                    "prevencion": "Always look forward. The ideal distance is when you see the tires of the car ahead. Use the two-second rule (we will study it later)"
+                },
+                {
+                    "nombre": "Collision with heavy vehicles",
+                    "causa": "For not respecting signals and for excess speed.",
+                    "consecuencias": "Damage to vehicle and passengers, as well as third parties.",
+                    "prevencion": "Use the interval rule (we will study it later)"
+                },
+                {
+                    "nombre": "Left side collision",
+                    "causa": "When moving to the left lane.",
+                    "consecuencias": "Damage to vehicle and passengers, as well as third parties.",
+                    "prevencion": "Observe the whole road and maneuver with caution. Remember the blind spot (we will study it later)"
+                },
+                {
+                    "nombre": "Right side collision",
+                    "causa": "When moving to the right lane.",
+                    "consecuencias": "Damage to vehicle and passengers, as well as third parties.",
+                    "prevencion": "Observe the whole road and maneuver with caution. Remember the blind spot (we will study it later)"
+                }
+            ]
+        },
+        "regla_de_los_dos_segundos": {
+            "intro": "Applied when driving a light vehicle.",
+            "description": "Look for a reference point (a tree, for example) ahead of the vehicle you are following, and when the rear part of that vehicle passes the reference point, you must count: one thousand one hundred one, one thousand one hundred two. At that moment, the front of your vehicle should be about to pass the reference point. If it passed before you finished counting, decrease speed."
+        },
+        "regla_del_intervalo": {
+            "intro": "Applied when driving a heavy vehicle.",
+            "description": "You must keep one second of time for every 3 meters of length of the heavy vehicle you are driving. It is applied the same way as the two-second rule."
+        },
+        "distancia_en_la_ciudad": "As a general rule when in town, ensure that you can always see the tires of the vehicle ahead; this is the ideal distance.",
+        "angulo_o_punto_muerto": "It is the zone that cannot be seen behind the rearview mirrors; it is remedied by moving the head to the side where you are going to maneuver.",
+        "distancia_de_parada": {
+            "definition": "When the driver observes an obstacle, they need a distance to be able to stop; this distance is known as 'stopping distance' and is calculated as follows: SD = RD + BD",
+            "dp_explanation": "SD: stopping distance",
+            "dr_explanation": "RD: Reaction distance (is the moment in which the driver perceives the obstacle)",
+            "df_explanation": "BD: Braking distance (is the moment in which the brakes are applied and the vehicle stops)"
+        },
+        "estacionamiento": "The rule indicates that the parking zone is on the right side of the road and in places where signaling allows it (never on a yellow line, at taxi or bus stops, or in front of hydrants, firefighters, police, or garages)."
+    },
+    {
+        "chapter": "# 7",
+        "title": "ROUNDABOUTS",
+        "normas": {
+            "intro": "Do not attempt to exit if you are not positioned in the corresponding lane. Do not enter this lane suddenly either. Do not forget to signal with turn signals that you are going to maneuver. You must respect the following steps:",
+            "rules": [
+                "Drive at less than 30 KPH and respect stop and yield signs.",
+                "Enter the roundabout respecting the yield prudently and keeping distance",
+                "Position in the adequate lane.",
+                "Always signal maneuvers with turn signals.",
+                "The vehicle inside the roundabout has right of way priority."
+            ],
+            "priority_vehicles": "There are vehicles that by their position always have right of way priority: ambulance, firefighters, railroads, police, traffic inspector, for which they must identify themselves appropriately."
+        },
+        "ventajas_y_desventajas_de_las_rotondas": {
+            "ventajas": [
+                "Forces the driver to control speed (30 KPH) when making curves so as not to overturn.",
+                "In certain cases, offers some traffic fluidity by avoiding a traffic light.",
+                "Reduces risk of collisions.",
+                "Operational structure reduces waiting time for users compared to an intersection"
+            ],
+            "desventajas": [
+                "In two or three-lane roads, vehicle crossing is complicated when entering or leaving the roundabout.",
+                "Collisions occur because the driver does not use turn signals.",
+                "A series of steps and techniques must be applied to avoid these problems and take advantage of the roundabout.",
+                "Causes fatigue in driving."
+            ]
+        },
+        "reglas_para_conducir_en_una_rotonda": [
+            "Vehicles taking the FIRST and SECOND exit must use the EXTERNAL lane",
+            "Vehicles taking the THIRD, FOURTH, AND OTHER exits must use the INTERNAL lane.",
+            "The internal lane has right of way priority and can also be used to exit at any exit.",
+            "Respect stop and yield."
+        ]
+    },
+    {
+        "chapter": "# 8",
+        "title": "THE DRIVER AND ENVIRONMENTAL POLLUTION",
+        "air_composition": "Pure air is composed of 78% nitrogen, 21% oxygen, and 1% other components like argon, carbon dioxide, and ozone.",
+        "urban_pollution": "In cities and industrial zones, polluting particles are found, whose physical and chemical alterations break the equilibrium of air components. This pollution is defined as atmospheric contamination; consequently, pollutant emissions affect air quality and the health of the population.",
+        "sources_of_contamination": [
+            "Sudden accelerations",
+            "excess speed",
+            "unnecessary braking",
+            "oil spills",
+            "discarded batteries and tires",
+            "throwing cigarette butts, cans, and plastics anywhere contaminates.",
+            "Excess of solid waste",
+            "soot",
+            "asbestos particles",
+            "poisonous gases"
+        ],
+        "effects_of_contamination": "All with harmful effects on health, the deterioration of the environment, and global warming.",
+        "gasoline_consumption_impact": "One liter of gasoline consumed produces half a kilo of carbon dioxide, and 40% of river and lake pollution comes from used motor oil.",
+        "san_jose_pollution": "San José exceeds the limits of three pollutants: CARBON MONOXIDE (CO), NITROGEN OXIDE (NO2), and LEAD (Pb), according to Ministry of Health studies; those working in the urban center breathe, in terms of toxic gases, the equivalent of two packs of cigarettes.",
+        "costa_rica_greenhouse_gases": "Costa Rica is among the countries without major production of carbon dioxide in the capital, one of the pollutants responsible for the greenhouse effect, with effects on climate and the planet.",
+        "human_impact_on_environment": "In general terms, it can be said that all human action has an impact on the environment, being the only species capable of changing the medium that surrounds it.",
+        "litter_and_waste": "The phrases 'trash in the bin' and 'keep this place clean' have a double meaning. One is a conduct of order and cleanliness; the other is a place where to deposit papers, peels, plastics, cans, and containers of all types, which are normally used by pedestrians, drivers, and passengers both inside the vehicle and out.",
+        "types_of_atmospheric_contamination": [
+            "SONIC",
+            "LUMINOUS",
+            "CALORIC",
+            "ELECTROMAGNETIC."
+        ],
+        "ecological_awareness": {
+            "intro": "Ecological awareness.",
+            "vehicle_emissions": "Vehicle gas emission is fundamental because automotive transport constitutes the largest consumer of fuel in our country, obtained from petroleum which is a non-renewable resource. Furthermore, engines in bad condition do not burn gasoline and diesel well, producing a black cloud of soot that soils clothes, intoxicates lungs, and reddens eyes when we go behind a truck, a motorcycle, or an automobile with an engine in bad condition."
+        },
+        "concepto_de_contaminacion_ambiental": "Understood as the alterations and changes produced, mainly by human impact.",
+        "principales_contaminantes_del_aire": {
+            "primarios": {
+                "description": "remain in the atmosphere.",
+                "examples": [
+                    "hydrocarbons (HC)",
+                    "sulfur oxide",
+                    "carbon dioxide",
+                    "carbon monoxide (CO)",
+                    "nitrogen oxide",
+                    "lead (Pb)"
+                ]
+            },
+            "secundarios": {
+                "description": "product of a chemical reaction of two or more primary pollutants.",
+                "example": "Photochemical oxidants and ozone."
+            }
+        },
+        "fuentes_de_contaminacion": [
+            "Sonic pollution: excess noise.",
+            "Luminous pollution: light signs/billboards.",
+            "Caloric pollution: burning trash and roadside brush.",
+            "Electromagnetic: ray emissions from electronic equipment."
+        ],
+        "monoxido_de_carbono": "Represented by the symbol CO. It is an odorless and colorless gas, capable of producing death (toxic).",
+        "control_de_gases_contaminantes": "One liter of fuel 'consumed' within an engine transforms into gases that harm our health and the environment. Certain devices in the vehicle were designed to reduce environment pollution a little, for example: the catalytic converter and the general emission control system.",
+        "el_catalizador": "This device found before the tailpipe converts engine exhaust gases into less polluting gases. This device cannot be removed from the vehicle. THE CATALYTIC CONVERTER: under no circumstances should the catalytic converter be eliminated",
+        "sistema_general_de_control_de_emisiones": {
+            "description": "This system is in charge of maintaining gas emissions at the minimum permitted level, or else, eliminating them to make the engine environmentally friendly.",
+            "important_parts": [
+                "Fuel pressure regulator",
+                "exhaust gas regulation valve",
+                "activated carbon canister, etc."
+            ]
+        },
+        "conduccion_eficiente": {
+            "intro": "Efficient driving begins with engine maintenance:",
+            "maintenance_practices": [
+                "On-time oil changes",
+                "Engine tuning",
+                "Tire pressure control",
+                "Checking tire wear",
+                "Travel route planning."
+            ],
+            "considerations": [
+                "You should not unnecessarily keep your foot on the clutch, because this wears the release bearing and pressure plate.",
+                "Avoid excessive braking that wears the fibers and launches polluting particles.",
+                "Avoid accelerating abruptly or unnecessarily.",
+                "One must have 'feather foot'; this means using the gas pedal with smoothness and precision.",
+                "Engines have several devices for better fuel performance and to decrease pollution. The catalytic converter is important in the vehicle because it eliminates toxic gases.",
+                "Any alteration of the elements of an emission control system means: HELPING TO INCREASE our planet's pollution, fuel consumption, and threatens health.",
+                "It is fundamental to reiterate the concept of DEFENSIVE DRIVING. Which means EXPECT EVERYTHING, IMAGINE EVERYTHING, AND SUPPOSE EVERYTHING."
+            ]
+        },
+        "sensores_de_un_vehiculo": "Small devices that behave similarly to the body's sensory system; they perceive signals coming from all over the vehicle; they inform the driver of necessary adjustments."
+    },
+    {
+        "chapter": "# 9",
+        "title": "TECHNICAL, ECONOMIC, AND EFFICIENT DRIVING",
+        "intro": "This chapter contributes to the optimal achievement of driving motor vehicles in a technical, economic, and efficient way",
+        "reduction_of_costs": "Consists fundamentally in reducing operation costs, starting from the best and easiest way to achieve it, which is reducing costs for fuel consumption and maintenance. Fuel costs are the most important in the transport industry, without dismissing, of course, what occurs from the purchase of spare parts for corrective maintenance caused by deficient operational prevention of automotive equipment.",
+        "good_driving_habits_fuel_economy": "Good driving habits decrease fuel consumption by 10% or more, which can be equivalent to reducing your consumption by 9000 liters.",
+        "costa_rica_fuel_import_impact": "Given that Costa Rica is not a petroleum-producing country, it must be imported, which is why excessive consumption means a greater expenditure of foreign currency, with the consequent imbalance of national finances which, upon being affected, inevitably impacts the rest of the economy—for example, by having a lower availability of monetary reserves, the backing of public investment can be negatively affected, which translates into the construction of future hospitals, highways, and ports, among other vital investments to strengthen access to work, sources of employment, and with it, a better quality of life in the country.",
+        "spare_parts_import_impact": "A lower import of automotive spare parts that, as is well known, are not manufactured in the country, and also Costa Ricans earn in colones with 'the consequent leak of that expensive foreign currency'",
+        "concepto_de_conduccion_economica": "Type of driving or behavior in relation to the vehicle and other operators that allows for obtaining minimum consumption of fuel, tires, and spares, thus providing better engine performance and safety to the operator.",
+        "reglas_para_una_conduccion_economica": [
+            "Perform short gear changes and accelerate progressively.",
+            "Drive in the last revolutions of the gearbox.",
+            "When making gear changes, do not step fully on the accelerator.",
+            "Maintain a constant speed.",
+            "Maintain distance with the vehicle ahead and do not accelerate to close it."
+        ],
+        "revolucion_del_motor_rpm": {
+            "definition": "RPM means the revolutions per minute of the engine at the time of accelerating.",
+            "avoidance": "Over-revving the engine should be avoided as this causes unnecessary fuel consumption."
+        },
+        "el_tacometro": "It is a device used to measure revolutions per minute (RPM). It is a visual instrument that allows for good technical, economic, and efficient driving. The tachometer is nothing more and nothing less than the visual instrument that can allow for good driving of the vehicle in a TECHNICAL, EFFICIENT, and ECONOMIC way. Which consists of maintaining an oscillation between 1500 and 2800 RPM units. The analog tachometer measures RPM with a needle that turns from left to right over numbering starting at 1 and ending in 5, 7, or more, while the digital one will generally measure as an ascending or descending counter as the case may be.",
+        "habitos_al_conducir": "If good driving habits are applied, fuel expenses can be reduced by 10% to 30%.",
+        "fuerzas_que_intervienen_en_el_desplazamiento_del_vehiculo": {
+            "definition": "Means: the force or power it must deploy for its movement in an economic and efficient way is to achieve technically the maximum possible performance from our engine.",
+            "opposing_forces": "Forces that oppose the movement of a vehicle, and that the engine must overcome are:",
+            "forces_list": [
+                {
+                    "name": "Aerodynamic resistance",
+                    "description": "movement of the vehicle as a consequence of the wind; this reduces engine power and speed. It is recommended to close windows to prevent air from entering the vehicle and lifting it a few centimeters from the ground. The movement of a vehicle in the air is affected by aerodynamic force, composed of two forces: lift and drag; the first for being overcome upward and the second for being horizontal and opposite to the vehicle's movement. Lift force allows a plane to take off and sustain itself in the air; it can be observed that spoilers are placed on race cars so they do not lift at high speeds. Drag force exerts greater influence over the march of a vehicle because as already stated, it is opposite to its movement, according to its drag coefficient, which depends on its shape or aerodynamic profile that, exposed to air density mainly by the frontal area of the vehicle, determines displacement speed."
+                },
+                {
+                    "name": "Rolling resistance",
+                    "description": "Is the contact the tires have with the pavement; this produces resistance to the movement the vehicle carries; therefore decreasing speed. Friction results from contact between tires and the rolling surface or roadway, producing resistance to vehicle movement composed of elements known as: rolling resistance, movement resistance coefficient measured in kilograms per ton, vehicle mass in tons, and gravity acceleration."
+                },
+                {
+                    "name": "Grade resistance",
+                    "description": "If the slope is upward, it will slow the vehicle speed, but if the slope is downward, it will increase speed. Consists of driving on a route upward or downward. If it is an upward route, the inclination will tend to stop the vehicle and the engine will have to overcome it. If, on the contrary, it is a downward slope, the inclination will accelerate the vehicle, which is very important to take into account during mountain driving, because the engine can reach dangerous speeds that could even destroy it. It is recommended to use the appropriate gear or speed, such as descending in the same gear ratio used to climb the slope."
+                },
+                {
+                    "name": "Inertia resistance",
+                    "description": "occurs by changing the car's speed; it is the typical backward movement that causes that. If it is intended to change a vehicle's speed, the force that opposes that change, called inertia force, which depends on the vehicle's mass, must be overcome. It is very important to know and control, especially in urban traffic, as it generates high fuel consumption and wear."
+                },
+                {
+                    "name": "Centrifugal force",
+                    "description": "curvilinear movement that tends to throw it out of trajectory, occurs in very sharp curves. In a curve that is too sharp or has a small radius, centrifugal force can cause a rollover or a skid. It is important to determine when driving any type of vehicle where an inclination or superelevation of curves is directed, which is present on the right edge when the curve is to the left and on the left edge when the curve is to the right. It should not be forgotten that banking only counteracts the effect of centrifugal force, it is not eliminated, so we must always exercise the preventive action of decreasing speed or controlling the accelerator before entering the curve to later accelerate again when traveling through it, according to what the sense of touch indicates based on the centrifugal pressure perceived along a given horizontal, vertical, or mixed curve. If we accelerate into a curve and notice it has no superelevation or banking, we must reduce speed much more because, as there is no device to counteract the centrifugal effect, the latter will be null and the vehicle will tend to leave the road with much more force. IN SUMMARY, banking only counteracts centrifugal force, so if the entry speed to a curve is not adequate, the vehicle will always leave the road by skid or rollover."
+                }
+            ]
+        },
+        "curvas_caracteristicas_del_motor": {
+            "description": "They allow for knowing the behavior of the engine under different operation conditions—for technical driving, it is necessary to know and interpret these curves, such as information contained in technical sheets, which are data that logically or digitally the tachometer can facilitate. The rotation movement of the pistons is transformed into rotation movement, which in turn transmits to the gearbox, to the differential if it has one, and finally toward the tires, causing what is mechanically known as torsional torque."
+        },
+        "diagramacion_de_velocidades": "The torsion torque and power available over the engine's inertia voltage have to be transmitted to the tires; this function is performed by the clutch, gearbox, driveshaft, differential, and axles, which are the components of the transmission. The speed at which the engine turns is not transmitted directly to the wheels; instead, it is necessary to reduce it. This operation is performed by the gearbox and the differential.",
+        "tacometro_o_medidor_de_rpm": "To measure and control the economic range of RPM there exists a device commonly known as a tachometer, which has the function of indicating the RPM at which the engine is turning when the driver steps on the accelerator or when they are not doing so. The tachometer is nothing more and nothing less than the visual instrument that can allow for good driving of the vehicle in a TECHNICAL, EFFICIENT, and ECONOMIC way. Which consists of maintaining an oscillation between 1500 and 2800 RPM units. The analog tachometer measures RPM with a needle that turns from left to right over numbering starting at 1 and ending in 5, 7, or more, while the digital one will generally measure as an ascending or descending counter as the case may be.",
+        "el_cambio_progresivo_de_velocidades": "With this method, the driver makes it possible to manipulate the load easily in each ratio. The key is to make the best use of the engine's load capacity, instead of using maximum RPM. Do not forget that over-revving the engine is a bad habit, costly, and should be avoided at all times.",
+        "el_manejo_en_la_ciudad": "The progressive gear change method is the best way to change speed. When driving in the city, it is also possible to save fuel by anticipating traffic lights. Stops and starts consume a significant amount of fuel.",
+        "en_la_carretera": "The speed at which you drive your vehicle affects fuel consumption, wear on tires, brakes, and other parts of the unit. For example, you can reduce fuel consumption and general maintenance costs if you maintain your speed at 90 kph, where air resistance remains at a reasonable level. 90 kph is the MAXIMUM speed recommended for driving on HIGHWAYS.",
+        "seleccion_adeacuada_al_tipo_de_operacion": "Engine power depends on the type of service it will be destined for. The importance of a good choice of vehicle. It is worth noting that the behavior of the driver or operator is their own image as an educated, cultured, and capable person, as well as the quality of service of the company or society to which they transmit their effort.",
+        "conduccion_economica": {
+            "definition": "Defined as the type of driving and behavior in relation to the vehicle and other operators that allows for obtaining minimum consumption of fuel, tires, and spares, better engine performance, and safety for the operator; fundamental principles of good driving:",
+            "pie_de_pluma": "the elements necessary to produce power in a diesel or gasoline internal combustion engine are air, fuel, and heat. Of these elements, air and factors influencing it such as air filters, cylinder compression, or altitude above sea level depend little on the driver. The amount of fuel provided to the engine depends greatly on the operator. The amount of fuel is generally supplied through the accelerator, so this must be used to regulate the amount of fuel, which means driving with 'feather foot', not lead foot."
+        },
+        "recomendaciones_practicas_para_el_automovilista_inteligente": {
+            "intro": "Cold starting, continuous accelerations and braking, friction between mechanical and rolling parts, besides the resistance air offers when advancing cause over-consumption of fuel and greater pollution.",
+            "recommendation": "Driving on the highway between 90 and 100 kph saves fuel and is safer."
+        },
+        "anticipacion": "Maintaining constant speed is a key element for savings in vehicle driving.",
+        "actitud_positiva_al_volante": "The skilled and intelligent driver resists the temptation to rush, respects regulations, does not stress, stays alert, and anticipates without forcing the vehicle or traffic conditions.",
+        "aerodinamica": "When driving on the highway, windows should be closed and interior ventilation used whenever possible. Open windows increase air resistance and therefore fuel consumption also increases. IF you use the air conditioning, you can increase fuel consumption by 10% to 15%.",
+        "control_de_gastos": "To control fuel consumption, it is necessary to record the payments made for fuel every time you leave a gas station. A vehicle that requires tuning can over-consume 20% of fuel.",
+        "conduccion_inteligente": "Any driver who applies the indications contained in this chapter will be able to immediately notice the decrease in their gas or diesel expenses. The economic difference between driving technically and driving arbitrarily can mean up to 30% savings."
+    }
+]

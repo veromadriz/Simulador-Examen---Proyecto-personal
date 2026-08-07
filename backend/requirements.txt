@@ -1,0 +1,10 @@
+Flask==3.0.3
+flask-cors==4.0.1
+psycopg2-binary==2.9.12
+python-dotenv==1.0.1
+Werkzeug==3.0.3
+
+# Proveedores del chatbot de IA. Groq es el proveedor gratuito preferido;
+# Anthropic queda disponible como alternativa opcional.
+anthropic==0.34.2
+groq==0.31.1

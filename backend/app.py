@@ -1,10 +1,13 @@
+from functools import lru_cache
 from pathlib import Path
+import re
 
 from flask import Flask, jsonify, request, send_from_directory
 
 from db import get_cursor
 import connie_bot
 from auth_utils import hash_password, needs_rehash, verify_password
+import manual_routes
 from manual_routes import manual_bp
 
 BASE_DIR = Path(__file__).resolve().parent
@@ -13,6 +16,46 @@ STATIC_DIR = ROOT_DIR / "static"
 REACT_DIST_DIR = ROOT_DIR / "react-frontend" / "dist"
 
 PASSING_SCORE = 80  # porcentaje mínimo para aprobar un examen
+ENGLISH_QUESTIONS_PATH = ROOT_DIR / "preguntas_cosevi_full - inglés.sql"
+
+
+def _decode_sql_text(value):
+    return value.replace("''", "'")
+
+
+@lru_cache(maxsize=1)
+def load_english_questions():
+    """Read the translated seed as a localization catalog without modifying the DB."""
+    sql = ENGLISH_QUESTIONS_PATH.read_text(encoding="utf-8")
+    question_pattern = re.compile(
+        r"INSERT INTO preguntas\s*\([^)]*\)\s*VALUES\s*"
+        r"\('((?:''|[^'])*)'\s*,.*?\);\s*"
+        r"INSERT INTO opciones\s*\([^)]*\)\s*VALUES\s*(.*?);",
+        re.IGNORECASE | re.DOTALL,
+    )
+    option_pattern = re.compile(
+        r"\('((?:''|[^'])*)'\s*,\s*(?:true|false)\s*,\s*(\d+)\)",
+        re.IGNORECASE,
+    )
+
+    translations = {}
+    for question_text, option_block in question_pattern.findall(sql):
+        options = option_pattern.findall(option_block)
+        if not options:
+            continue
+        question_id = int(options[0][1])
+        translations[question_id] = {
+            "enunciado": _decode_sql_text(question_text),
+            "opciones": [_decode_sql_text(text) for text, _ in options],
+        }
+    return translations
+
+
+def english_question(question_id):
+    try:
+        return load_english_questions().get(int(question_id))
+    except (OSError, UnicodeError, ValueError):
+        return None
 
 
 def option_is_correct(value):
@@ -24,7 +67,7 @@ def option_is_correct(value):
     return str(value).strip().lower() in {"true", "t", "1", "si", "sí", "yes", "y"}
 
 
-def build_review_topics(revisiones):
+def build_review_topics(revisiones, language="es"):
     """Groups incorrect answers into a concise, chapter-based study plan."""
     topics = {}
     for revision in revisiones:
@@ -34,7 +77,12 @@ def build_review_topics(revisiones):
         chapter_title = revision.get("capitulo_titulo")
         key = chapter_number or "general"
         if key not in topics:
-            label = f"Capítulo {chapter_number}: {chapter_title}" if chapter_number else "Tema general"
+            if language == "en":
+                english_chapter = manual_routes._english_manual().get(chapter_number, {}) if chapter_number else {}
+                chapter_title = english_chapter.get("titulo", chapter_title)
+                label = f"Chapter {chapter_number}: {chapter_title}" if chapter_number else "General topic"
+            else:
+                label = f"Capítulo {chapter_number}: {chapter_title}" if chapter_number else "Tema general"
             topics[key] = {"tema": label, "errores": 0, "preguntas": []}
         topics[key]["errores"] += 1
         topics[key]["preguntas"].append(revision["enunciado"])
@@ -139,12 +187,22 @@ def get_capitulos_examen():
         )
         rows = cur.fetchall()
 
+    english_titles = {}
+    if request.args.get("lang") == "en":
+        try:
+            english_titles = {
+                chapter["numero"]: chapter
+                for chapter in manual_routes._english_manual().values()
+            }
+        except (OSError, ValueError, KeyError):
+            english_titles = {}
+
     return jsonify([
         {
             "id": chapter_id,
             "numero": numero,
-            "titulo": titulo,
-            "descripcion": descripcion,
+            "titulo": english_titles.get(numero, {}).get("titulo", titulo),
+            "descripcion": english_titles.get(numero, {}).get("descripcion", descripcion),
             "icono": icono,
             "total_preguntas": total,
         }
@@ -156,6 +214,7 @@ def get_capitulos_examen():
 def get_questions():
     exam_type = request.args.get("type", "random")
     capitulo_id = request.args.get("capitulo_id")
+    language = request.args.get("lang", "es")
 
     with get_cursor() as cur:
         if exam_type == "chapter" and capitulo_id:
@@ -199,11 +258,21 @@ def get_questions():
             # Eso solo se revisa del lado del servidor en /guardar_resultado,
             # para que no se pueda "hacer trampa" leyendo la respuesta desde
             # las devtools del navegador.
-            opciones = [{"id_opcion": id_opcion, "texto": texto} for id_opcion, texto in cur.fetchall()]
+            option_rows = cur.fetchall()
+            translation = english_question(id_pregunta) if language == "en" else None
+            opciones = [
+                {
+                    "id_opcion": id_opcion,
+                    "texto": translation["opciones"][index]
+                    if translation and index < len(translation["opciones"])
+                    else texto,
+                }
+                for index, (id_opcion, texto) in enumerate(option_rows)
+            ]
 
             questions.append({
                 "id_pregunta": id_pregunta,
-                "enunciado": enunciado,
+                "enunciado": translation["enunciado"] if translation else enunciado,
                 "opciones": opciones,
             })
 
@@ -214,6 +283,7 @@ def get_questions():
 def guardar_resultado():
     data = request.get_json() or {}
     respuestas = data.get("respuestas") or []
+    language = data.get("language", "es")
 
     if not isinstance(respuestas, list) or not respuestas:
         return jsonify({"success": False, "message": "No se recibieron respuestas para calificar."}), 400
@@ -252,7 +322,8 @@ def guardar_resultado():
                 (id_pregunta,),
             )
             opciones = cur.fetchall()
-            enunciado = opciones[0][0] if opciones else "Pregunta no disponible"
+            translation = english_question(id_pregunta) if language == "en" else None
+            enunciado = translation["enunciado"] if translation else (opciones[0][0] if opciones else "Pregunta no disponible")
             capitulo_id = opciones[0][1] if opciones else None
             capitulo_numero = opciones[0][2] if opciones else None
             capitulo_titulo = opciones[0][3] if opciones else None
@@ -274,11 +345,24 @@ def guardar_resultado():
                 "id_opcion": id_opcion,
                 "es_correcta": es_correcta,
             })
+            user_option_index = next((index for index, option in enumerate(opciones) if option[4] == id_opcion), None)
+            correct_option_index = next((index for index, option in enumerate(opciones) if option_is_correct(option[6])), None)
+            translated_options = translation["opciones"] if translation else []
+            user_answer = (
+                translated_options[user_option_index]
+                if user_option_index is not None and user_option_index < len(translated_options)
+                else (opcion_usuario[5] if opcion_usuario else ("No answer" if language == "en" else "Sin respuesta"))
+            )
+            correct_answer = (
+                translated_options[correct_option_index]
+                if correct_option_index is not None and correct_option_index < len(translated_options)
+                else (opcion_correcta[5] if opcion_correcta else ("Not configured" if language == "en" else "No configurada"))
+            )
             revisiones.append({
                 "id_pregunta": id_pregunta,
                 "enunciado": enunciado,
-                "respuesta_usuario": opcion_usuario[5] if opcion_usuario else "Sin respuesta",
-                "respuesta_correcta": opcion_correcta[5] if opcion_correcta else "No configurada",
+                "respuesta_usuario": user_answer,
+                "respuesta_correcta": correct_answer,
                 "es_correcta": es_correcta,
                 "capitulo_numero": capitulo_numero,
                 "capitulo_titulo": capitulo_titulo,
@@ -324,7 +408,7 @@ def guardar_resultado():
         "modo_diagnostico": es_diagnostico,
         "respuestas_calificadas": respuestas_calificadas,
         "revisiones": revisiones,
-        "temas_a_repasar": build_review_topics(revisiones),
+        "temas_a_repasar": build_review_topics(revisiones, language),
     })
 
 
@@ -355,11 +439,21 @@ def obtener_estadisticas(id_usuario):
             """,
             (id_usuario,),
         )
+        english_titles = {}
+        if request.args.get("lang") == "en":
+            try:
+                english_titles = {
+                    chapter["numero"]: chapter["titulo"]
+                    for chapter in manual_routes._english_manual().values()
+                }
+            except (OSError, ValueError, KeyError):
+                english_titles = {}
+
         temas = [
             {
                 "id": capitulo_id,
                 "numero": numero,
-                "titulo": titulo,
+                "titulo": english_titles.get(numero, titulo),
                 "puntaje": round(float(puntaje), 1) if puntaje is not None else 0,
             }
             for capitulo_id, numero, titulo, puntaje in cur.fetchall()

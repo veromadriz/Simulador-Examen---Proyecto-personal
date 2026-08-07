@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useEffect, useRef, useState } from 'react';
-import { Navigate, Route, Routes, Link, useNavigate, useParams } from 'react-router-dom';
+import { Navigate, Route, Routes, Link, NavLink, useNavigate, useParams } from 'react-router-dom';
 import { fetchJson } from './api';
 
 const LanguageContext = createContext(null);
@@ -16,6 +16,28 @@ const translations = {
     reviewTopics: 'Temas que deberías repasar', reinforceTopics: 'Temas para reforzar', personalized: 'Recomendación personalizada',
     reviewCopy: 'Priorizados según las respuestas que necesitás revisar.', resultFinal: '🎯 Resultado final',
     light: 'Claro', dark: 'Oscuro', spanish: 'ES', english: 'EN'
+    ,chooseExam: 'Elige tu tipo de examen', examIntro: 'Pon a prueba tus conocimientos y descubre qué tan preparado estás.',
+    diagnosticCard: 'Diagnóstico', diagnosticCardCopy: 'Descubre qué temas necesitas reforzar.', extreme: 'Examen Extremo', extremeCopy: 'El desafío más difícil de DrivePrep.',
+    byChapter: 'Por Capítulo', byChapterCopy: 'Practica exclusivamente el capítulo que elijas.', random: 'Aleatorio', randomCopy: 'Una mezcla sorpresa de preguntas.', start: 'Comenzar',
+    reviewAnswers: 'Revisa tus respuestas', missedQuestions: 'Preguntas por reforzar', missedCopy: 'Estas son las respuestas que no coincidieron con la respuesta correcta.', yourAnswer: 'Tu respuesta:', correctAnswer: 'Respuesta correcta:',
+    answerToReinforce: 'respuesta por reforzar', answersToReinforce: 'respuestas por reforzar'
+    ,login: 'Iniciar sesión', loginMore: 'Inicia sesión para más', register: 'Registrarse', logout: 'Cerrar sesión', goToExams: 'Ir a exámenes', viewManual: 'Ver manual',
+    simulator: 'Simulador teórico de manejo', homeTitle: 'Practica, mide tu progreso y aprueba con seguridad', homeCopy: 'Estudia, hacé exámenes y revisá tus avances sin perder el ritmo.',
+    examsDone: 'Exámenes', average: 'Promedio', topics: 'Temas', chatbot: 'Chatbot', practical: 'Práctico', askConnie: 'Pregúntale a Connie', readManual: 'Leer manual', simulation: 'Simulación',
+    guide: 'Guía de estudio', manualTitle: 'Manual de DrivePrep', manualCopy: 'Explorá el Manual del Conductor capítulo por capítulo.', loadingChapters: 'Cargando capítulos…',
+    chapterSelection: 'Selección de Capítulo', chapterSelectionCopy: 'Elige un capítulo del manual para preparar tu siguiente examen.', questionsAvailable: 'preguntas disponibles',
+    askConniePlaceholder: 'Pregúntale algo a Connie…', quizTitle: 'Quiz final',
+    welcome: 'Hola, {name} ✨', accountCreated: 'Cuenta creada 💖 Ahora inicia sesión.', actionFailed: 'No se pudo completar la acción.',
+    completedApproved: 'hechos y aprobados', preparation: 'preparación', progressing: 'con avance', totalReadiness: 'Preparación total', readinessByTopic: 'Preparación por tema',
+    completeChapterExam: 'Completa un examen por capítulo para ver tu nivel por tema.', topicsToReview: 'Temas para revisar', takeExamRecommendation: 'Haz un examen para recibir recomendaciones de estudio.', testKnowledge: 'Prueba tu conocimiento',
+    name: 'Nombre', email: 'Correo', password: 'Contraseña', enter: 'Entrar', createAccount: 'Crear cuenta', noAccount: '¿No tienes cuenta? Regístrate', hasAccount: '¿Ya tienes cuenta? Inicia sesión',
+    examsTaken: 'Exámenes realizados', attemptedTotal: 'intentados en total', generalPerformance: 'rendimiento general', mastered: 'dominados', recommendationCopy: 'Te recomendamos practicar señales de tránsito antes de intentar otro examen completo.',
+    connieGreeting: '¡Hola! Soy tu asistente virtual de autoescuela. ¿En qué puedo ayudarte hoy?', connieFallback: 'No entendí tu mensaje.', connieUnavailable: 'No pude responder en este momento.',
+    manualPageCopy: 'Cada capítulo del manual del conductor tiene su propia página para que estudies a tu ritmo.', sections: 'secciones', noChapters: 'Todavía no hay capítulos', noChaptersCopy: 'El manual todavía no tiene contenido disponible.', manualLoadError: 'No se pudo cargar el manual.',
+    chapterNotFound: 'Capítulo no encontrado.', chapterLoadError: 'No se pudo cargar este capítulo.', loadingChapter: 'Cargando capítulo…', backToManual: 'Volver al manual', noSections: 'Este capítulo todavía no tiene secciones cargadas.', topic: 'Tema', reviewMainIdeas: 'Repasá las ideas principales de este tema.',
+    noQuestions: 'No hay preguntas disponibles para esta selección.', questionLoadError: 'Error al cargar las preguntas.', loadingQuestion: 'Cargando pregunta…', saveResultError: 'No se pudo guardar el resultado del examen.',
+    passed: '🎉 ¡Aprobaste el examen!', failed: '💪 Sigue practicando', noResults: 'No se encontraron resultados.', chaptersLoadError: 'No se pudieron cargar los capítulos.', noChapterQuestions: 'Todavía no hay capítulos con preguntas disponibles.',
+    readinessDescription: 'Tu nivel actual de preparación se refleja en la media de tus exámenes realizados.', homeAria: 'Ir a la página principal de DrivePrep', backHome: 'Volver al inicio', enableLight: 'Activar modo claro', enableDark: 'Activar modo oscuro', close: 'Cerrar', send: 'Enviar mensaje'
   },
   en: {
     exams: 'Exams', manual: 'Manual', back: 'Back', results: 'Results',
@@ -28,6 +50,28 @@ const translations = {
     reviewTopics: 'Topics you should review', reinforceTopics: 'Topics to strengthen', personalized: 'Personalized recommendation',
     reviewCopy: 'Prioritized from the answers you need to review.', resultFinal: '🎯 Final result',
     light: 'Light', dark: 'Dark', spanish: 'ES', english: 'EN'
+    ,chooseExam: 'Choose your exam type', examIntro: 'Test your knowledge and discover how prepared you are.',
+    diagnosticCard: 'Diagnostic', diagnosticCardCopy: 'Discover which topics you need to strengthen.', extreme: 'Extreme Exam', extremeCopy: 'DrivePrep’s toughest challenge.',
+    byChapter: 'By Chapter', byChapterCopy: 'Practice only the chapter you choose.', random: 'Random', randomCopy: 'A surprise mix of questions.', start: 'Start',
+    reviewAnswers: 'Review your answers', missedQuestions: 'Questions to strengthen', missedCopy: 'These answers did not match the correct answer.', yourAnswer: 'Your answer:', correctAnswer: 'Correct answer:',
+    answerToReinforce: 'answer to strengthen', answersToReinforce: 'answers to strengthen'
+    ,login: 'Log in', loginMore: 'Log in for more', register: 'Sign up', logout: 'Log out', goToExams: 'Go to exams', viewManual: 'View manual',
+    simulator: 'Driving theory exam simulator', homeTitle: 'Practice, track your progress, and pass with confidence', homeCopy: 'Study, take exams, and review your progress without losing momentum.',
+    examsDone: 'Exams', average: 'Average', topics: 'Topics', chatbot: 'Chatbot', practical: 'Practical', askConnie: 'Ask Connie', readManual: 'Read manual', simulation: 'Simulation',
+    guide: 'Study guide', manualTitle: 'DrivePrep Manual', manualCopy: 'Explore the Driver’s Manual chapter by chapter.', loadingChapters: 'Loading chapters…',
+    chapterSelection: 'Chapter selection', chapterSelectionCopy: 'Choose a Manual chapter for your next exam.', questionsAvailable: 'questions available',
+    askConniePlaceholder: 'Ask Connie anything…', quizTitle: 'Final quiz',
+    welcome: 'Hello, {name} ✨', accountCreated: 'Account created 💖 You can now log in.', actionFailed: 'The action could not be completed.',
+    completedApproved: 'completed and passed', preparation: 'readiness', progressing: 'in progress', totalReadiness: 'Overall readiness', readinessByTopic: 'Readiness by topic',
+    completeChapterExam: 'Complete a chapter exam to see your readiness by topic.', topicsToReview: 'Topics to review', takeExamRecommendation: 'Take an exam to receive study recommendations.', testKnowledge: 'Test your knowledge',
+    name: 'Name', email: 'Email', password: 'Password', enter: 'Log in', createAccount: 'Create account', noAccount: "Don't have an account? Sign up", hasAccount: 'Already have an account? Log in',
+    examsTaken: 'Exams taken', attemptedTotal: 'attempted in total', generalPerformance: 'overall performance', mastered: 'mastered', recommendationCopy: 'We recommend practicing road signs before attempting another full exam.',
+    connieGreeting: 'Hi! I am your virtual driving-school assistant. How can I help you today?', connieFallback: "I didn't understand your message.", connieUnavailable: "I can't respond right now.",
+    manualPageCopy: "Each Driver's Manual chapter has its own page so you can study at your own pace.", sections: 'sections', noChapters: 'No chapters yet', noChaptersCopy: 'The manual does not have content available yet.', manualLoadError: 'The manual could not be loaded.',
+    chapterNotFound: 'Chapter not found.', chapterLoadError: 'This chapter could not be loaded.', loadingChapter: 'Loading chapter…', backToManual: 'Back to manual', noSections: 'This chapter does not have any sections yet.', topic: 'Topic', reviewMainIdeas: 'Review the main ideas in this topic.',
+    noQuestions: 'There are no questions available for this selection.', questionLoadError: 'The questions could not be loaded.', loadingQuestion: 'Loading question…', saveResultError: 'The exam result could not be saved.',
+    passed: '🎉 You passed the exam!', failed: '💪 Keep practicing', noResults: 'No results were found.', chaptersLoadError: 'The chapters could not be loaded.', noChapterQuestions: 'There are no chapters with questions available yet.',
+    readinessDescription: 'Your current readiness is based on the average of your completed exams.', homeAria: 'Go to the DrivePrep home page', backHome: 'Back to home', enableLight: 'Enable light mode', enableDark: 'Enable dark mode', close: 'Close', send: 'Send message'
   }
 };
 
@@ -47,17 +91,22 @@ function App() {
   return (
     <LanguageProvider><Routes>
       <Route path="/" element={<HomePage />} />
-      <Route path="/examenes" element={<ExamsPage />} />
-      <Route path="/connie" element={<ConniePage />} />
+      <Route path="/examenes" element={<RequireLogin><ExamsPage /></RequireLogin>} />
+      <Route path="/connie" element={<RequireLogin><ConniePage /></RequireLogin>} />
       <Route path="/manual" element={<ManualPage />} />
       <Route path="/manual/:capituloId" element={<ManualChapterPage />} />
-      <Route path="/examen" element={<ExamPage />} />
-      <Route path="/resultados" element={<ResultsPage />} />
-      <Route path="/chapter-selection" element={<ChapterSelectionPage />} />
-      <Route path="/category-selection" element={<Navigate to="/chapter-selection" replace />} />
+      <Route path="/examen" element={<RequireLogin><ExamPage /></RequireLogin>} />
+      <Route path="/resultados" element={<RequireLogin><ResultsPage /></RequireLogin>} />
+      <Route path="/chapter-selection" element={<RequireLogin><ChapterSelectionPage /></RequireLogin>} />
+      <Route path="/category-selection" element={<RequireLogin><Navigate to="/chapter-selection" replace /></RequireLogin>} />
       <Route path="*" element={<Navigate to="/" replace />} />
     </Routes></LanguageProvider>
   );
+}
+
+function RequireLogin({ children }) {
+  const loggedIn = Boolean(localStorage.getItem('id_usuario') && localStorage.getItem('usuario'));
+  return loggedIn ? children : <Navigate to="/" replace />;
 }
 
 function safeParse(json) {
@@ -80,6 +129,7 @@ function readinessColor(percent) {
 }
 
 function HomePage() {
+  const { language, t } = useLanguage();
   const navigate = useNavigate();
   const [usuario, setUsuario] = useState(localStorage.getItem('usuario') || '');
   const [idUsuario, setIdUsuario] = useState(localStorage.getItem('id_usuario') || '');
@@ -92,7 +142,7 @@ function HomePage() {
   useEffect(() => {
     if (!idUsuario) return;
     loadStats(idUsuario);
-  }, [idUsuario]);
+  }, [idUsuario, language]);
 
   useEffect(() => {
     if (!toast) return undefined;
@@ -102,7 +152,7 @@ function HomePage() {
 
   async function loadStats(userId) {
     try {
-      const data = await fetchJson(`/estadisticas/${userId}`);
+      const data = await fetchJson(`/estadisticas/${userId}?lang=${language}`);
       setStats({
         examenes: data.total_examenes ?? 0,
         promedio: data.promedio ?? 0,
@@ -126,7 +176,7 @@ function HomePage() {
         localStorage.setItem('id_usuario', data.id_usuario);
         setUsuario(data.nombre);
         setIdUsuario(String(data.id_usuario));
-        setToast(`Bienvenido, ${data.nombre} 😌`);
+        setToast(t('welcome', { name: data.nombre }));
         setModalOpen(false);
         setForm({ nombre: '', email: '', password: '' });
         return;
@@ -137,11 +187,11 @@ function HomePage() {
         body: JSON.stringify({ nombre: form.nombre, email: form.email, password: form.password })
       });
 
-      setToast('Cuenta creada 😌 ahora inicia sesión');
+      setToast(t('accountCreated'));
       setIsLogin(true);
       setForm({ nombre: '', email: '', password: '' });
     } catch (error) {
-      window.alert(error.message || 'No se pudo completar la acción.');
+      window.alert(error.message || t('actionFailed'));
     }
   }
 
@@ -162,50 +212,69 @@ function HomePage() {
   const topReviewTopics = sortedTopics.slice(0, 3);
 
   return (
-    <div>
+    <div className="home-page">
       <header className="navbar navbar-home">
         <BrandLogo />
         <div className="nav-right">
           <ThemeToggle />
-          {!loggedIn && <button className="nav-btn" onClick={() => { setIsLogin(true); setModalOpen(true); }}>Iniciar sesión</button>}
-          {!loggedIn && <button className="nav-btn" onClick={() => { setIsLogin(false); setModalOpen(true); }}>Registrarse</button>}
+          {!loggedIn && <button className="nav-btn" onClick={() => { setIsLogin(true); setModalOpen(true); }}>{t('login')}</button>}
+          {!loggedIn && <button className="nav-btn" onClick={() => { setIsLogin(false); setModalOpen(true); }}>{t('register')}</button>}
           {loggedIn && (
             <div id="nav-usuario" style={{ display: 'flex' }}>
               <span id="user-name">{usuario}</span>
-              <button id="logout-btn" className="nav-btn logout" onClick={logout}>Cerrar sesión</button>
+              <button id="logout-btn" className="nav-btn logout" onClick={logout}>{t('logout')}</button>
             </div>
           )}
         </div>
       </header>
 
       <section className="hero-home">
-        <p className="eyebrow">Simulador teórico de manejo</p>
-        <h1>{loggedIn ? `Hola, ${usuario} 😌` : 'Practica, mide tu progreso y aprueba con seguridad'}</h1>
-        <p className="hero-copy">
-          Una interfaz más limpia en React para estudiar, hacer exámenes y revisar tus avances sin perder el flujo.
-        </p>
-        <div className="hero-actions">
-          <button className="primary-pill" onClick={() => navigate('/examenes')}>Ir a exámenes</button>
-          <button className="secondary-pill" onClick={() => navigate('/manual')}>Ver manual</button>
+        <div className="hero-copy-block">
+          <p className="eyebrow">{t('simulator')}</p>
+          <h1>{loggedIn ? t('welcome', { name: usuario }) : t('homeTitle')}</h1>
+          <p className="hero-copy">
+            {t('homeCopy')}
+          </p>
+          <div className="hero-actions">
+            {loggedIn && <button className="primary-pill" onClick={() => navigate('/examenes')}>{t('goToExams')}</button>}
+            <button className="secondary-pill" onClick={() => navigate('/manual')}>{t('viewManual')}</button>
+            {!loggedIn && <button className="primary-pill" onClick={() => { setIsLogin(true); setModalOpen(true); }}>{t('loginMore')}</button>}
+          </div>
         </div>
+        <img src="/static/assets/happyconnie.png" alt="" aria-hidden="true" className="guest-connie hero-guest-connie" />
       </section>
 
       {loggedIn && (
         <>
+          <section className="actions-grid dashboard-actions">
+            <ActionCard title={t('exams')} icon="fa-clipboard-check" accent="accent-orange" onClick={() => navigate('/examenes')}>
+              {t('testKnowledge')}
+            </ActionCard>
+            <ActionCard title={t('chatbot')} icon="fa-comments" accent="accent-purple" onClick={() => navigate('/connie')}>
+              {t('askConnie')}
+            </ActionCard>
+            <ActionCard title={t('manual')} icon="fa-book-open" accent="accent-pink" onClick={() => navigate('/manual')}>
+              {t('readManual')}
+            </ActionCard>
+            <ActionCard title={t('practical')} icon="fa-car-side" accent="accent-green" onClick={() => window.open('https://www.drivingskillsforlife.com/media/games/vr2pc/sub/roundabout/index.html', '_blank')}>
+              {t('simulation')}
+            </ActionCard>
+          </section>
+
           <section className="stats-grid">
-            <StatCard title="Exámenes" value={stats.examenes} subtitle="hechos y aprobados" />
-            <StatCard title="Promedio" value={`${stats.promedio}%`} subtitle="preparación" />
-            <StatCard title="Temas" value={stats.temas} subtitle="con avance" />
+            <StatCard title={t('examsDone')} value={stats.examenes} subtitle={t('completedApproved')} />
+            <StatCard title={t('average')} value={`${stats.promedio}%`} subtitle={t('preparation')} />
+            <StatCard title={t('topics')} value={stats.temas} subtitle={t('progressing')} />
           </section>
 
           <section className="dashboard-visuals">
-            <ReadinessGauge title="Preparación total" value={stats.promedio} />
+            <ReadinessGauge title={t('totalReadiness')} value={stats.promedio} />
 
             <div className="dashboard-side">
               <article className="panel topic-panel">
                 <div className="panel-header">
-                  <h3>Preparación por tema</h3>
-                  <span>{stats.topicos.length} temas</span>
+                  <h3>{t('readinessByTopic')}</h3>
+                  <span>{stats.topicos.length} {t('topics').toLowerCase()}</span>
                 </div>
 
                 {stats.topicos.length > 0 ? (
@@ -220,13 +289,13 @@ function HomePage() {
                     ))}
                   </div>
                 ) : (
-                  <p className="empty-state">Completa un examen con preguntas por capítulo para ver tu nivel por tema.</p>
+                  <p className="empty-state">{t('completeChapterExam')}</p>
                 )}
               </article>
 
               <article className="panel review-panel">
                 <div className="panel-header">
-                  <h3>Temas para revisar</h3>
+                  <h3>{t('topicsToReview')}</h3>
                   <span>Top 3</span>
                 </div>
 
@@ -237,13 +306,13 @@ function HomePage() {
                         <div className="review-rank">#{index + 1}</div>
                         <div className="review-content">
                           <strong>{topic.titulo}</strong>
-                          <span>{Math.round(Number(topic.puntaje || 0))}% de preparación</span>
+                          <span>{Math.round(Number(topic.puntaje || 0))}% {t('preparation')}</span>
                         </div>
                       </li>
                     ))}
                   </ol>
                 ) : (
-                  <p className="empty-state">Haz un examen para que te recomendemos los temas más importantes a reforzar.</p>
+                  <p className="empty-state">{t('takeExamRecommendation')}</p>
                 )}
               </article>
             </div>
@@ -251,34 +320,19 @@ function HomePage() {
         </>
       )}
 
-      <section className="actions-grid">
-        <ActionCard title="Exámenes" accent="accent-orange" onClick={() => navigate('/examenes')} locked={!loggedIn}>
-          Prueba tu conocimiento
-        </ActionCard>
-        <ActionCard title="Chatbot" accent="accent-purple" onClick={() => navigate('/connie')} locked={!loggedIn}>
-          Pregúntale a Connie
-        </ActionCard>
-        <ActionCard title="Manual" accent="accent-pink" onClick={() => navigate('/manual')} locked={!loggedIn}>
-          Leer manual
-        </ActionCard>
-        <ActionCard title="Práctico" accent="accent-green" onClick={() => window.open('https://www.drivingskillsforlife.com/media/games/vr2pc/sub/roundabout/index.html', '_blank')} locked={!loggedIn}>
-          Simulación
-        </ActionCard>
-      </section>
-
       {modalOpen && (
         <div className="modal" onClick={() => setModalOpen(false)}>
           <div className="modal-content" onClick={(event) => event.stopPropagation()}>
-            <button className="modal-close" onClick={() => setModalOpen(false)}>×</button>
-            <h2>{isLogin ? 'Iniciar sesión' : 'Registrarse'}</h2>
+            <button className="modal-close" aria-label={t('close')} title={t('close')} onClick={() => setModalOpen(false)}><i className="fas fa-xmark" /></button>
+            <h2>{isLogin ? t('login') : t('register')}</h2>
             {!isLogin && (
-              <input value={form.nombre} onChange={(event) => setForm((current) => ({ ...current, nombre: event.target.value }))} placeholder="Nombre" />
+              <input value={form.nombre} onChange={(event) => setForm((current) => ({ ...current, nombre: event.target.value }))} placeholder={t('name')} />
             )}
-            <input value={form.email} onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))} placeholder="Correo" type="email" />
-            <input value={form.password} onChange={(event) => setForm((current) => ({ ...current, password: event.target.value }))} placeholder="Contraseña" type="password" />
-            <button className="primary-pill full-width" onClick={submitForm}>{isLogin ? 'Entrar' : 'Crear cuenta'}</button>
+            <input value={form.email} onChange={(event) => setForm((current) => ({ ...current, email: event.target.value }))} placeholder={t('email')} type="email" />
+            <input value={form.password} onChange={(event) => setForm((current) => ({ ...current, password: event.target.value }))} placeholder={t('password')} type="password" />
+            <button className="primary-pill full-width" onClick={submitForm}>{isLogin ? t('enter') : t('createAccount')}</button>
             <button className="text-link" onClick={() => setIsLogin((current) => !current)}>
-              {isLogin ? '¿No tienes cuenta? Regístrate' : '¿Ya tienes cuenta? Inicia sesión'}
+              {isLogin ? t('noAccount') : t('hasAccount')}
             </button>
           </div>
         </div>
@@ -290,27 +344,14 @@ function HomePage() {
 }
 
 function ExamsPage() {
+  const { t } = useLanguage();
   const navigate = useNavigate();
-  const idUsuario = localStorage.getItem('id_usuario');
-  const [stats, setStats] = useState({ examenes: 0, promedio: 0, temas: 0 });
-
-  useEffect(() => {
-    if (!idUsuario) return;
-
-    fetchJson(`/estadisticas/${idUsuario}`)
-      .then((data) => setStats({
-        examenes: data.total_examenes ?? 0,
-        promedio: data.promedio ?? 0,
-        temas: 0
-      }))
-      .catch((error) => console.error('Error cargando estadísticas:', error));
-  }, [idUsuario]);
 
   const cards = [
-    { title: 'Diagnóstico', icon: 'fa-stethoscope', cls: 'blue', text: 'Descubre qué temas necesitas reforzar.', action: () => startExam('diagnostic') },
-    { title: 'Examen Extremo', icon: 'fa-fire', cls: 'purple', text: 'El desafío más difícil de DrivePrep.', action: () => startExam('extreme') },
-    { title: 'Por Capítulo', icon: 'fa-book', cls: 'green', text: 'Practica exclusivamente el capítulo que elijas.', action: () => navigate('/chapter-selection') },
-    { title: 'Aleatorio', icon: 'fa-dice', cls: 'orange', text: 'Una mezcla sorpresa de preguntas.', action: () => startExam('random') }
+    { title: t('diagnosticCard'), icon: 'fa-stethoscope', cls: 'blue', text: t('diagnosticCardCopy'), action: () => startExam('diagnostic') },
+    { title: t('extreme'), icon: 'fa-fire', cls: 'purple', text: t('extremeCopy'), action: () => startExam('extreme') },
+    { title: t('byChapter'), icon: 'fa-book', cls: 'green', text: t('byChapterCopy'), action: () => navigate('/chapter-selection') },
+    { title: t('random'), icon: 'fa-dice', cls: 'orange', text: t('randomCopy'), action: () => startExam('random') }
   ];
 
   function startExam(type) {
@@ -324,14 +365,7 @@ function ExamsPage() {
     <main className="page-shell">
       <TopNav />
       <section className="panel hero-panel">
-        <h1>Elige tu tipo de examen</h1>
-        <p>Pon a prueba tus conocimientos y descubre qué tan preparado estás.</p>
-      </section>
-
-      <section className="stats-grid exams-stats">
-        <StatCard title="Exámenes realizados" value={stats.examenes} subtitle="intentados en total" />
-        <StatCard title="Promedio" value={`${stats.promedio}%`} subtitle="rendimiento general" />
-        <StatCard title="Temas" value={stats.temas} subtitle="dominados" />
+        <div><h1>{t('chooseExam')}</h1><p>{t('examIntro')}</p></div>
       </section>
 
       <section className="exam-cards-grid">
@@ -340,23 +374,20 @@ function ExamsPage() {
             <i className={`fas ${card.icon}`} />
             <h2>{card.title}</h2>
             <p>{card.text}</p>
-            <button onClick={card.action}>Comenzar</button>
+            <button onClick={card.action}>{t('start')}</button>
           </article>
         ))}
       </section>
 
-      <section className="panel recommendation-panel">
-        <h3>🎯 Recomendación personalizada</h3>
-        <p>Te recomendamos practicar Señales de tránsito antes de intentar otro examen completo.</p>
-      </section>
     </main>
   );
 }
 
 function ConniePage() {
+  const { language, t } = useLanguage();
   const chatBodyRef = useRef(null);
   const [messages, setMessages] = useState([
-    { role: 'connie', text: '¡Hola! Soy tu asistente virtual de autoescuela retro. ¿En qué puedo ayudarte hoy?' }
+    { role: 'connie', text: translations[localStorage.getItem('driveprep-language') || 'es'].connieGreeting }
   ]);
   const [input, setInput] = useState('');
   const [sending, setSending] = useState(false);
@@ -371,20 +402,32 @@ function ConniePage() {
     const text = input.trim();
     if (!text || sending) return;
 
+    const history = messages.slice(-8).map((message) => ({
+      role: message.role === 'user' ? 'user' : 'assistant',
+      content: message.text
+    }));
     setMessages((current) => [...current, { role: 'user', text }]);
     setInput('');
     setSending(true);
 
     try {
-      const data = await fetchJson('/api/connie', {
+      const data = await fetchJson('/api/manual/chat', {
         method: 'POST',
-        body: JSON.stringify({ message: text })
+        body: JSON.stringify({ pregunta: text, historial: history, language })
       });
 
-      setMessages((current) => [...current, { role: 'connie', text: data.reply || 'No entendí tu mensaje.' }]);
-    } catch (error) {
-      setMessages((current) => [...current, { role: 'connie', text: 'No pude responder en este momento.' }]);
-      console.error(error);
+      setMessages((current) => [...current, { role: 'connie', text: data.respuesta || t('connieFallback') }]);
+    } catch (aiError) {
+      try {
+        const fallback = await fetchJson('/api/connie', {
+          method: 'POST',
+          body: JSON.stringify({ message: text, language })
+        });
+        setMessages((current) => [...current, { role: 'connie', text: fallback.reply || t('connieFallback') }]);
+      } catch (fallbackError) {
+        setMessages((current) => [...current, { role: 'connie', text: t('connieUnavailable') }]);
+        console.error(aiError, fallbackError);
+      }
     } finally {
       setSending(false);
     }
@@ -395,8 +438,8 @@ function ConniePage() {
       <header className="chat-header">
         <BrandLogo compact />
         <div className="header-title">
-          <div className="header-avatar">🚗</div>
-          Pregúntale a Connie
+          <div className="header-avatar connie-portrait" role="img" aria-label="Connie" />
+          {t('askConnie')}
         </div>
         <ThemeToggle />
       </header>
@@ -413,13 +456,13 @@ function ConniePage() {
           <input
             type="text"
             id="user-input"
-            placeholder="Pregúntale algo a Connie…"
+            placeholder={t('askConniePlaceholder')}
             autoComplete="off"
             value={input}
             onChange={(event) => setInput(event.target.value)}
             onKeyDown={(event) => { if (event.key === 'Enter') sendMessage(); }}
           />
-          <button className="send-btn" id="send-btn" onClick={sendMessage} disabled={sending}>➤</button>
+          <button className="send-btn" id="send-btn" aria-label={t('send')} title={t('send')} onClick={sendMessage} disabled={sending}><i className="fas fa-paper-plane" /></button>
         </div>
       </div>
     </div>
@@ -429,50 +472,51 @@ function ConniePage() {
 // ─── Manual: mini-app propia con lista de capítulos + página por capítulo ──
 
 function ManualPage() {
+  const { language, t } = useLanguage();
   const [capitulos, setCapitulos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchJson('/api/manual/capitulos')
+    setLoading(true);
+    setError('');
+    fetchJson(`/api/manual/capitulos?lang=${language}`)
       .then((data) => {
-        if (!data.ok) throw new Error(data.error || 'No se pudo cargar el manual.');
+        if (!data.ok) throw new Error(data.error || t('manualLoadError'));
         setCapitulos(data.capitulos || []);
       })
       .catch((err) => {
         console.error('Error cargando el manual:', err);
-        setError('No se pudo cargar el manual. Verificá que la migración de base de datos esté aplicada.');
+        setError(t('manualLoadError'));
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [language]);
 
   return (
     <main className="manual-page page-shell">
       <TopNav />
       <section className="panel hero-panel">
-        <p className="eyebrow">Guía de estudio</p>
-        <h1>Manual de DrivePrep</h1>
-        <p>Cada capítulo del manual del conductor tiene su propia página, como una mini-app dentro de DrivePrep.</p>
+        <div><p className="eyebrow">{t('guide')}</p><h1>{t('manualTitle')}</h1><p>{t('manualPageCopy')}</p></div>
       </section>
 
-      {loading && <CenteredMessage title="Cargando capítulos…" />}
-      {!loading && error && <CenteredMessage title={error} />}
+      {loading && <div className="status-inline"><i className="fas fa-circle-notch fa-spin" /><span>{t('loadingChapters')}</span></div>}
+      {!loading && error && <div className="status-inline error"><i className="fas fa-circle-exclamation" /><span>{error}</span></div>}
 
       {!loading && !error && (
         <section className="manual-grid">
           {capitulos.map((capitulo) => (
             <Link key={capitulo.id} to={`/manual/${capitulo.id}`} className="panel info-card chapter-card">
-              <span className="chapter-icon">{capitulo.icono || '📘'}</span>
+              <span className="chapter-icon"><i className="fas fa-book-open" /></span>
               <h2>{capitulo.titulo}</h2>
               <p>{capitulo.descripcion}</p>
-              <span className="chapter-meta">{capitulo.total_secciones ?? 0} secciones</span>
+              <span className="chapter-meta">{capitulo.total_secciones ?? 0} {t('sections')}</span>
             </Link>
           ))}
 
           {capitulos.length === 0 && (
             <article className="panel info-card">
-              <h2>Todavía no hay capítulos</h2>
-              <p>Corré la migración <code>migrations/001_categorias_y_manual.sql</code> para crear contenido de ejemplo.</p>
+              <h2>{t('noChapters')}</h2>
+              <p>{t('noChaptersCopy')}</p>
             </article>
           )}
         </section>
@@ -482,7 +526,7 @@ function ManualPage() {
 }
 
 function ManualChapterPage() {
-  const { t } = useLanguage();
+  const { language, t } = useLanguage();
   const { capituloId } = useParams();
   const navigate = useNavigate();
   const [capitulo, setCapitulo] = useState(null);
@@ -492,19 +536,19 @@ function ManualChapterPage() {
   useEffect(() => {
     setLoading(true);
     setError('');
-    fetchJson(`/api/manual/capitulos/${capituloId}`)
+    fetchJson(`/api/manual/capitulos/${capituloId}?lang=${language}`)
       .then((data) => {
-        if (!data.ok) throw new Error(data.error || 'Capítulo no encontrado.');
+        if (!data.ok) throw new Error(data.error || t('chapterNotFound'));
         setCapitulo(data.capitulo);
       })
       .catch((err) => {
         console.error('Error cargando el capítulo:', err);
-        setError(err.message || 'No se pudo cargar este capítulo.');
+        setError(err.message || t('chapterLoadError'));
       })
       .finally(() => setLoading(false));
-  }, [capituloId]);
+  }, [capituloId, language]);
 
-  if (loading) return <CenteredMessage title="Cargando capítulo…" />;
+  if (loading) return <CenteredMessage title={t('loadingChapter')} />;
   if (error) return <CenteredMessage title={error} />;
   if (!capitulo) return null;
 
@@ -514,7 +558,7 @@ function ManualChapterPage() {
   return (
     <main className="manual-page page-shell">
       <TopNav />
-      <button className="secondary-pill" onClick={() => navigate('/manual')}>← Volver al manual</button>
+      <button className="secondary-pill" onClick={() => navigate('/manual')}>← {t('backToManual')}</button>
 
       <section className="panel hero-panel">
         <p className="eyebrow">{t('chapter')} {capitulo.numero}</p>
@@ -540,7 +584,7 @@ function ManualChapterPage() {
 
         {secciones.length === 0 && (
           <article className="panel info-card">
-            <p>Este capítulo todavía no tiene secciones cargadas.</p>
+            <p>{t('noSections')}</p>
           </article>
         )}
       </section>
@@ -559,13 +603,13 @@ function ManualSection({ seccion, index }) {
     <details className="manual-section" open={index < 2}>
       <summary>
         <span className="section-index">{String(index + 1).padStart(2, '0')}</span>
-        <span>{seccion.subtitulo || `Tema ${index + 1}`}</span>
+        <span>{seccion.subtitulo || `${t('topic')} ${index + 1}`}</span>
         <span className="section-toggle" aria-hidden="true">⌄</span>
       </summary>
       <div className="manual-section-content">
         <div className="exam-focus">
           <span>{t('examFocus')}</span>
-          <p>{paragraphs[0] || 'Repasá las ideas principales de este tema.'}</p>
+          <p>{paragraphs[0] || t('reviewMainIdeas')}</p>
         </div>
         <div className="section-reading-list">
           {visibleParagraphs.map((paragraph, paragraphIndex) => <p key={paragraphIndex}>{paragraph}</p>)}
@@ -581,6 +625,7 @@ function ManualSection({ seccion, index }) {
 }
 
 function ExamPage() {
+  const { language, t } = useLanguage();
   const navigate = useNavigate();
   const [questions, setQuestions] = useState([]);
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -592,8 +637,15 @@ function ExamPage() {
   const finishedRef = useRef(false);
 
   useEffect(() => {
+    setQuestions([]);
+    setCurrentIndex(0);
+    setAnswers({});
+    setTimeRemaining(300);
+    setError('');
+    setLoading(true);
+    finishedRef.current = false;
     loadQuestions();
-  }, []);
+  }, [language]);
 
   useEffect(() => {
     if (!questions.length || loading || error || finishedRef.current) return undefined;
@@ -614,7 +666,7 @@ function ExamPage() {
   async function loadQuestions() {
     try {
       const examType = localStorage.getItem('selectedExamType') || 'random';
-      const params = new URLSearchParams({ type: examType });
+      const params = new URLSearchParams({ type: examType, lang: language });
 
       if (examType === 'chapter') {
         const chapterId = localStorage.getItem('selectedChapterId');
@@ -624,7 +676,7 @@ function ExamPage() {
       const data = await fetchJson(`/api/examen/questions?${params.toString()}`);
 
       if (!Array.isArray(data) || data.length === 0) {
-        setError('No hay preguntas disponibles para esta selección.');
+        setError(t('noQuestions'));
         setLoading(false);
         return;
       }
@@ -633,7 +685,7 @@ function ExamPage() {
       setLoading(false);
     } catch (caughtError) {
       console.error('Error cargando preguntas:', caughtError);
-      setError('Error al cargar las preguntas.');
+      setError(t('questionLoadError'));
       setLoading(false);
     }
   }
@@ -683,7 +735,8 @@ function ExamPage() {
           id_usuario: parseInt(localStorage.getItem('id_usuario'), 10) || 1,
           id_examen: parseInt(localStorage.getItem('id_examen'), 10) || 1,
           tipo_generado: tipoGenerado,
-          respuestas
+          respuestas,
+          language
         })
       });
 
@@ -701,14 +754,14 @@ function ExamPage() {
     } catch (caughtError) {
       console.error('Error al guardar resultado:', caughtError);
       finishedRef.current = false;
-      window.alert('No se pudo guardar el resultado del examen.');
+      window.alert(t('saveResultError'));
     } finally {
       setSubmitting(false);
     }
   }
 
   if (loading) {
-    return <CenteredMessage title="Cargando pregunta..." />;
+    return <CenteredMessage title={t('loadingQuestion')} />;
   }
 
   if (error) {
@@ -724,12 +777,12 @@ function ExamPage() {
       <header className="exam-header">
         <BrandLogo compact />
         <div className="exam-title">
-          <div className="title-icon" />
-          <h1 id="exam-title">Quiz Final</h1>
+          <i className="fas fa-clipboard-list title-icon" />
+          <h1 id="exam-title">{t('quizTitle')}</h1>
         </div>
         <div className="header-right">
           <ThemeToggle />
-          <div className="timer-pill">⏱️ <span id="timer">{timeRemaining}s</span></div>
+          <div className="timer-pill"><i className="fas fa-stopwatch" /> <span id="timer">{timeRemaining}s</span></div>
           <div className="question-counter" id="question-counter">{currentIndex + 1}/{questions.length}</div>
         </div>
       </header>
@@ -760,8 +813,8 @@ function ExamPage() {
         </section>
 
         <section className="navigation-buttons">
-          <button className="secondary-btn" id="prev-btn" onClick={prevQuestion} disabled={currentIndex === 0}>Anterior</button>
-          <button className="primary-btn" id="next-btn" onClick={nextQuestion} disabled={submitting}>{currentIndex === questions.length - 1 ? 'Finalizar' : 'Siguiente'}</button>
+          <button className="secondary-btn" id="prev-btn" onClick={prevQuestion} disabled={currentIndex === 0}>{t('previous')}</button>
+          <button className="primary-btn" id="next-btn" onClick={nextQuestion} disabled={submitting}>{currentIndex === questions.length - 1 ? t('finish') : t('next')}</button>
         </section>
       </main>
     </div>
@@ -775,9 +828,9 @@ function ResultsPage() {
 
   const estado = resultado
     ? resultado.aprobado
-      ? '🎉 ¡Aprobaste el examen!'
-      : '❌ No aprobaste el examen'
-    : 'No se encontraron resultados.';
+      ? t('passed')
+      : t('failed')
+    : t('noResults');
 
   const correctas = resultado ? `${resultado.correctas}/${resultado.total}` : '0/0';
   const porcentaje = resultado ? Number(resultado.porcentaje).toFixed(1) : '0.0';
@@ -821,7 +874,7 @@ function ResultsPage() {
               {temasARevisar.map((tema) => (
                 <article className="review-topic" key={tema.tema}>
                   <strong>{tema.tema}</strong>
-                  <span>{tema.errores} {tema.errores === 1 ? 'respuesta por reforzar' : 'respuestas por reforzar'}</span>
+                  <span>{tema.errores} {tema.errores === 1 ? t('answerToReinforce') : t('answersToReinforce')}</span>
                 </article>
               ))}
             </div>
@@ -831,9 +884,9 @@ function ResultsPage() {
         {errores.length > 0 && (
           <section className="mistakes-card">
             <div className="mistakes-heading">
-              <span>Revisa tus respuestas</span>
-              <h2>Preguntas por reforzar</h2>
-              <p>Estas son las respuestas que no coincidieron con la respuesta correcta.</p>
+              <span>{t('reviewAnswers')}</span>
+              <h2>{t('missedQuestions')}</h2>
+              <p>{t('missedCopy')}</p>
             </div>
             <div className="mistakes-list">
               {errores.map((error, index) => (
@@ -841,8 +894,8 @@ function ResultsPage() {
                   <span className="mistake-number">{index + 1}</span>
                   <div>
                     <h3>{error.enunciado}</h3>
-                    <p><strong>Tu respuesta:</strong> {error.respuesta_usuario}</p>
-                    <p className="correct-answer"><strong>Respuesta correcta:</strong> {error.respuesta_correcta}</p>
+                    <p><strong>{t('yourAnswer')}</strong> {error.respuesta_usuario}</p>
+                    <p className="correct-answer"><strong>{t('correctAnswer')}</strong> {error.respuesta_correcta}</p>
                   </div>
                 </article>
               ))}
@@ -851,8 +904,8 @@ function ResultsPage() {
         )}
 
         <section className="navigation-buttons">
-          <button className="secondary-btn" onClick={() => navigate('/examenes')}>Volver a exámenes</button>
-          <button className="primary-btn" onClick={() => navigate('/examen')}>Repetir examen</button>
+          <button className="secondary-btn" onClick={() => navigate('/examenes')}>{t('backToExams')}</button>
+          <button className="primary-btn" onClick={() => navigate('/examen')}>{t('repeat')}</button>
         </section>
       </main>
     </div>
@@ -860,20 +913,21 @@ function ResultsPage() {
 }
 
 function ChapterSelectionPage() {
+  const { language, t } = useLanguage();
   const navigate = useNavigate();
   const [capitulos, setCapitulos] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState('');
 
   useEffect(() => {
-    fetchJson('/api/examen/capitulos')
+    fetchJson(`/api/examen/capitulos?lang=${language}`)
       .then((data) => setCapitulos(Array.isArray(data) ? data : []))
       .catch((err) => {
         console.error('Error cargando capítulos:', err);
-        setError('No se pudieron cargar los capítulos.');
+        setError(t('chaptersLoadError'));
       })
       .finally(() => setLoading(false));
-  }, []);
+  }, [language]);
 
   function chooseChapter(chapterId) {
     localStorage.setItem('selectedExamType', 'chapter');
@@ -887,15 +941,14 @@ function ChapterSelectionPage() {
       <TopNav />
       <main className="exam-container">
       <section className="question-card">
-        <h2>Selección de Capítulo</h2>
-        <p>Elige un capítulo del manual para preparar tu siguiente examen.</p>
+        <h2>{t('chapterSelection')}</h2>
+        <p>{t('chapterSelectionCopy')}</p>
 
-        {loading && <p>Cargando capítulos…</p>}
+        {loading && <p>{t('loadingChapters')}</p>}
         {!loading && error && <p>{error}</p>}
         {!loading && !error && capitulos.length === 0 && (
           <p>
-            Todavía no hay capítulos en el manual. Corré la migración{' '}
-            <code>migrations/001_categorias_y_manual.sql</code> para crear el contenido inicial.
+            {t('noChapterQuestions')}
           </p>
         )}
 
@@ -908,15 +961,15 @@ function ChapterSelectionPage() {
                 className="option category-option"
                 onClick={() => chooseChapter(item.id)}
               >
-                <strong>{item.icono} Capítulo {item.numero}: {item.titulo}</strong>
-                <span>{item.total_preguntas} preguntas disponibles{item.descripcion ? ` · ${item.descripcion}` : ''}</span>
+                <strong><i className="fas fa-book-open" /> {t('chapter')} {item.numero}: {item.titulo}</strong>
+                <span>{item.total_preguntas} {t('questionsAvailable')}{item.descripcion ? ` · ${item.descripcion}` : ''}</span>
               </button>
             ))}
           </div>
         )}
 
         <div className="navigation-buttons category-actions">
-          <button className="secondary-btn" onClick={() => navigate('/examenes')}>Volver</button>
+          <button className="secondary-btn" onClick={() => navigate('/examenes')}>{t('back')}</button>
         </div>
       </section>
       </main>
@@ -925,6 +978,7 @@ function ChapterSelectionPage() {
 }
 
 function ReadinessGauge({ title, value }) {
+  const { t } = useLanguage();
   const percent = clampPercent(value);
   const color = readinessColor(percent);
 
@@ -939,7 +993,7 @@ function ReadinessGauge({ title, value }) {
           <strong>{percent}%</strong>
         </div>
       </div>
-      <p className="readiness-description">Tu nivel actual de preparación se refleja en la media de tus exámenes realizados.</p>
+      <p className="readiness-description">{t('readinessDescription')}</p>
     </article>
   );
 }
@@ -968,9 +1022,9 @@ function MessageBubble({ message }) {
 
   return (
     <div className={`msg-row ${isUser ? 'user' : ''}`}>
-      {!isUser && <div className="msg-avatar">🚗</div>}
+      {!isUser && <div className="msg-avatar connie-portrait" role="img" aria-label="Connie" />}
       <div className={`bubble ${isUser ? 'user' : 'connie'}`}>{message.text}</div>
-      {isUser && <div className="msg-avatar">🧑</div>}
+      {isUser && <div className="msg-avatar"><i className="fas fa-user" /></div>}
     </div>
   );
 }
@@ -978,7 +1032,7 @@ function MessageBubble({ message }) {
 function TypingBubble() {
   return (
     <div className="msg-row">
-      <div className="msg-avatar">🚗</div>
+      <div className="msg-avatar connie-portrait" role="img" aria-label="Connie" />
       <div className="bubble connie typing"><span /><span /><span /></div>
     </div>
   );
@@ -986,14 +1040,15 @@ function TypingBubble() {
 
 function TopNav() {
   const { t } = useLanguage();
+  const loggedIn = Boolean(localStorage.getItem('id_usuario') && localStorage.getItem('usuario'));
   return (
     <header className="navbar">
-        <BrandLogo />
-      <div className="top-links">
-        <Link to="/examenes">{t('exams')}</Link>
-        <Link to="/connie">Connie</Link>
-        <Link to="/manual">{t('manual')}</Link>
-      </div>
+      <BrandLogo />
+      <nav className="top-links" aria-label="Primary navigation">
+        {loggedIn && <NavLink to="/examenes"><i className="fas fa-clipboard-check" /><span>{t('exams')}</span></NavLink>}
+        {loggedIn && <NavLink to="/connie"><i className="fas fa-comments" /><span>Connie</span></NavLink>}
+        <NavLink to="/manual"><i className="fas fa-book-open" /><span>{t('manual')}</span></NavLink>
+      </nav>
       <ThemeToggle />
     </header>
   );
@@ -1017,9 +1072,9 @@ function ThemeToggle() {
         className="theme-toggle"
         type="button"
         onClick={() => setTheme(isDark ? 'light' : 'dark')}
-        aria-label={isDark ? 'Activar modo claro' : 'Activar modo oscuro'}
+        aria-label={isDark ? t('enableLight') : t('enableDark')}
       >
-        <span aria-hidden="true">{isDark ? '☀️' : '🌙'}</span>
+        <i className={`fas ${isDark ? 'fa-sun' : 'fa-moon'}`} aria-hidden="true" />
         <span className="theme-toggle-label">{isDark ? t('light') : t('dark')}</span>
       </button>
       <button
@@ -1035,8 +1090,9 @@ function ThemeToggle() {
 }
 
 function BrandLogo({ compact = false }) {
+  const { t } = useLanguage();
   return (
-    <Link to="/" className={`logo${compact ? ' logo-compact' : ''}`} aria-label="Ir a la página principal de DrivePrep">
+    <Link to="/" className={`logo${compact ? ' logo-compact' : ''}`} aria-label={t('homeAria')}>
       <img src="/static/assets/drivepreplogo.png" alt="DrivePrep" className="logo-img" />
       <span className="logo-text">DrivePrep</span>
     </Link>
@@ -1053,27 +1109,25 @@ function StatCard({ title, value, subtitle }) {
   );
 }
 
-function ActionCard({ title, accent, onClick, locked, children }) {
+function ActionCard({ title, icon, accent, onClick, children }) {
   return (
-    <article className={`action-card ${accent}`}>
-      <h2>{title}</h2>
-      <div className="card-content">
-        <button className={`action-button ${locked ? 'disabled' : ''}`} onClick={locked ? undefined : onClick} disabled={locked}>
-          {locked ? `🔒 ${children}` : children}
-        </button>
-      </div>
-    </article>
+    <button className={`action-card ${accent}`} onClick={onClick}>
+      <i className={`fas ${icon}`} aria-hidden="true" />
+      <span><strong>{title}</strong><small>{children}</small></span>
+      <i className="fas fa-arrow-right action-arrow" aria-hidden="true" />
+    </button>
   );
 }
 
 function CenteredMessage({ title }) {
+  const { t } = useLanguage();
   return (
     <div className="status-page">
       <TopNav />
       <main className="exam-container">
         <section className="question-card centered-message">
           <h2>{title}</h2>
-          <Link to="/" className="secondary-pill">Volver al inicio</Link>
+          <Link to="/" className="secondary-pill">{t('backHome')}</Link>
         </section>
       </main>
     </div>

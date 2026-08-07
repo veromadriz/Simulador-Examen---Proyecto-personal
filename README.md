@@ -66,9 +66,9 @@ según palabras clave del enunciado.
 - **Backend:** Python, Flask, psycopg2, Werkzeug (hash de contraseñas)
 - **Base de datos:** PostgreSQL (Supabase)
 - **Frontend:** React + Vite + React Router
-- **Chatbot Connie:** basado en reglas simples (patrones + `connie.json`)
-- **Manual (opcional):** chatbot con la API de Claude, si configurás
-  `ANTHROPIC_API_KEY`
+- **Chatbot Connie:** Groq (`openai/gpt-oss-120b`) con contexto bilingüe
+  del Manual; puede usar Claude como proveedor alternativo y conserva las
+  reglas de `connie.json` como respaldo local
 
 ## Frontend React
 
@@ -99,10 +99,14 @@ evitar problemas de CORS (ver `react-frontend/vite.config.js`).
      ```
    - Correr `migrations/001_categorias_y_manual.sql` en el SQL Editor de
      Supabase (agrega columna de categoría + tablas del manual).
-   - (Opcional, para el chatbot de IA del manual) agregar también:
+   - Para activar gratis la versión inteligente de Connie, creá una clave
+     nueva en Groq y agregá:
      ```
-     ANTHROPIC_API_KEY=tu-api-key
+     GROQ_API_KEY=tu-api-key-nueva
      ```
+     No reutilicés la clave incluida en prototipos viejos. Opcionalmente podés
+     cambiar el modelo con `GROQ_MODEL` o usar `ANTHROPIC_API_KEY` como segundo
+     proveedor.
 
 3. Instalar y compilar el frontend:
    ```
@@ -130,7 +134,7 @@ Simulador-Examen---Proyecto-personal/
 │   ├── db.py               # conexión a Postgres
 │   ├── auth_utils.py        # hash/verificación de contraseñas
 │   ├── connie_bot.py        # lógica del chatbot Connie (única copia)
-│   └── manual_routes.py     # blueprint del Manual + chatbot con Claude
+│   └── manual_routes.py     # blueprint del Manual + chatbot Groq/Claude
 ├── migrations/
 │   └── 001_categorias_y_manual.sql
 ├── react-frontend/          # frontend en React + Vite
@@ -148,8 +152,10 @@ Simulador-Examen---Proyecto-personal/
 - La categoría de las preguntas es un campo de texto libre; si querés un
   set fijo de categorías con validación, conviene convertirlo en una tabla
   `categorias` con clave foránea.
-- El chatbot del Manual (`/api/manual/chat`) requiere `ANTHROPIC_API_KEY`;
-  sin esa variable, responde con un error claro en vez de romperse.
+- Connie usa `/api/manual/chat` cuando `GROQ_API_KEY` (preferida) o
+  `ANTHROPIC_API_KEY` está configurada. Sin esas variables, la interfaz cambia
+  automáticamente al bot local basado en reglas, por lo que el chat sigue
+  funcionando con respuestas limitadas.
 
 ✨ Proyecto desarrollado por Verónica Madriz como proyecto personal para
 practicar desarrollo web full stack y crear una herramienta de apoyo para
