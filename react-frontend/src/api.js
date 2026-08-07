@@ -2,7 +2,6 @@ const API_BASE = import.meta.env.VITE_API_BASE ?? '';
 
 async function fetchJson(path, options = {}) {
   const response = await fetch(`${API_BASE}${path}`, {
-    credentials: 'include',
     ...options,
     headers: {
       'Content-Type': 'application/json',
