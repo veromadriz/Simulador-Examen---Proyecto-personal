@@ -11,3 +11,6 @@ venv/
 react-frontend/node_modules/
 react-frontend/dist/
 npm-debug.log*
+
+.vercel
+.env*

@@ -1,5 +1,6 @@
 from functools import lru_cache
 from pathlib import Path
+import os
 import re
 
 from flask import Flask, jsonify, request, send_from_directory
@@ -138,7 +139,7 @@ ensure_result_tracking_tables()
 try:
     from flask_cors import CORS
 
-    CORS(app, resources={r"/api/*": {"origins": "*"}, r"/login": {"origins": "*"}, r"/register": {"origins": "*"}})
+    CORS(app, resources={r"/*": {"origins": os.getenv("FRONTEND_ORIGIN", "*")}})
 except ImportError:
     pass
 
